@@ -123,6 +123,15 @@ body {
     max-width: 600px;
 }
 
+.hero-logo {
+    height: 180px;
+    width: auto;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .hero-title {
     font-size: 3rem;
     font-weight: 700;
@@ -188,6 +197,10 @@ body {
 @media (max-width: 768px) {
     .hero {
         height: 400px;
+    }
+
+    .hero-logo {
+        height: 120px;
     }
 
     .hero-title {
