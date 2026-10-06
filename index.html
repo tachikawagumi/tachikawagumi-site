@@ -3,75 +3,198 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="株式会社 太刀川組｜東京都江戸川区を拠点に土工・とび・コンクリート工事。創業40年以上、安全第一で関東一円に対応します。">
 <title>株式会社 太刀川組｜土工・とび・コンクリート工事</title>
+<meta name="description" content="株式会社太刀川組。昭和55年創業。江戸川区を拠点に、土工・とび・コンクリート工事、建設補修を関東一円で承ります。">
+<meta name="theme-color" content="#0b1626">
+<meta property="og:title" content="株式会社 太刀川組｜土工・とび・コンクリート工事">
+<meta property="og:description" content="昭和55年創業。40年以上の経験と技術で、関東一円の建設を支えます。">
+<meta property="og:type" content="website">
 <style>
-:root{--navy:#071a2b;--blue:#075c91;--blue2:#0b7bb8;--ink:#17212b;--muted:#66727d;--line:#dfe6eb;--light:#f4f7f9;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.8;background:#fff}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
-.container{width:min(var(--max),calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
-.head{width:min(var(--max),calc(100% - 40px));min-height:78px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;white-space:nowrap}.logo{width:55px;height:55px;object-fit:contain}
-nav{display:flex;gap:22px;align-items:center;font-size:14px;font-weight:700}nav a:hover{color:var(--blue)}.navbtn{background:var(--navy);color:#fff;padding:10px 17px;border-radius:3px}
-.hero{min-height:690px;position:relative;display:flex;align-items:center;color:#fff;overflow:hidden}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,18,30,.88),rgba(4,18,30,.48),rgba(4,18,30,.16))}
-.hero-in{position:relative;width:min(var(--max),calc(100% - 40px));margin:auto;padding:100px 0}.eyebrow,.kicker{font-size:12px;letter-spacing:.22em;font-weight:800;margin:0 0 14px}.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.2;margin:0 0 22px;letter-spacing:.04em}.hero-lead{font-size:18px}.buttons{display:flex;gap:12px;margin-top:30px}.btn{padding:12px 23px;border:1px solid #fff;border-radius:3px;font-weight:700}.primary{background:#fff;color:var(--navy)}
-section{padding:100px 0}.light{background:var(--light)}.heading{margin-bottom:45px}.heading h2,.about h2,.contact h2{font-size:clamp(30px,4vw,46px);line-height:1.35;margin:0 0 12px}.heading>p:last-child{color:var(--muted);margin:0}
-.about-grid,.company-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px}.about h2{font-size:clamp(34px,4vw,52px)}.copy{font-size:17px;color:#46515a}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);padding:30px 25px;min-height:235px}.num{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:.15em}.card h3{font-size:21px;margin:18px 0 10px}.card p{font-size:14px;color:var(--muted);margin:0}
-.dark{background:var(--navy);color:#fff}.dark .kicker{color:#8ed5f6}.strengths{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.25)}.strength{padding:38px 28px;border-right:1px solid rgba(255,255,255,.25)}.strength:last-child{border:0}.strength strong{font-size:28px}.strength h3{font-size:20px;margin:12px 0 5px}.strength p{color:#c8d6df;font-size:14px;margin:0}
-.works{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.work{border:1px solid var(--line);background:#fff}.work img{width:100%;height:270px;object-fit:cover}.work-body{padding:22px 25px}.work-body span{font-size:11px;color:var(--blue);letter-spacing:.17em;font-weight:800}.work h3{margin:6px 0 3px}.work p{margin:0;color:var(--muted);font-size:14px}
-table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:15px 0;border-bottom:1px solid var(--line);font-size:14px}th{width:130px}
-.contact{background:var(--blue);color:#fff;text-align:center}.contact .kicker{color:#b9e7fa}.contact p{color:#e0f3fb}.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:15px;max-width:800px;margin:35px auto 0}.contact-box a{background:#fff;color:var(--navy);padding:22px;text-align:left;border-radius:3px}.contact-box small{display:block;color:var(--muted)}.contact-box strong{display:block;font-size:21px}
-footer{background:#04111c;color:#c5d0d8;padding:32px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px}.foot p{margin:3px 0}
-@media(max-width:900px){nav{gap:10px;font-size:12px}.cards{grid-template-columns:repeat(2,1fr)}.about-grid,.company-grid{grid-template-columns:1fr;gap:30px}}
-@media(max-width:700px){.head{min-height:68px}.brand{font-size:13px}.logo{width:46px;height:46px}nav a:not(.navbtn){display:none}.hero{min-height:610px}.hero h1{font-size:43px}.hero-lead{font-size:15px}section{padding:72px 0}.cards,.strengths,.works,.contact-box{grid-template-columns:1fr}.strength{border-right:0;border-bottom:1px solid rgba(255,255,255,.25);padding:28px 0}.work img{height:220px}.foot{display:block}}
+:root{
+ --navy:#0b1626; --navy2:#101f33; --ink:#172233; --muted:#647184;
+ --line:#dfe5eb; --paper:#f5f7f9; --white:#fff; --accent:#c89b3c;
+ --max:1180px; --shadow:0 18px 50px rgba(8,24,43,.12);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.85;background:#fff}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+.container{width:min(calc(100% - 48px),var(--max));margin:auto}
+.header{position:fixed;z-index:50;top:0;left:0;right:0;background:rgba(11,22,38,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px;color:#fff;font-weight:700;letter-spacing:.08em}
+.brand img{width:44px;height:44px;object-fit:contain;background:#fff;border-radius:6px;padding:3px}
+.brand span{font-size:16px}.menu{display:flex;gap:28px;align-items:center;color:#dce5ee;font-size:13px}
+.menu a{transition:.25s}.menu a:hover{color:#fff}
+.menu .cta{padding:10px 18px;border:1px solid rgba(255,255,255,.45);border-radius:3px;color:#fff}
+.hero{min-height:760px;padding-top:78px;position:relative;background:#0b1626;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,13,24,.93) 0%,rgba(4,13,24,.67) 45%,rgba(4,13,24,.18) 100%);z-index:1}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-inner{position:relative;z-index:2;min-height:682px;display:flex;align-items:center}
+.hero-copy{max-width:760px;color:#fff;padding:70px 0}
+.kicker{display:flex;align-items:center;gap:12px;color:#d8b66a;font-size:12px;letter-spacing:.22em;font-weight:700}
+.kicker:before{content:"";width:36px;height:1px;background:#d8b66a}
+.hero h1{font-size:clamp(38px,5.4vw,72px);line-height:1.2;letter-spacing:.04em;margin:22px 0 22px;font-weight:800}
+.hero h1 em{font-style:normal;color:#d8b66a}
+.hero p{font-size:17px;color:#e4ebf2;max-width:600px;margin:0 0 34px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-width:178px;padding:14px 22px;border-radius:3px;font-weight:700;font-size:13px;letter-spacing:.06em}
+.btn-primary{background:#c89b3c;color:#fff}.btn-ghost{border:1px solid rgba(255,255,255,.45);color:#fff}
+.hero-note{position:absolute;right:0;bottom:34px;color:#dce5ee;font-size:11px;letter-spacing:.16em;writing-mode:vertical-rl}
+.section{padding:105px 0}.section.gray{background:var(--paper)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:46px}
+.eyebrow{font-size:11px;letter-spacing:.22em;color:#9a7430;font-weight:800}
+.section h2{font-size:clamp(28px,4vw,44px);line-height:1.35;margin:9px 0 0;letter-spacing:.03em}
+.section-lead{max-width:540px;color:var(--muted);font-size:14px}
+.intro{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.intro-photo{position:relative}.intro-photo img{width:100%;height:520px;object-fit:cover}
+.intro-photo:after{content:"TAKICHIKAWA GUMI";position:absolute;bottom:-14px;left:-14px;background:var(--navy);color:#fff;padding:12px 16px;font-size:10px;letter-spacing:.18em}
+.intro-copy h3{font-size:29px;line-height:1.5;margin:0 0 20px}.intro-copy p{color:var(--muted);font-size:14px}
+.signature{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:end}
+.signature small{color:var(--muted)}.signature strong{font-size:22px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);padding:28px 24px;min-height:230px;position:relative;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card-no{font-size:11px;color:#9a7430;letter-spacing:.15em}.card h3{font-size:21px;margin:28px 0 8px}.card p{font-size:13px;color:var(--muted);margin:0}.card .arrow{position:absolute;right:22px;bottom:20px;font-size:18px}
+.works{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.work{position:relative;overflow:hidden;background:#111;min-height:300px}.work.big{min-height:616px}.work img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.work:hover img{transform:scale(1.045)}.work:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(5,14,25,.82))}
+.work-info{position:absolute;z-index:2;left:25px;right:25px;bottom:22px;color:#fff}.work-info span{font-size:10px;letter-spacing:.16em;color:#d8b66a}.work-info h3{margin:5px 0 0;font-size:21px}
+.work-stack{display:grid;grid-template-rows:1fr 1fr;gap:16px}
+.strength{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.strength-item{padding:32px;border-top:3px solid var(--navy);background:#fff}.strength-num{font-size:12px;color:#9a7430;font-weight:800}.strength-item h3{font-size:21px;margin:18px 0 8px}.strength-item p{color:var(--muted);font-size:13px;margin:0}
+.history{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}.history-year{font-size:clamp(58px,8vw,105px);line-height:1;font-weight:800;color:var(--navy);letter-spacing:-.04em}.history-note{color:var(--muted);font-size:13px}.history-list{border-top:1px solid var(--line)}.history-row{display:grid;grid-template-columns:110px 1fr;gap:25px;padding:20px 0;border-bottom:1px solid var(--line)}.history-row b{font-size:13px}.history-row span{font-size:13px;color:var(--muted)}
+.company{display:grid;grid-template-columns:1fr 1fr;gap:70px}.company table{width:100%;border-collapse:collapse}.company th,.company td{text-align:left;padding:16px 8px;border-bottom:1px solid var(--line);font-size:13px}.company th{width:30%;color:#586577}
+.contact{background:var(--navy);color:#fff}.contact .section-head{margin-bottom:34px}.contact .eyebrow{color:#d8b66a}.contact h2{color:#fff}.contact .section-lead{color:#b9c4d0}
+.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-main{padding:35px;background:#122238}.tel{font-size:clamp(30px,4vw,50px);font-weight:800;letter-spacing:.03em}.mail{font-size:14px;color:#dce5ee}.contact-hours{padding:35px;border:1px solid rgba(255,255,255,.14)}.contact-hours p{margin:0 0 12px;color:#c4ced9;font-size:13px}.contact-hours strong{font-size:17px}
+.footer{background:#07111e;color:#9eabba;padding:30px 0}.footer-in{display:flex;justify-content:space-between;gap:20px;font-size:11px}.footer strong{color:#fff}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){
+ .menu{display:none}.container{width:min(calc(100% - 32px),var(--max))}
+ .hero{min-height:680px}.hero-inner{min-height:602px}.hero-note{display:none}
+ .section{padding:76px 0}.section-head{display:block}.section-lead{margin-top:18px}
+ .intro,.history,.company{grid-template-columns:1fr;gap:38px}.intro-photo img{height:390px}
+ .cards{grid-template-columns:1fr 1fr}.strength{grid-template-columns:1fr}
+ .works{grid-template-columns:1fr}.work.big{min-height:430px}.work-stack{grid-template-rows:300px 300px}
+ .contact-box{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+ .nav{height:68px}.brand img{width:38px;height:38px}.brand span{font-size:14px}
+ .hero{padding-top:68px}.hero-inner{min-height:612px}.hero-copy{padding:35px 0}.hero p{font-size:15px}
+ .btn{width:100%}.cards{grid-template-columns:1fr}.card{min-height:200px}
+ .intro-photo img{height:300px}.work.big{min-height:340px}.work-stack{grid-template-rows:240px 240px}
+ .history-row{grid-template-columns:75px 1fr}.footer-in{display:block}.footer-in div+div{margin-top:8px}
+}
 </style>
 </head>
 <body>
-<header><div class="head">
-<a class="brand" href="#top"><img class="logo" src="logo.png" alt="株式会社 太刀川組"><span>株式会社 太刀川組</span></a>
-<nav><a href="#business">事業内容</a><a href="#strength">太刀川組の強み</a><a href="#works">施工実績</a><a href="#company">会社概要</a><a class="navbtn" href="#contact">お問い合わせ</a></nav>
-</div></header>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#top"><img src="logo.png" alt="太刀川組ロゴ"><span>株式会社 太刀川組</span></a>
+    <nav class="menu">
+      <a href="#about">私たちについて</a><a href="#business">事業内容</a><a href="#works">施工実績</a><a href="#strength">強み</a><a href="#company">会社概要</a><a class="cta" href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
 
 <main id="top">
 <section class="hero">
-<img src="tobi.jpg" alt="太刀川組 とび工事"><div class="shade"></div>
-<div class="hero-in"><p class="eyebrow">BUILDING THE FUTURE</p><h1>確かな技術で、<br>街をつくる。</h1><p class="hero-lead">土工・とび・コンクリート工事<br>株式会社 太刀川組</p><div class="buttons"><a class="btn primary" href="#works">施工実績を見る</a><a class="btn" href="#contact">お問い合わせ</a></div></div>
+  <img src="tobi.jpg" alt="太刀川組の施工風景">
+  <div class="container hero-inner">
+    <div class="hero-copy reveal">
+      <div class="kicker">TAKICHIKAWA GUMI / SINCE 1980</div>
+      <h1>街を支える仕事に、<br><em>40年以上。</em></h1>
+      <p>土工・とび・コンクリート工事を通じて、建物の土台から現場の安全まで。積み重ねてきた経験と技術で、関東の建設を支えます。</p>
+      <div class="buttons"><a class="btn btn-primary" href="#works">施工実績を見る</a><a class="btn btn-ghost" href="#contact">お問い合わせ</a></div>
+    </div>
+  </div>
+  <div class="container hero-note">CONSTRUCTION / TOKYO / KANTO</div>
 </section>
 
-<section><div class="container about-grid"><div><p class="kicker">ABOUT US</p><h2>現場を支える。<br>未来をつくる。</h2></div><div class="copy"><p>株式会社 太刀川組は、東京都江戸川区を拠点に、土工・とび・コンクリート工事を手がける建設会社です。</p><p>昭和55年の創業以来、40年以上。安全と品質を大切に、一つひとつの現場に誠実に向き合ってきました。</p></div></div></section>
+<section class="section" id="about">
+ <div class="container intro">
+  <div class="intro-photo reveal"><img src="doko.jpg" alt="土工事の施工風景"></div>
+  <div class="intro-copy reveal">
+   <div class="eyebrow">ABOUT US</div><h2>現場を知る。<br>だから、強い。</h2>
+   <h3>確かな仕事は、<br>一つひとつの現場から。</h3>
+   <p>株式会社太刀川組は、昭和55年の創業以来、土工・とび・コンクリート工事を中心に、建設現場を支えてきました。</p>
+   <p>安全を第一に、現場ごとの条件を見極め、経験と技術を活かした施工を行っています。これからも、地域と建設業界に必要とされる会社であり続けます。</p>
+   <div class="signature"><small>代表者</small><strong>太刀川 慶一</strong></div>
+  </div>
+ </div>
+</section>
 
-<section id="business" class="light"><div class="container"><div class="heading"><p class="kicker">OUR BUSINESS</p><h2>事業内容</h2><p>建設現場の基盤から仕上げまで、確かな施工で対応します。</p></div>
-<div class="cards">
-<article class="card"><span class="num">01</span><h3>土工事</h3><p>造成、掘削、盛土、埋戻しなど、建設工事の基盤となる土工事に対応します。</p></article>
-<article class="card"><span class="num">02</span><h3>とび工事</h3><p>足場組立・解体、鉄骨建方、仮設工事など、安全第一で施工します。</p></article>
-<article class="card"><span class="num">03</span><h3>コンクリート工事</h3><p>基礎、土間、構造物など、各種コンクリート工事に対応します。</p></article>
-<article class="card"><span class="num">04</span><h3>建設補修</h3><p>既存構造物の補修・改修など、現場の状況に合わせてご相談いただけます。</p></article>
-</div></div></section>
+<section class="section gray" id="business">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">BUSINESS</div><h2>事業内容</h2></div><p class="section-lead">建設現場を支える、4つの領域。計画から施工まで、安全と品質を意識した仕事を積み重ねています。</p></div>
+  <div class="cards">
+   <article class="card reveal"><div class="card-no">01 / TOBI</div><h3>とび工事</h3><p>仮設工、鉄骨建設、足場組立など。現場の安全を支える重要な工程を担います。</p><div class="arrow">↗</div></article>
+   <article class="card reveal"><div class="card-no">02 / DOKO</div><h3>土工事</h3><p>造成工事、掘削、盛土など。建設の土台となる工程を確かな技術で施工します。</p><div class="arrow">↗</div></article>
+   <article class="card reveal"><div class="card-no">03 / CONCRETE</div><h3>コンクリート工事</h3><p>基礎工事、構造物の施工など。品質と精度を大切に仕上げます。</p><div class="arrow">↗</div></article>
+   <article class="card reveal"><div class="card-no">04 / REPAIR</div><h3>建設補修</h3><p>既存構造物の補修・改修工事。建物を長く使うための施工にも対応します。</p><div class="arrow">↗</div></article>
+  </div>
+ </div>
+</section>
 
-<section id="strength" class="dark"><div class="container"><div class="heading"><p class="kicker">WHY TACHIKAWAGUMI</p><h2>太刀川組が選ばれる理由</h2></div><div class="strengths">
-<article class="strength"><strong>40 YEARS+</strong><h3>創業40年以上</h3><p>昭和55年の創業以来、長年にわたり建設現場に携わってきました。</p></article>
-<article class="strength"><strong>SAFETY</strong><h3>安全第一の施工管理</h3><p>現場の安全を最優先に、丁寧な施工管理を徹底します。</p></article>
-<article class="strength"><strong>AREA</strong><h3>関東一円に対応</h3><p>東京都江戸川区を拠点に、関東一円の現場に対応しています。</p></article>
-</div></div></section>
+<section class="section" id="works">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">WORKS</div><h2>施工実績</h2></div><p class="section-lead">現場で積み重ねてきた仕事の一部をご紹介します。写真を通して、太刀川組の仕事をご覧ください。</p></div>
+  <div class="works">
+   <article class="work big reveal"><img src="tobi.jpg" alt="とび工事"><div class="work-info"><span>TOBI WORK</span><h3>安全を最優先に、現場を組み上げる。</h3></div></article>
+   <div class="work-stack">
+    <article class="work reveal"><img src="doko.jpg" alt="土工事"><div class="work-info"><span>DOKO WORK</span><h3>建設を支える、確かな土工事。</h3></div></article>
+    <article class="work reveal"><img src="doma.jpg" alt="施工風景"><div class="work-info"><span>CONCRETE WORK</span><h3>基礎から、未来の建物へ。</h3></div></article>
+   </div>
+  </div>
+ </div>
+</section>
 
-<section id="works"><div class="container"><div class="heading"><p class="kicker">WORKS</p><h2>施工実績</h2><p>これまでの主な施工内容をご紹介します。</p></div>
-<div class="works">
-<article class="work"><img src="tobi.jpg" alt="とび工事"><div class="work-body"><span>TOBI WORK</span><h3>足場・仮設工事</h3><p>足場組立・解体、仮設工事など。</p></div></article>
-<article class="work"><img src="doko.jpg" alt="土工事"><div class="work-body"><span>DOKO WORK</span><h3>掘削・造成工事</h3><p>掘削、造成、埋戻しなど。</p></div></article>
-<article class="work"><img src="doma.jpg" alt="コンクリート工事"><div class="work-body"><span>CONCRETE WORK</span><h3>基礎・土間コンクリート</h3><p>基礎コンクリート、土間工事など。</p></div></article>
-<article class="work"><img src="yane.jpg" alt="建設補修工事"><div class="work-body"><span>REPAIR WORK</span><h3>屋根・建物補修</h3><p>既存構造物の補修・改修など。</p></div></article>
-</div></div></section>
+<section class="section gray" id="strength">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">OUR STRENGTH</div><h2>太刀川組の強み</h2></div><p class="section-lead">長く現場に携わってきたからこそ分かること。経験を安全と品質につなげます。</p></div>
+  <div class="strength">
+   <article class="strength-item reveal"><div class="strength-num">01 / EXPERIENCE</div><h3>40年以上の経験</h3><p>昭和55年創業。長年にわたって建設現場と向き合い、経験を積み重ねてきました。</p></article>
+   <article class="strength-item reveal"><div class="strength-num">02 / SAFETY</div><h3>安全第一の施工管理</h3><p>安全を最優先に、現場の状況を確認しながら丁寧な施工を行います。</p></article>
+   <article class="strength-item reveal"><div class="strength-num">03 / KANTO</div><h3>関東一円に対応</h3><p>江戸川区を拠点に、関東一円の工事に対応しています。</p></article>
+  </div>
+ </div>
+</section>
 
-<section id="company" class="light"><div class="container company-grid"><div><p class="kicker">COMPANY</p><h2>会社概要</h2><p class="copy">地域社会との信頼関係を大切に、一つひとつの現場に丁寧に取り組んでいます。</p></div>
-<table><tr><th>会社名</th><td>株式会社 太刀川組</td></tr><tr><th>代表者</th><td>太刀川 慶一</td></tr><tr><th>設立</th><td>昭和55年</td></tr><tr><th>事業内容</th><td>とび・土工・コンクリート工事</td></tr><tr><th>対応エリア</th><td>関東一円</td></tr><tr><th>所在地</th><td>〒132-0001 東京都江戸川区新堀1-33-3</td></tr></table>
-</div></section>
+<section class="section">
+ <div class="container history">
+  <div class="reveal"><div class="eyebrow">HISTORY</div><div class="history-year">40<span>+</span></div><p class="history-note">YEARS OF EXPERIENCE<br>Since 1980</p></div>
+  <div class="history-list reveal">
+   <div class="history-row"><b>昭和55年</b><span>太刀川組 創業</span></div>
+   <div class="history-row"><b>現在</b><span>土工・とび・コンクリート工事、建設補修を中心に関東一円で対応</span></div>
+   <div class="history-row"><b>これから</b><span>積み重ねた経験を次の世代へ。安全と品質を大切に、地域の建設を支えます。</span></div>
+  </div>
+ </div>
+</section>
 
-<section id="contact" class="contact"><div class="container"><p class="kicker">CONTACT</p><h2>まずはお気軽にご相談ください。</h2><p>工事内容・施工規模・現場のご相談など、お気軽にお問い合わせください。</p>
-<div class="contact-box"><a href="tel:03-3670-0534"><small>お電話でのお問い合わせ</small><strong>03-3670-0534</strong><span>9:00〜18:00（日曜・祝日を除く）</span></a><a href="mailto:tachikawa@nifty.com"><small>メールでのお問い合わせ</small><strong>tachikawa@nifty.com</strong></a></div>
-</div></section>
+<section class="section gray" id="company">
+ <div class="container company">
+  <div class="reveal"><div class="eyebrow">COMPANY</div><h2>会社概要</h2><p class="section-lead">地域に根ざし、現場に向き合う建設会社として歩んでいます。</p></div>
+  <table class="reveal">
+   <tr><th>会社名</th><td>株式会社 太刀川組</td></tr>
+   <tr><th>代表者</th><td>太刀川 慶一</td></tr>
+   <tr><th>設立</th><td>昭和55年</td></tr>
+   <tr><th>事業内容</th><td>とび・土工・コンクリート工事</td></tr>
+   <tr><th>対応エリア</th><td>関東一円</td></tr>
+   <tr><th>所在地</th><td>〒132-0001 東京都江戸川区新堀1-33-3</td></tr>
+  </table>
+ </div>
+</section>
+
+<section class="section contact" id="contact">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">CONTACT</div><h2>まずは、お気軽に<br>お問い合わせください。</h2></div><p class="section-lead">工事のご相談・お問い合わせを承ります。</p></div>
+  <div class="contact-box">
+   <div class="contact-main"><div class="eyebrow">PHONE</div><div class="tel">03-3670-0534</div><div class="mail">tachikawa@nifty.com</div></div>
+   <div class="contact-hours"><p>お問い合わせ受付時間</p><strong>9:00 — 18:00</strong><p style="margin-top:25px">株式会社 太刀川組<br>東京都江戸川区新堀1-33-3</p></div>
+  </div>
+ </div>
+</section>
 </main>
-<footer><div class="container foot"><div><strong>株式会社 太刀川組</strong><p>土工・とび・コンクリート工事</p></div><p>© 株式会社 太刀川組 All Rights Reserved.</p></div></footer>
+<footer class="footer"><div class="container footer-in"><div><strong>株式会社 太刀川組</strong>　土工・とび・コンクリート工事</div><div>© TAKICHIKAWA GUMI</div></div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
+</script>
 </body>
 </html>
