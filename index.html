@@ -92,7 +92,9 @@
 @media(max-width:900px){.menu{display:none}.container{width:min(calc(100% - 32px),var(--max))}.hero{min-height:680px}.hero-inner{min-height:602px}.hero-note{display:none}.section{padding:76px 0}.section-head{display:block}.section-lead{margin-top:18px}.intro,.message,.history,.company{grid-template-columns:1fr;gap:38px}.intro-photo img{height:390px}.cards{grid-template-columns:1fr 1fr}.strength,.activities{grid-template-columns:1fr}.works{grid-template-columns:1fr}.work.featured{grid-column:auto;grid-row:auto;min-height:420px}.work{min-height:300px}.contact-box{grid-template-columns:1fr}}
 @media(max-width:560px){.nav{height:68px}.brand img{width:38px;height:38px}.brand span{font-size:14px}.hero{padding-top:68px}.hero-inner{min-height:612px}.hero-copy{padding:35px 0}.hero p{font-size:15px}.btn{width:100%}.cards{grid-template-columns:1fr}.card{min-height:200px}.intro-photo img{height:300px}.message img{height:300px}.work.featured{min-height:340px}.footer-in{display:block}.footer-in div+div{margin-top:8px}}
 </style>
-</head>
+<style>
+.contact-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:42px;align-items:start}.contact-panel{padding:28px 0;border-bottom:1px solid var(--line)}.contact-panel:first-child{padding-top:0}.contact-label{font-size:10px;letter-spacing:.2em;font-weight:800;color:#9a7430;margin-bottom:10px}.contact-phone{display:block;font-size:31px;font-weight:800;color:var(--navy)}.contact-panel a:not(.contact-phone){color:var(--navy);font-weight:700}.contact-panel p{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.8}.form-card{background:#fff;padding:38px;box-shadow:0 20px 55px rgba(10,25,40,.08);border:1px solid #e8edf2}.form-note{font-size:10px;letter-spacing:.2em;font-weight:800;color:#9a7430}.form-card h3{font-size:26px;margin:8px 0 6px}.form-lead{color:var(--muted);font-size:13px;margin:0 0 26px}.contact-form{display:grid;gap:17px}.contact-form label{display:grid;gap:7px;font-size:12px;font-weight:700;color:var(--ink)}.contact-form label>span{font-size:10px;color:#b35d52;margin-left:5px}.contact-form input,.contact-form select,.contact-form textarea{width:100%;border:1px solid #d9e0e7;background:#fbfcfd;padding:13px 14px;font:inherit;font-size:14px;color:var(--ink);border-radius:2px;outline:none;box-sizing:border-box}.contact-form textarea{resize:vertical;min-height:150px}.contact-form .agree{display:flex;align-items:flex-start;gap:8px;font-weight:500;font-size:11px;color:var(--muted)}.contact-form .agree input{width:auto;margin-top:2px}.form-submit{border:0;background:var(--navy);color:#fff;padding:16px 20px;font:inherit;font-weight:800;cursor:pointer;display:flex;justify-content:center;gap:15px}.form-small{font-size:10px;color:#8996a3;line-height:1.6;margin:0}@media(max-width:900px){.contact-grid{grid-template-columns:1fr}.form-card{padding:28px}}
+</style></head>
 <body>
 <header class="header"><div class="container nav"><a class="brand" href="#top"><img src="logo.png" alt="太刀川組ロゴ"><span>株式会社 太刀川組</span></a><button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
 <nav class="menu"><a href="#about">私たちについて</a><a href="#business">事業内容</a><a href="#works">施工実績</a><a href="#strength">強み</a><a href="#company">会社概要</a><a class="cta" href="#contact">お問い合わせ</a></nav></div></header>
@@ -153,15 +155,31 @@
   </div>
 </section>
 <section class="section gray" id="company"><div class="container company"><div class="reveal"><div class="eyebrow">COMPANY</div><h2>会社概要</h2><p class="section-lead">地域に根ざし、現場に向き合う建設会社として歩んでいます。</p></div><table class="reveal"><tr><th>会社名</th><td>株式会社 太刀川組</td></tr><tr><th>代表者</th><td>太刀川 慶一</td></tr><tr><th>設立</th><td>昭和55年</td></tr><tr><th>事業内容</th><td>とび・土工・コンクリート工事</td></tr><tr><th>対応エリア</th><td>関東一円</td></tr><tr><th>所在地</th><td>〒132-0001 東京都江戸川区新堀1-33-3</td></tr></table></div></section>
-<section class="section contact" id="contact"><div class="container"><div class="section-head"><div><div class="eyebrow">CONTACT</div><h2>まずは、お気軽に<br>お問い合わせください。</h2></div><p class="section-lead">工事のご相談・お問い合わせを承ります。</p></div><div class="contact-box"><div class="contact-main"><div class="eyebrow">PHONE</div><div class="tel">03-3670-0534</div><div class="mail">tachikawa@nifty.com</div></div><div class="contact-hours"><p>お問い合わせ受付時間</p><strong>9:00 — 18:00</strong><p style="margin-top:25px">株式会社 太刀川組<br>東京都江戸川区新堀1-33-3</p></div></div></div>
-<div class="container final-cta reveal">
-  <div>
-    <h3>工事のご相談、お見積りなどお気軽に。</h3>
-    <p>土工・とび・コンクリート工事、建設補修についてお問い合わせください。</p>
-  </div>
-  <a class="btn btn-primary" href="tel:03-3670-0534">03-3670-0534 に電話する</a>
+<section class="section contact" id="contact">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">CONTACT</div><h2>まずは、お気軽に<br>お問い合わせください。</h2></div><p class="section-lead">工事のご相談・お見積り・協力会社様からのお問い合わせなど、お気軽にご連絡ください。</p></div>
+<div class="contact-grid">
+<div class="contact-info reveal">
+<div class="contact-panel"><div class="contact-label">PHONE</div><a class="contact-phone" href="tel:03-3670-0534">03-3670-0534</a><p>受付時間 9:00〜18:00</p></div>
+<div class="contact-panel"><div class="contact-label">EMAIL</div><a href="mailto:tachikawa@nifty.com">tachikawa@nifty.com</a><p>メールでのお問い合わせも承ります。</p></div>
+<div class="contact-panel"><div class="contact-label">ADDRESS</div><p>〒132-0001<br>東京都江戸川区新堀1-33-3</p></div>
 </div>
-</section>
+<div class="form-card reveal">
+<div class="form-note">FORM</div><h3>お問い合わせフォーム</h3><p class="form-lead">必要事項をご入力のうえ、送信してください。</p>
+<form action="https://formspree.io/f/moejvjdr" method="POST" class="contact-form">
+<input type="hidden" name="_subject" value="太刀川組ホームページからのお問い合わせ">
+<label>お名前 <span>必須</span><input type="text" name="name" autocomplete="name" required placeholder="山田 太郎"></label>
+<label>会社名<input type="text" name="company" autocomplete="organization" placeholder="株式会社〇〇"></label>
+<label>メールアドレス <span>必須</span><input type="email" name="email" autocomplete="email" required placeholder="example@example.com"></label>
+<label>電話番号<input type="tel" name="phone" autocomplete="tel" placeholder="03-0000-0000"></label>
+<label>お問い合わせ種別<select name="category"><option>工事について</option><option>お見積りについて</option><option>協力会社について</option><option>採用について</option><option>その他</option></select></label>
+<label>お問い合わせ内容 <span>必須</span><textarea name="message" rows="7" required placeholder="お問い合わせ内容をご入力ください"></textarea></label>
+<label class="agree"><input type="checkbox" required><span>入力内容を確認のうえ送信します。</span></label>
+<button class="form-submit" type="submit">お問い合わせを送信する <span>→</span></button>
+<p class="form-small">※送信機能を有効にするには、FormspreeのフォームID設定が必要です。</p>
+</form></div></div>
+<div class="final-cta reveal"><div><h3>お急ぎの場合は、お電話ください。</h3><p>土工・とび・コンクリート工事、建設補修についてお問い合わせください。</p></div><a class="btn btn-primary" href="tel:03-3670-0534">03-3670-0534 に電話する</a></div>
+</div></section>
 </main><footer class="footer"><div class="container footer-in"><div><strong>株式会社 太刀川組</strong>　土工・とび・コンクリート工事</div><div>© TAKICHIKAWA GUMI</div></div></footer>
 <div class="lightbox" id="lightbox"><button aria-label="閉じる">×</button><img id="lightboxImg" src="" alt=""><p id="lightboxTitle"></p></div>
 <script>
