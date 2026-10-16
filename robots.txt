@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tachikawagumi-site.pages.dev/sitemap.xml
