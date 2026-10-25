@@ -3,31 +3,31 @@
   "note": "Internal editorial data only. Do not render unverified entries on public pages. Reconcile each field with current primary documents and obtain publication approval before status=verified.",
   "constructionLicense": {
     "status": "historical_unverified",
-    "number": "東京都知事許可（般－7）第58800号",
+    "number": null,
     "category": "とび・土工工事業",
-    "validFrom": "2025-11-20",
-    "validUntil": "2030-11-19",
+    "validFrom": null,
+    "validUntil": null,
     "source": "過去の会社広告資料"
   },
   "qualifications": [
     {
       "name": "1級土木施工管理技士",
-      "count": 2,
+      "count": null,
       "status": "historical_unverified"
     },
     {
       "name": "2級土木施工管理技士",
-      "count": 2,
+      "count": null,
       "status": "historical_unverified"
     },
     {
       "name": "2級建築施工管理技士（躯体）",
-      "count": 3,
+      "count": null,
       "status": "historical_unverified"
     },
     {
       "name": "2級建築士",
-      "count": 1,
+      "count": null,
       "status": "historical_unverified"
     }
   ],
@@ -78,7 +78,7 @@
     }
   ],
   "editorialCopy": {
-    "historicalCandidate": "困ったときの、太刀川組。",
+    "historicalCandidate": null,
     "adopted": false
   },
   "publicationRule": "Only publish fields individually confirmed current and approved; never sum qualified-person counts into total employee count."
