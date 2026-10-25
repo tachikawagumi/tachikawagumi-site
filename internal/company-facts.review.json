@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "note": "Internal editorial data only. Do not render unverified entries on public pages. Reconcile each field with current primary documents and obtain publication approval before status=verified.",
+  "constructionLicense": {
+    "status": "historical_unverified",
+    "number": "東京都知事許可（般－7）第58800号",
+    "category": "とび・土工工事業",
+    "validFrom": "2025-11-20",
+    "validUntil": "2030-11-19",
+    "source": "過去の会社広告資料"
+  },
+  "qualifications": [
+    {
+      "name": "1級土木施工管理技士",
+      "count": 2,
+      "status": "historical_unverified"
+    },
+    {
+      "name": "2級土木施工管理技士",
+      "count": 2,
+      "status": "historical_unverified"
+    },
+    {
+      "name": "2級建築施工管理技士（躯体）",
+      "count": 3,
+      "status": "historical_unverified"
+    },
+    {
+      "name": "2級建築士",
+      "count": 1,
+      "status": "historical_unverified"
+    }
+  ],
+  "systems": [
+    {
+      "name": "CCUS",
+      "status": "historical_unverified"
+    },
+    {
+      "name": "グリーンサイト",
+      "status": "historical_unverified"
+    },
+    {
+      "name": "Buildee",
+      "status": "historical_unverified"
+    }
+  ],
+  "enrollments": [
+    {
+      "name": "社会保険",
+      "status": "historical_unverified"
+    },
+    {
+      "name": "厚生年金",
+      "status": "historical_unverified"
+    },
+    {
+      "name": "雇用保険",
+      "status": "historical_unverified"
+    },
+    {
+      "name": "建退共",
+      "status": "historical_unverified"
+    }
+  ],
+  "other": [
+    {
+      "name": "協力会社・職人ネットワークの具体的範囲",
+      "status": "unverified"
+    },
+    {
+      "name": "ドローン調査の提供",
+      "status": "unverified"
+    },
+    {
+      "name": "解体工事業・鋼構造物工事業・建築一式工事業の許可",
+      "status": "unverified"
+    }
+  ],
+  "editorialCopy": {
+    "historicalCandidate": "困ったときの、太刀川組。",
+    "adopted": false
+  },
+  "publicationRule": "Only publish fields individually confirmed current and approved; never sum qualified-person counts into total employee count."
+}
