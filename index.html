@@ -222,11 +222,13 @@ const header=document.querySelector('.header');
 window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>20),{passive:true});
 const toggle=document.querySelector('.menu-toggle'), menu=document.querySelector('.menu');
 if(toggle&&menu){
-  toggle.addEventListener('click',()=>{
-    const open=menu.classList.toggle('open');
+  const setMenuOpen=open=>{
+    menu.classList.toggle('open',open);
     toggle.setAttribute('aria-expanded',open?'true':'false');
-  });
-  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+    toggle.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');
+  };
+  toggle.addEventListener('click',()=>setMenuOpen(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenuOpen(false)));
 }
 </script>
 <script>
