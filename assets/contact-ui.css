@@ -1,0 +1,17 @@
+/* Shared contact actions; keep public pages within the navy/gold design. */
+body.has-contact-actions{background:#fff}
+.subpage-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;padding:18px max(18px,calc((100% - 1100px)/2));background:#0a1525;color:#fff}
+.subpage-header .subpage-brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-weight:800}
+.subpage-brand img{width:38px;height:38px;object-fit:contain;background:#fff;border-radius:5px;padding:3px}
+.subpage-header nav{display:flex;align-items:center;flex-wrap:wrap;gap:20px;font-size:13px}
+.subpage-header nav a{color:#fff;text-decoration:none}
+.subpage-header .contact-link{padding:9px 13px;border:1px solid #d8b66a;border-radius:3px}
+.subpage-header a:focus-visible{outline-color:#d8b66a}
+.mobile-contact-bar{display:none}
+@media(max-width:700px){
+ body.has-contact-actions{padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+ .subpage-header{gap:12px}.subpage-header nav{width:100%;justify-content:space-between;gap:12px}.subpage-header .desktop-phone{display:none}
+ .mobile-contact-bar{position:fixed;bottom:0;left:0;right:0;z-index:70;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:9px max(12px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom));background:rgba(10,21,37,.97);box-shadow:0 -4px 22px rgba(0,0,0,.2)}
+ .mobile-contact-bar a{display:block;text-align:center;padding:12px 6px;background:#fff;color:#0a1525;border-radius:3px;font-weight:800;font-size:14px;line-height:1.85;text-decoration:none}
+ .mobile-contact-bar a:last-child{background:#c79a3b;color:#0a1525}
+}
