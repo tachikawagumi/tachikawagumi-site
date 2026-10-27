@@ -109,8 +109,8 @@
 </style><style>
 .btn-primary,.final-cta .btn-primary{color:var(--navy)}.contact .contact-label{color:#d8b66a}.contact-form input:focus-visible,.contact-form select:focus-visible,.contact-form textarea:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid #896322;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-</style><noscript><style>.menu-toggle{display:none}.header{position:static}.nav{height:auto;display:block;padding:12px 0}.menu{display:flex!important;position:static;flex-direction:row;flex-wrap:wrap}.hero{padding-top:0}</style></noscript></head>
-<body>
+</style><noscript><style>.menu-toggle{display:none}.header{position:static}.nav{height:auto;display:block;padding:12px 0}.menu{display:flex!important;position:static;flex-direction:row;flex-wrap:wrap}.hero{padding-top:0}</style></noscript><link rel="stylesheet" href="assets/contact-ui.css"><script defer src="assets/contact-ui.js"></script></head>
+<body class="has-contact-actions" data-service="general">
 <header class="header"><div class="container nav"><a class="brand" href="#top"><img src="assets/optimized/logo-96.png" srcset="assets/optimized/logo-192.png 2x" alt="太刀川組ロゴ" width="96" height="96"><span>株式会社太刀川組</span></a><button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-menu">☰</button>
 <nav class="menu" id="primary-menu" aria-label="メインナビゲーション"><a href="#about">私たちについて</a><a href="#business">事業内容</a><a href="#works">施工実績</a><a href="#strength">強み</a><a href="#trust">信頼と施工体制</a><a href="#company">会社概要</a><a class="cta" href="#contact">お問い合わせ</a></nav></div></header>
 <main id="top">
@@ -180,8 +180,9 @@
 <div class="contact-panel"><div class="contact-label">ADDRESS</div><p>〒132-0001<br>東京都江戸川区新堀1-33-3</p></div>
 </div>
 <div class="form-card reveal">
-<div class="form-note">FORM</div><h3>お問い合わせフォーム</h3><p class="form-lead">必要事項をご入力のうえ、送信してください。</p>
+<div class="form-note">FORM</div><h3>お問い合わせフォーム</h3><p class="form-lead">工事内容や現場の状況など、分かる範囲でご記入ください。図面・写真の有無もお知らせください。</p>
 <form action="https://formspree.io/f/xaeqnqde" method="POST" class="contact-form" id="contactForm">
+<input type="hidden" name="source_service" value="general">
 <input type="hidden" name="_subject" value="太刀川組ホームページからのお問い合わせ">
 <label>お名前 <span>必須</span><input type="text" name="name" autocomplete="name" required placeholder="山田 太郎"></label>
 <label>会社名<input type="text" name="company" autocomplete="organization" placeholder="株式会社〇〇"></label>
@@ -240,8 +241,6 @@ if(toggle&&menu){
 }
 </script>
 <script>
-document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>{if(typeof gtag==='function')gtag('event','phone_click');}));
-document.querySelectorAll('a[href="#contact"]').forEach(a=>a.addEventListener('click',()=>{if(typeof gtag==='function')gtag('event','contact_click');}));
 const contactForm=document.getElementById('contactForm'),formStatus=document.getElementById('formStatus');
-if(contactForm&&formStatus){let submitting=false;contactForm.addEventListener('submit',async e=>{e.preventDefault();if(submitting||!contactForm.reportValidity())return;submitting=true;contactForm.setAttribute('aria-busy','true');const btn=contactForm.querySelector('[type="submit"]');btn.disabled=true;formStatus.textContent='送信しています…';try{const res=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});if(!res.ok)throw new Error('send');formStatus.textContent='お問い合わせを受け付けました。ありがとうございます。';contactForm.reset();if(typeof gtag==='function')gtag('event','generate_lead');}catch(err){formStatus.textContent='送信できませんでした。再度お試しいただくか、お電話でご連絡ください。';}finally{submitting=false;btn.disabled=false;contactForm.setAttribute('aria-busy','false');}});}
+if(contactForm&&formStatus){let submitting=false;contactForm.addEventListener('submit',async e=>{e.preventDefault();if(submitting||!contactForm.reportValidity())return;submitting=true;contactForm.setAttribute('aria-busy','true');const btn=contactForm.querySelector('[type="submit"]');btn.disabled=true;formStatus.textContent='送信しています…';try{const res=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});if(!res.ok)throw new Error('send');formStatus.textContent='お問い合わせを受け付けました。ありがとうございます。';if(typeof window.tachikawaTrackLead==='function')window.tachikawaTrackLead();else if(typeof gtag==='function')gtag('event','generate_lead',{service:'general'});contactForm.reset();}catch(err){formStatus.textContent='送信できませんでした。再度お試しいただくか、お電話でご連絡ください。';}finally{submitting=false;btn.disabled=false;contactForm.setAttribute('aria-busy','false');}});}
 </script></body></html>
