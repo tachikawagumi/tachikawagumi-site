@@ -109,6 +109,7 @@
 </style><style>
 .btn-primary,.final-cta .btn-primary{color:var(--navy)}.contact .contact-label{color:#d8b66a}.contact-form input:focus-visible,.contact-form select:focus-visible,.contact-form textarea:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid #896322;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.contact .form-card .form-error{color:#a34539;font-size:13px;line-height:1.7;margin:-10px 0 0}
 </style><noscript><style>.menu-toggle{display:none}.header{position:static}.nav{height:auto;display:block;padding:12px 0}.menu{display:flex!important;position:static;flex-direction:row;flex-wrap:wrap}.hero{padding-top:0}</style></noscript><link rel="stylesheet" href="assets/contact-ui.css"><script defer src="assets/contact-ui.js"></script></head>
 <body class="has-contact-actions" data-service="general">
 <header class="header"><div class="container nav"><a class="brand" href="#top"><img src="assets/optimized/logo-96.png" srcset="assets/optimized/logo-192.png 2x" alt="太刀川組ロゴ" width="96" height="96"><span>株式会社太刀川組</span></a><button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-menu">☰</button>
@@ -190,7 +191,8 @@
 <label>電話番号<input type="tel" name="phone" autocomplete="tel" placeholder="03-0000-0000"></label>
 <label>お問い合わせ種別<select name="category"><option>工事について</option><option>工場改修・補修</option><option>高速道路・遮音壁工事</option><option>お見積りについて</option><option>協力会社について</option><option>採用について</option><option>その他</option></select></label>
 <label>現場所在地（市区町村など）<input name="site_location" type="text" placeholder="例：東京都江戸川区"></label><label>希望工事時期<select name="desired_timing"><option value="">未定・相談したい</option><option>なるべく早く</option><option>1〜3か月以内</option><option>3か月以降</option></select></label><label>図面・現場写真<select name="documents_available"><option value="">未定・不明</option><option>あり</option><option>なし</option></select></label><p class="form-small">図面・現場写真は、お問い合わせ後に安全な方法をご案内してからお送りください。</p><label>お問い合わせ内容 <span>必須</span><textarea name="message" rows="7" required placeholder="お問い合わせ内容をご入力ください"></textarea></label>
-<label class="agree"><input type="checkbox" name="privacy_consent" value="agreed" required><span><a href="privacy/" target="_blank" rel="noopener" style="text-decoration:underline">プライバシーポリシー</a>に同意します。</span></label>
+<label class="agree"><input type="checkbox" name="privacy_consent" value="agreed" required><span><a href="privacy/" target="_blank" rel="noopener" style="text-decoration:underline">プライバシーポリシー</a>を確認し、個人情報の取り扱いに同意します。</span></label>
+<p id="privacyConsentError" class="form-error" role="alert" hidden>送信するには、プライバシーポリシーへの同意が必要です。</p>
 <button class="form-submit" type="submit">お問い合わせを送信する <span>→</span></button>
 <p class="form-small">送信内容はお問い合わせへの対応に利用します。</p>
 <p id="formStatus" role="status" aria-live="polite"></p></form></div></div>
@@ -242,5 +244,53 @@ if(toggle&&menu){
 </script>
 <script>
 const contactForm=document.getElementById('contactForm'),formStatus=document.getElementById('formStatus');
-if(contactForm&&formStatus){let submitting=false;contactForm.addEventListener('submit',async e=>{e.preventDefault();if(submitting||!contactForm.reportValidity())return;submitting=true;contactForm.setAttribute('aria-busy','true');const btn=contactForm.querySelector('[type="submit"]');btn.disabled=true;formStatus.textContent='送信しています…';try{const res=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});if(!res.ok)throw new Error('send');formStatus.textContent='お問い合わせを受け付けました。ありがとうございます。';if(typeof window.tachikawaTrackLead==='function')window.tachikawaTrackLead();else if(typeof gtag==='function')gtag('event','generate_lead',{service:'general'});contactForm.reset();}catch(err){formStatus.textContent='送信できませんでした。再度お試しいただくか、お電話でご連絡ください。';}finally{submitting=false;btn.disabled=false;contactForm.setAttribute('aria-busy','false');}});}
+if(contactForm&&formStatus){
+  let submitting=false;
+  const consent=contactForm.querySelector('[name="privacy_consent"]');
+  const consentError=document.getElementById('privacyConsentError');
+  const clearStatus=()=>{if(!submitting)formStatus.textContent='';};
+  const clearConsentError=()=>{
+    consentError.hidden=true;
+    consent.removeAttribute('aria-invalid');
+    consent.removeAttribute('aria-describedby');
+  };
+  contactForm.addEventListener('input',clearStatus);
+  contactForm.addEventListener('change',clearStatus);
+  // Native validation runs before submit, so clear stale feedback here too.
+  contactForm.addEventListener('invalid',clearStatus,true);
+  consent.addEventListener('invalid',event=>{
+    event.preventDefault();
+    consentError.hidden=false;
+    consent.setAttribute('aria-invalid','true');
+    consent.setAttribute('aria-describedby','privacyConsentError');
+    if(!contactForm.querySelector(':invalid:not([name="privacy_consent"])'))consent.focus();
+  });
+  consent.addEventListener('change',()=>{if(consent.checked)clearConsentError();});
+  contactForm.addEventListener('submit',async event=>{
+    event.preventDefault();
+    if(submitting)return;
+    clearStatus();
+    if(!contactForm.reportValidity())return;
+    submitting=true;
+    contactForm.setAttribute('aria-busy','true');
+    const btn=contactForm.querySelector('[type="submit"]');
+    btn.disabled=true;
+    formStatus.textContent='送信しています…';
+    try{
+      const res=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});
+      if(!res.ok)throw new Error('send');
+      formStatus.textContent='送信が完了しました。お問い合わせありがとうございます。';
+      if(typeof window.tachikawaTrackLead==='function')window.tachikawaTrackLead();
+      else if(typeof gtag==='function')gtag('event','generate_lead',{service:'general'});
+      contactForm.reset();
+      clearConsentError();
+    }catch(err){
+      formStatus.textContent='送信できませんでした。再度お試しいただくか、お電話でご連絡ください。';
+    }finally{
+      submitting=false;
+      btn.disabled=false;
+      contactForm.setAttribute('aria-busy','false');
+    }
+  });
+}
 </script></body></html>
