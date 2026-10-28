@@ -31,6 +31,7 @@
 .service-content .case-feature img{width:100%;height:100%;min-height:300px;object-fit:cover}
 .service-content .case-feature>div{padding:30px}
 .service-content .case-feature h3{font-size:clamp(22px,2.6vw,30px);line-height:1.5;margin:12px 0}
+.service-content .case-feature h3 span{display:block}
 .service-content .case-feature p{color:#e0e5ea}
 .service-content .case-feature .btn{background:#c79a3b;color:#0a1525;margin:10px 0 0}
 .service-content .case-badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;color:#76571f}
@@ -41,7 +42,7 @@
 .service-content .photo-card>div{padding:22px}
 .service-content .photo-card h3{font-size:20px;line-height:1.5;margin:8px 0 12px}
 .service-content .photo-card p{font-size:14px;margin:10px 0}
-.service-content .photo-card a{color:#76571f;font-weight:700;text-underline-offset:4px}
+.service-content .photo-card a{display:inline-block;padding:4px 0;color:#76571f;font-weight:700;text-underline-offset:4px}
 .service-content .photo-card .related{font-size:13px}
 .service-content .photo-only-note{font-size:14px;color:#626f80;max-width:850px}
 @media(max-width:1000px){.service-content .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
