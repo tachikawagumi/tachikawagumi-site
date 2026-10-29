@@ -1,0 +1,316 @@
+[
+  {
+    "id": "01",
+    "source_file": "01_completed_overview.jpg",
+    "source_sha256": "e643e8e4b5352f7777eb38578801f66c382e2aeecc1fd814e581241152451be6",
+    "source_bytes": 481950,
+    "exif_tags": 0,
+    "gps": false,
+    "permission": "owner_authorized_public_derivative_2026-10-29",
+    "copies": [
+      {
+        "file": "01_completed_overview.webp",
+        "width": 1536,
+        "height": 1152,
+        "bytes": 327888
+      },
+      {
+        "file": "01_completed_overview-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 91266
+      }
+    ],
+    "selection": "candidate-main",
+    "authorization": "Owner site-side permission recorded in PR #19 comment 6489998691; direct user instruction to incorporate photos and publish PR #18 then #19.",
+    "individual_rights_note": "No blanket third-party permission asserted. Visible person excluded by crop; identifying company/equipment labels redacted on public copies.",
+    "privacy_edits": {
+      "blur": [
+        [
+          1105,
+          95,
+          1185,
+          270
+        ]
+      ]
+    },
+    "public_copies": [
+      {
+        "file": "photos/01_completed_overview.webp",
+        "width": 1536,
+        "height": 1152,
+        "bytes": 325264,
+        "sha256": "2042e0c44013009c9c67579e88431850bfd28f68dc3d1c27c33f44f6e6abf230"
+      },
+      {
+        "file": "photos/01_completed_overview-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 90618,
+        "sha256": "bcb8b4eff1f138442e4aac100d8d74f28cf45871403b9eaa00072d5017771bcc"
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "source_file": "02_under_construction_frame.jpg",
+    "source_sha256": "05ffdd6dceaacf0e85599b9e4ad18a2ffea22b314f071ad865eb8c3d8fcb35a6",
+    "source_bytes": 450951,
+    "exif_tags": 0,
+    "gps": false,
+    "permission": "owner_authorized_public_derivative_2026-10-29",
+    "copies": [
+      {
+        "file": "02_under_construction_frame.webp",
+        "width": 1152,
+        "height": 1536,
+        "bytes": 271188
+      },
+      {
+        "file": "02_under_construction_frame-800.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 87690
+      }
+    ],
+    "selection": "candidate-frame",
+    "authorization": "Owner site-side permission recorded in PR #19 comment 6489998691; direct user instruction to incorporate photos and publish PR #18 then #19.",
+    "individual_rights_note": "No blanket third-party permission asserted. Visible person excluded by crop; identifying company/equipment labels redacted on public copies.",
+    "privacy_edits": {
+      "crop": [
+        190,
+        0,
+        1130,
+        1536
+      ]
+    },
+    "public_copies": [
+      {
+        "file": "photos/02_under_construction_frame.webp",
+        "width": 940,
+        "height": 1536,
+        "bytes": 225508,
+        "sha256": "ed398c9767e2e959fedae930edb8932fb2b3936bc3920b9869241ad2b69f26ad"
+      },
+      {
+        "file": "photos/02_under_construction_frame-800.webp",
+        "width": 490,
+        "height": 800,
+        "bytes": 74044,
+        "sha256": "3ec701cdeb66ae4c48b1af9dba57a1acb01ae2ecae03bbf3097fa34194ad5eeb"
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "source_file": "03_before_wide.jpg",
+    "source_sha256": "f6556f271bc028f2e86a922abcef1548f33b29436e5aa9a8fc3af42163d4a2ec",
+    "source_bytes": 529051,
+    "exif_tags": 0,
+    "gps": false,
+    "permission": "owner_authorized_public_derivative_2026-10-29",
+    "copies": [
+      {
+        "file": "03_before_wide.webp",
+        "width": 1536,
+        "height": 1152,
+        "bytes": 361158
+      },
+      {
+        "file": "03_before_wide-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 110064
+      }
+    ],
+    "selection": "candidate-before",
+    "authorization": "Owner site-side permission recorded in PR #19 comment 6489998691; direct user instruction to incorporate photos and publish PR #18 then #19.",
+    "individual_rights_note": "No blanket third-party permission asserted. Visible person excluded by crop; identifying company/equipment labels redacted on public copies.",
+    "privacy_edits": {
+      "blur": [
+        [
+          1064,
+          0,
+          1158,
+          158
+        ],
+        [
+          445,
+          765,
+          535,
+          815
+        ]
+      ]
+    },
+    "public_copies": [
+      {
+        "file": "photos/03_before_wide.webp",
+        "width": 1536,
+        "height": 1152,
+        "bytes": 349188,
+        "sha256": "be0a81caab52fa409a26c8d83df4afe35ea2181a68ffef50f4f4e51029f253ff"
+      },
+      {
+        "file": "photos/03_before_wide-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 108700,
+        "sha256": "9f46712f35b92964387468403885ed73fefd32fbdef5fb4ff9a9cd43807a253d"
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "source_file": "04_before_truck.jpg",
+    "source_sha256": "8c403cae3c7474b2e2276fc6c7103713c01fd4b0bc2e75b7a68f3d18eca9b9ef",
+    "source_bytes": 545255,
+    "exif_tags": 0,
+    "gps": false,
+    "permission": "pending",
+    "copies": [
+      {
+        "file": "04_before_truck.webp",
+        "width": 1536,
+        "height": 1152,
+        "bytes": 376860
+      },
+      {
+        "file": "04_before_truck-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 111300
+      }
+    ],
+    "selection": "reserve-vehicle-review"
+  },
+  {
+    "id": "05",
+    "source_file": "05_existing_steel_condition.jpg",
+    "source_sha256": "1faddc63578418d8f6c07b35d6822fade7b8845160191a1f8c20415e502df1e5",
+    "source_bytes": 421267,
+    "exif_tags": 0,
+    "gps": false,
+    "permission": "owner_authorized_public_derivative_2026-10-29",
+    "copies": [
+      {
+        "file": "05_existing_steel_condition.webp",
+        "width": 1152,
+        "height": 1536,
+        "bytes": 245828
+      },
+      {
+        "file": "05_existing_steel_condition-800.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 82472
+      }
+    ],
+    "selection": "candidate-condition",
+    "authorization": "Owner site-side permission recorded in PR #19 comment 6489998691; direct user instruction to incorporate photos and publish PR #18 then #19.",
+    "individual_rights_note": "No blanket third-party permission asserted. Visible person excluded by crop; identifying company/equipment labels redacted on public copies.",
+    "privacy_edits": {
+      "blur": [
+        [
+          155,
+          775,
+          239,
+          1115
+        ],
+        [
+          465,
+          788,
+          544,
+          842
+        ]
+      ]
+    },
+    "public_copies": [
+      {
+        "file": "photos/05_existing_steel_condition.webp",
+        "width": 1152,
+        "height": 1536,
+        "bytes": 241652,
+        "sha256": "7b337a4fc78c662a4c478eb6e004bcb374724292f45677c9403f9f7642ec22c0"
+      },
+      {
+        "file": "photos/05_existing_steel_condition-800.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 80854,
+        "sha256": "e428474a1b30cff9311749182708b03af19eaaa5ac0d29d2345254e1c1057a34"
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "source_file": "06_fabrication_cutting_wide.jpg",
+    "source_sha256": "c1844f7beba6a2942ae9016f7ef527a96e822f705ace1e2eb74bad664c48a2e9",
+    "source_bytes": 411358,
+    "exif_tags": 0,
+    "gps": false,
+    "permission": "pending",
+    "copies": [
+      {
+        "file": "06_fabrication_cutting_wide.webp",
+        "width": 1152,
+        "height": 1536,
+        "bytes": 234172
+      },
+      {
+        "file": "06_fabrication_cutting_wide-800.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 78362
+      }
+    ],
+    "selection": "not-selected"
+  },
+  {
+    "id": "07",
+    "source_file": "07_fabrication_cutting_close.jpg",
+    "source_sha256": "91d882c505305dcaa9ab0ade92b30957b88cc192d1537ada29d6d8766e5d0497",
+    "source_bytes": 363370,
+    "exif_tags": 0,
+    "gps": false,
+    "permission": "pending",
+    "copies": [
+      {
+        "file": "07_fabrication_cutting_close.webp",
+        "width": 1152,
+        "height": 1536,
+        "bytes": 198988
+      },
+      {
+        "file": "07_fabrication_cutting_close-800.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 68954
+      }
+    ],
+    "selection": "not-selected"
+  },
+  {
+    "id": "08",
+    "source_file": "08_fabrication_welding.jpg",
+    "source_sha256": "b288567fa26124447444233805c7778be9c09a527045248c9d1edcf3d4423253",
+    "source_bytes": 425003,
+    "exif_tags": 0,
+    "gps": false,
+    "permission": "pending",
+    "copies": [
+      {
+        "file": "08_fabrication_welding.webp",
+        "width": 1152,
+        "height": 1536,
+        "bytes": 255700
+      },
+      {
+        "file": "08_fabrication_welding-800.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 83024
+      }
+    ],
+    "selection": "reserve-rights-and-appearance-review"
+  }
+]
