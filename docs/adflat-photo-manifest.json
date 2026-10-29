@@ -6,7 +6,7 @@
     "source_bytes": 481950,
     "exif_tags": 0,
     "gps": false,
-    "permission": "pending",
+    "permission": "owner_authorized_public_derivative_2026-10-29",
     "copies": [
       {
         "file": "01_completed_overview.webp",
@@ -21,7 +21,35 @@
         "bytes": 91266
       }
     ],
-    "selection": "candidate-main"
+    "selection": "candidate-main",
+    "authorization": "Owner site-side permission recorded in PR #19 comment 6489998691; direct user instruction to incorporate photos and publish PR #18 then #19.",
+    "individual_rights_note": "No blanket third-party permission asserted. Visible person excluded by crop; identifying company/equipment labels redacted on public copies.",
+    "privacy_edits": {
+      "blur": [
+        [
+          1105,
+          95,
+          1185,
+          270
+        ]
+      ]
+    },
+    "public_copies": [
+      {
+        "file": "photos/01_completed_overview.webp",
+        "width": 1536,
+        "height": 1152,
+        "bytes": 325264,
+        "sha256": "2042e0c44013009c9c67579e88431850bfd28f68dc3d1c27c33f44f6e6abf230"
+      },
+      {
+        "file": "photos/01_completed_overview-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 90618,
+        "sha256": "bcb8b4eff1f138442e4aac100d8d74f28cf45871403b9eaa00072d5017771bcc"
+      }
+    ]
   },
   {
     "id": "02",
@@ -30,7 +58,7 @@
     "source_bytes": 450951,
     "exif_tags": 0,
     "gps": false,
-    "permission": "pending",
+    "permission": "owner_authorized_public_derivative_2026-10-29",
     "copies": [
       {
         "file": "02_under_construction_frame.webp",
@@ -45,7 +73,33 @@
         "bytes": 87690
       }
     ],
-    "selection": "candidate-frame"
+    "selection": "candidate-frame",
+    "authorization": "Owner site-side permission recorded in PR #19 comment 6489998691; direct user instruction to incorporate photos and publish PR #18 then #19.",
+    "individual_rights_note": "No blanket third-party permission asserted. Visible person excluded by crop; identifying company/equipment labels redacted on public copies.",
+    "privacy_edits": {
+      "crop": [
+        190,
+        0,
+        1130,
+        1536
+      ]
+    },
+    "public_copies": [
+      {
+        "file": "photos/02_under_construction_frame.webp",
+        "width": 940,
+        "height": 1536,
+        "bytes": 225508,
+        "sha256": "ed398c9767e2e959fedae930edb8932fb2b3936bc3920b9869241ad2b69f26ad"
+      },
+      {
+        "file": "photos/02_under_construction_frame-800.webp",
+        "width": 490,
+        "height": 800,
+        "bytes": 74044,
+        "sha256": "3ec701cdeb66ae4c48b1af9dba57a1acb01ae2ecae03bbf3097fa34194ad5eeb"
+      }
+    ]
   },
   {
     "id": "03",
@@ -54,7 +108,7 @@
     "source_bytes": 529051,
     "exif_tags": 0,
     "gps": false,
-    "permission": "pending",
+    "permission": "owner_authorized_public_derivative_2026-10-29",
     "copies": [
       {
         "file": "03_before_wide.webp",
@@ -69,7 +123,41 @@
         "bytes": 110064
       }
     ],
-    "selection": "candidate-before"
+    "selection": "candidate-before",
+    "authorization": "Owner site-side permission recorded in PR #19 comment 6489998691; direct user instruction to incorporate photos and publish PR #18 then #19.",
+    "individual_rights_note": "No blanket third-party permission asserted. Visible person excluded by crop; identifying company/equipment labels redacted on public copies.",
+    "privacy_edits": {
+      "blur": [
+        [
+          1064,
+          0,
+          1158,
+          158
+        ],
+        [
+          445,
+          765,
+          535,
+          815
+        ]
+      ]
+    },
+    "public_copies": [
+      {
+        "file": "photos/03_before_wide.webp",
+        "width": 1536,
+        "height": 1152,
+        "bytes": 349188,
+        "sha256": "be0a81caab52fa409a26c8d83df4afe35ea2181a68ffef50f4f4e51029f253ff"
+      },
+      {
+        "file": "photos/03_before_wide-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 108700,
+        "sha256": "9f46712f35b92964387468403885ed73fefd32fbdef5fb4ff9a9cd43807a253d"
+      }
+    ]
   },
   {
     "id": "04",
@@ -102,7 +190,7 @@
     "source_bytes": 421267,
     "exif_tags": 0,
     "gps": false,
-    "permission": "pending",
+    "permission": "owner_authorized_public_derivative_2026-10-29",
     "copies": [
       {
         "file": "05_existing_steel_condition.webp",
@@ -117,7 +205,41 @@
         "bytes": 82472
       }
     ],
-    "selection": "candidate-condition"
+    "selection": "candidate-condition",
+    "authorization": "Owner site-side permission recorded in PR #19 comment 6489998691; direct user instruction to incorporate photos and publish PR #18 then #19.",
+    "individual_rights_note": "No blanket third-party permission asserted. Visible person excluded by crop; identifying company/equipment labels redacted on public copies.",
+    "privacy_edits": {
+      "blur": [
+        [
+          155,
+          775,
+          239,
+          1115
+        ],
+        [
+          465,
+          788,
+          544,
+          842
+        ]
+      ]
+    },
+    "public_copies": [
+      {
+        "file": "photos/05_existing_steel_condition.webp",
+        "width": 1152,
+        "height": 1536,
+        "bytes": 241652,
+        "sha256": "7b337a4fc78c662a4c478eb6e004bcb374724292f45677c9403f9f7642ec22c0"
+      },
+      {
+        "file": "photos/05_existing_steel_condition-800.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 80854,
+        "sha256": "e428474a1b30cff9311749182708b03af19eaaa5ac0d29d2345254e1c1057a34"
+      }
+    ]
   },
   {
     "id": "06",
