@@ -1,0 +1,173 @@
+[
+  {
+    "source": "1000004595.jpg",
+    "name": "01_completed_inside",
+    "description": "完成：室内側から見たアルミ複合板",
+    "size_full": 97766,
+    "image_size": [
+      1536,
+      1152
+    ],
+    "sha256": "839127810c3eb882d67b237022008d46fd2cc9b220e3d375440bc8b22f510835",
+    "public_sha256": "839127810c3eb882d67b237022008d46fd2cc9b220e3d375440bc8b22f510835",
+    "public_bytes": 97766,
+    "public_dimensions": [
+      1536,
+      1152
+    ]
+  },
+  {
+    "source": "1000003806.jpg",
+    "name": "02_original_exterior",
+    "description": "施工前：既存パネルの外観",
+    "size_full": 74290,
+    "image_size": [
+      1152,
+      1536
+    ],
+    "sha256": "1b9c8f1f47cf0c9496b7923f346e307ef794cad16e2d7847da7fbbfd6eb7118e",
+    "public_sha256": "1b9c8f1f47cf0c9496b7923f346e307ef794cad16e2d7847da7fbbfd6eb7118e",
+    "public_bytes": 74290,
+    "public_dimensions": [
+      1152,
+      1536
+    ]
+  },
+  {
+    "source": "1000003809.jpg",
+    "name": "03_fallen_resin_panel",
+    "description": "破損後：落下して回収された黒い樹脂板",
+    "size_full": 154764,
+    "image_size": [
+      1152,
+      1536
+    ],
+    "sha256": "751ebdef7f7c931b51396da829e957cee67d466934c0ec4fa5c88650a2bd7210",
+    "public_sha256": "751ebdef7f7c931b51396da829e957cee67d466934c0ec4fa5c88650a2bd7210",
+    "public_bytes": 154764,
+    "public_dimensions": [
+      1152,
+      1536
+    ]
+  },
+  {
+    "source": "1000004588.jpg",
+    "name": "04_temporary_repair",
+    "description": "仮復旧：再固定した黒い樹脂板",
+    "size_full": 196940,
+    "image_size": [
+      1536,
+      1152
+    ],
+    "sha256": "1d7f4f4796ddde7981353f3fc80adc6369c4a0308e7629b1a4341d6cd5af348c",
+    "public_sha256": "1d7f4f4796ddde7981353f3fc80adc6369c4a0308e7629b1a4341d6cd5af348c",
+    "public_bytes": 196940,
+    "public_dimensions": [
+      1536,
+      1152
+    ]
+  },
+  {
+    "source": "1000003821.jpg",
+    "name": "05_scaffolding",
+    "description": "仮復旧：足場を使用した作業",
+    "size_full": 213152,
+    "image_size": [
+      1152,
+      1536
+    ],
+    "sha256": "ed3758235ace1fbc37d79fd4a6bc168b03c278cc8da36c8f9132214f948af233",
+    "public_sha256": "ed3758235ace1fbc37d79fd4a6bc168b03c278cc8da36c8f9132214f948af233",
+    "public_bytes": 213152,
+    "public_dimensions": [
+      1152,
+      1536
+    ]
+  },
+  {
+    "source": "1000003824.jpg",
+    "name": "06_gasket",
+    "description": "部材：既存パッキン",
+    "size_full": 48296,
+    "image_size": [
+      1152,
+      1536
+    ],
+    "sha256": "509cc6412b9ce89a8150f35d1bcb095afd5569e997a9db3cc8cb5f19a780f0b0",
+    "public_sha256": "509cc6412b9ce89a8150f35d1bcb095afd5569e997a9db3cc8cb5f19a780f0b0",
+    "public_bytes": 48296,
+    "public_dimensions": [
+      1152,
+      1536
+    ]
+  },
+  {
+    "source": "1000004590.jpg",
+    "name": "07_panel_work",
+    "description": "本施工：パネル取付作業",
+    "size_full": 109556,
+    "image_size": [
+      1536,
+      1152
+    ],
+    "sha256": "536c6cc5d64f7167840649444cbcecb67b1abf5bf2b0b14382609c849b65ad69",
+    "public_sha256": "ccffc277db82aba7b380a0e4819c292c8a4ff3e2085f40ae24f27a1c9cf5495e",
+    "public_bytes": 105684,
+    "public_dimensions": [
+      1536,
+      932
+    ],
+    "privacy_edit": "公開用コピーのみ上端220pxをトリミング。顔の一部と背景を除外。施工内容の補完・生成なし。元画像は提供ZIPに保全。"
+  },
+  {
+    "source": "1000004594.jpg",
+    "name": "08_caulking",
+    "description": "本施工：コーキング打ち直し",
+    "size_full": 87782,
+    "image_size": [
+      1536,
+      1152
+    ],
+    "sha256": "c5dd85312718f64480ec2b58d9b811b170a6fc8c3d12f65d6496ce3e23104fe5",
+    "public_sha256": "c5dd85312718f64480ec2b58d9b811b170a6fc8c3d12f65d6496ce3e23104fe5",
+    "public_bytes": 87782,
+    "public_dimensions": [
+      1536,
+      1152
+    ]
+  },
+  {
+    "source": "1000004599.jpg",
+    "name": "09_completed_outside",
+    "description": "完成：外側から見た交換後のフェンス",
+    "size_full": 110094,
+    "image_size": [
+      1536,
+      1152
+    ],
+    "sha256": "a61fdd1736780667e8c5627644ff0f45e52d07ae64360f83d93a66808771db76",
+    "public_sha256": "a61fdd1736780667e8c5627644ff0f45e52d07ae64360f83d93a66808771db76",
+    "public_bytes": 110094,
+    "public_dimensions": [
+      1536,
+      1152
+    ]
+  },
+  {
+    "source": "1000004600.jpg",
+    "name": "10_completed_side",
+    "description": "完成：外側から見た交換後のフェンス別角度",
+    "size_full": 118850,
+    "image_size": [
+      1536,
+      1152
+    ],
+    "sha256": "8852b674ee96606c4fa5bdf3de3cf6434525611a44889d31c7f0d80f7709e8c1",
+    "public_sha256": "8852b674ee96606c4fa5bdf3de3cf6434525611a44889d31c7f0d80f7709e8c1",
+    "public_bytes": 118850,
+    "public_dimensions": [
+      1536,
+      1152
+    ]
+  }
+]
