@@ -16,20 +16,24 @@ if out==repo or repo in out.parents:
 page=out/'works/adflat-temporary-enclosure/index.html'
 if not page.is_file():
     raise SystemExit('Copy the review site skeleton to OUTPUT_SITE_DIR before preparing photos.')
+# Candidates selected in the owner review; publication permission remains pending.
 source_files={
-'01':'01_completed_overview.jpg','02':'02_under_construction_frame.jpg',
-'03':'03_before_wide.jpg','04':'04_before_truck.jpg','05':'05_existing_steel_condition.jpg',
-'06':'06_fabrication_cutting_wide.jpg','07':'07_fabrication_cutting_close.jpg','08':'08_fabrication_welding.jpg'}
+'01':'01_completed_overview.jpg','03':'03_before_wide.jpg',
+'05':'05_existing_steel_condition.jpg','02':'02_under_construction_frame.jpg'}
 alt={
 '01':'アドフラットパネルを設置した仮囲いの完成全景',
-'02':'柱と単管の骨組みと設置前のアドフラットパネル',
 '03':'仮囲い設置前の敷地外側からの全景',
-'04':'仮囲い設置前の資材とトラックのある現場',
-'05':'既存鉄骨とその周囲の現場条件',
-'06':'鋼製部材を切断加工している様子',
-'07':'鋼製部材の切断加工の近景',
-'08':'鋼製部材の溶接作業'}
-assets=page.parent/'photos';assets.mkdir(exist_ok=True)
+'05':'控えの設置に利用した既存鉄骨と周囲の作業空間',
+'02':'柱と単管の骨組みと設置前のアドフラットパネル'}
+captions={
+'01':('完成全景','骨組みにアドフラットパネルを取り付けた仮囲いの外観です。'),
+'03':('施工前の敷地','仮囲いを設置する前の敷地外側からの様子です。'),
+'05':('既存鉄骨と作業スペース','控えの取り付け先となる既存鉄骨と、その周囲の状況です。'),
+'02':('骨組み施工中','柱・単管による骨組みと、取り付け前のパネルがある施工中の様子です。')}
+assets=page.parent/'photos'
+if assets.exists() and any(assets.iterdir()):
+    raise SystemExit('Use a fresh output site: do not mix earlier unselected photos into this review.')
+assets.mkdir(exist_ok=True)
 audit=[];html=page.read_text()
 for n,name in source_files.items():
     original=source/name
@@ -46,18 +50,23 @@ for n,name in source_files.items():
             row['copies'].append({'file':target.name,'width':copy.width,'height':copy.height,'bytes':target.stat().st_size})
             variants.append((target.name,copy.width,copy.height))
         full,small=variants
-        sizes='(max-width:720px) calc(100vw - 36px), 1032px' if n=='01' else '(max-width:700px) calc(100vw - 36px), 504px'
+        sizes='(max-width:720px) calc(100vw - 36px), 1032px' if n=='01' else '(max-width:700px) calc(100vw - 36px), 560px' if n=='02' else '(max-width:700px) calc(100vw - 36px), 503px'
         loading='fetchpriority="high"' if n=='01' else 'loading="lazy" fetchpriority="low"'
         markup=f'<a href="photos/{full[0]}" aria-label="{alt[n]}：写真を大きく見る"><img src="photos/{small[0]}" srcset="photos/{small[0]} {small[1]}w, photos/{full[0]} {full[1]}w" sizes="{sizes}" width="{full[1]}" height="{full[2]}" alt="{alt[n]}" {loading} decoding="async"><span class="photo-note">写真を大きく見る →</span></a>'
-        pattern=r'(<figure data-photo="'+n+r'">)<div class="photo-pending">.*?</div>'
-        html,count=re.subn(pattern,lambda m:m[1]+markup,html,flags=re.S)
-        if count!=1:raise ValueError('Expected exactly one photo slot '+n)
+        title,caption=captions[n]
+        extra=' class="frame-photo"' if n=='02' else ''
+        figure=f'<figure data-photo="{n}"{extra}>{markup}<figcaption><strong>{title}</strong>{caption}</figcaption></figure>'
+        marker='<!-- approved-photo:'+n+' -->'
+        if html.count(marker)!=1:raise ValueError('Expected exactly one photo marker '+n)
+        html=html.replace(marker,figure,1)
         audit.append(row)
-html=html.replace('確認用原稿：案件・写真の公開可否は社長確認待ちです。外部プレビューには未承認の写真を掲載していません。','社長確認用：写真入りのローカル原稿です。人物・施設・撮影者等の掲載許諾と、必要な匿名化の確認後に公開を判断してください。')
 page.write_text(html)
 index=out/'works/index.html'
 s=index.read_text()
-s=s.replace('<div class="photo-pending" style="min-height:260px;display:grid;place-content:center;text-align:center;padding:24px;background:#eef1f3;color:#3a4b60"><strong>アドフラット仮囲い</strong><span>写真の掲載確認待ち</span></div>','<img src="adflat-temporary-enclosure/photos/01_completed_overview-800.webp" width="800" height="600" alt="アドフラット仮囲いの完成全景" loading="lazy" decoding="async">',1)
+marker='<!-- approved-adflat-thumbnail -->'
+if s.count(marker)!=1:raise ValueError('Expected one adflat thumbnail marker')
+s=s.replace(marker,'<img src="adflat-temporary-enclosure/photos/01_completed_overview-800.webp" width="800" height="600" alt="アドフラット仮囲いの完成全景" loading="lazy" decoding="async">',1)
+s=s.replace('id="adflat-case" style="grid-template-columns:1fr"','id="adflat-case"',1)
 index.write_text(s)
 (out/'photo-audit.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2))
 print(json.dumps({'photos':len(audit),'source_bytes':sum(x['source_bytes'] for x in audit),'full_webp_bytes':sum(x['copies'][0]['bytes'] for x in audit),'small_webp_bytes':sum(x['copies'][1]['bytes'] for x in audit),'permission':'all pending'},ensure_ascii=False))
