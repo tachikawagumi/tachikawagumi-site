@@ -68,40 +68,6 @@
     ]
   },
   {
-    "source": "1000003821.jpg",
-    "name": "05_scaffolding",
-    "description": "仮復旧：足場を使用した作業",
-    "size_full": 213152,
-    "image_size": [
-      1152,
-      1536
-    ],
-    "sha256": "ed3758235ace1fbc37d79fd4a6bc168b03c278cc8da36c8f9132214f948af233",
-    "public_sha256": "ed3758235ace1fbc37d79fd4a6bc168b03c278cc8da36c8f9132214f948af233",
-    "public_bytes": 213152,
-    "public_dimensions": [
-      1152,
-      1536
-    ]
-  },
-  {
-    "source": "1000003824.jpg",
-    "name": "06_gasket",
-    "description": "部材：既存パッキン",
-    "size_full": 48296,
-    "image_size": [
-      1152,
-      1536
-    ],
-    "sha256": "509cc6412b9ce89a8150f35d1bcb095afd5569e997a9db3cc8cb5f19a780f0b0",
-    "public_sha256": "509cc6412b9ce89a8150f35d1bcb095afd5569e997a9db3cc8cb5f19a780f0b0",
-    "public_bytes": 48296,
-    "public_dimensions": [
-      1152,
-      1536
-    ]
-  },
-  {
     "source": "1000004590.jpg",
     "name": "07_panel_work",
     "description": "本施工：パネル取付作業",
