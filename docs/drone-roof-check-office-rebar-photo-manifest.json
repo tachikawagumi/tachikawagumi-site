@@ -1,0 +1,33 @@
+{
+  "source": "1000004693.jpg",
+  "source_type": "user-provided real drone photograph",
+  "case": "own office rebuild, rebar inspection from aerial image",
+  "crop_original_pixels": [
+    395,
+    65,
+    1170,
+    740
+  ],
+  "original_size": [
+    1536,
+    864
+  ],
+  "files": [
+    {
+      "path": "drone-roof-check/photos/office-rebar-aerial.webp",
+      "width": 775,
+      "height": 675,
+      "bytes": 93848,
+      "sha256": "3eaa8996974f0d8cb713aa5e3a8542c4a60638890fe36ab29ac75b538c5d6f3a",
+      "exif_fields": 0
+    },
+    {
+      "path": "drone-roof-check/photos/office-rebar-aerial-600.webp",
+      "width": 600,
+      "height": 523,
+      "bytes": 54636,
+      "sha256": "cbc020f3ba52ccd38e0f4fe72ac9a11fedc5024b1e4945b2a6719ddec9e6f4a0",
+      "exif_fields": 0
+    }
+  ]
+}
