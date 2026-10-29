@@ -1,0 +1,49 @@
+/* Content navigation and case introductions; shared by the works and service pages. */
+.service-content .breadcrumb{font-size:13px;color:#626f80;margin:0 0 28px}
+.service-content .breadcrumb ol{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.service-content .breadcrumb li+li:before{content:"/";margin-right:8px;color:#626f80}
+.service-content .breadcrumb a{color:#76571f;text-underline-offset:3px}
+.service-content .topic-nav{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 38px}
+.service-content .topic-nav a{padding:9px 14px;border:1px solid #dfe5eb;background:#f5f7f9;text-decoration:none;font-size:14px;font-weight:700}
+.service-content section[id],.service-content article[id]{scroll-margin-top:24px}
+.service-content .info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:24px 0}
+.service-content .info-card{padding:24px;background:#f5f7f9;border-top:3px solid #c79a3b}
+.service-content .info-card h3{margin:0 0 12px;font-size:20px}
+.service-content .info-card ul{padding-left:1.3em;margin:0}
+.service-content .info-card li+li{margin-top:8px}
+.service-content .scope-note{padding:20px 24px;border-left:3px solid #c79a3b;background:#f5f7f9;font-size:14px}
+.service-content .scope-note p{margin:0}
+.service-content .scope-note p+p{margin-top:10px}
+.service-content .case-links{display:grid;gap:12px;margin:22px 0}
+.service-content .case-links a{display:block;padding:18px 22px;border:1px solid #dfe5eb;text-decoration:none}
+.service-content .case-links strong{display:block;color:#0a1525}
+.service-content .case-links span{display:block;margin-top:5px;color:#626f80;font-size:14px}
+.service-content .case-links small{display:block;color:#76571f;margin-top:8px;font-weight:700}
+.service-content .faq-list details{border-bottom:1px solid #dfe5eb;padding:18px 0}
+.service-content .faq-list summary{cursor:pointer;font-weight:700;color:#0a1525}
+.service-content .faq-list details p{margin:12px 0 0}
+.service-content summary:focus-visible{outline:3px solid #896322;outline-offset:4px}
+.service-content .consult-steps{padding-left:1.5em}
+.service-content .consult-steps li{padding:8px 0 8px 8px}
+.service-content .consult-steps strong{display:block}
+.service-content .works-lead{max-width:760px;font-size:17px}
+.service-content .case-feature{display:grid;grid-template-columns:42% 1fr;margin:24px 0 42px;background:#0a1525;color:#fff}
+.service-content .case-feature img{width:100%;height:100%;min-height:300px;object-fit:cover}
+.service-content .case-feature>div{padding:30px}
+.service-content .case-feature h3{font-size:clamp(22px,2.6vw,30px);line-height:1.5;margin:12px 0}
+.service-content .case-feature h3 span{display:block}
+.service-content .case-feature p{color:#e0e5ea}
+.service-content .case-feature .btn{background:#c79a3b;color:#0a1525;margin:10px 0 0}
+.service-content .case-badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;color:#76571f}
+.service-content .case-feature .case-badge{color:#e2bf74}
+.service-content .photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:24px 0 36px}
+.service-content .photo-card{min-width:0;border:1px solid #dfe5eb;background:#fff}
+.service-content .photo-card img{display:block;width:100%;height:230px;object-fit:contain;background:#eef1f3}
+.service-content .photo-card>div{padding:22px}
+.service-content .photo-card h3{font-size:20px;line-height:1.5;margin:8px 0 12px}
+.service-content .photo-card p{font-size:14px;margin:10px 0}
+.service-content .photo-card a{display:inline-block;padding:4px 0;color:#76571f;font-weight:700;text-underline-offset:4px}
+.service-content .photo-card .related{font-size:13px}
+.service-content .photo-only-note{font-size:14px;color:#626f80;max-width:850px}
+@media(max-width:1000px){.service-content .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.service-content .info-grid,.service-content .photo-grid,.service-content .case-feature{grid-template-columns:1fr}.service-content .info-card{padding:20px}.service-content .case-feature img{height:230px;min-height:0}.service-content .case-feature>div{padding:22px}.service-content .topic-nav{gap:8px}.service-content .topic-nav a{padding:8px 10px;font-size:13px}.service-content .breadcrumb{margin-bottom:20px}}
