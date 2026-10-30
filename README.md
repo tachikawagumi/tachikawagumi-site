@@ -1,219 +1,62 @@
-# 株式会社太刀川組 - 公式ウェブサイト
+# 株式会社太刀川組｜公式ホームページ
 
-公式ウェブサイトです。土工・とび・コンクリート工事の専門企業としての情報を提供しています。
+**公式サイト：<https://tachikawagumi.co.jp/>**
 
-## プロジェクト情報
+株式会社太刀川組（東京都江戸川区）の公式ホームページを管理する公開GitHubリポジトリです。  
+**工事のご相談・お見積もり・お問い合わせは、[公式サイト](https://tachikawagumi.co.jp/#contact)からお願いします。** このGitHubリポジトリはお問い合わせ窓口ではありません。
 
-- **会社名**: 株式会社太刀川組
-- **代表者**: 太刀川 慶一
-- **設立**: 昭和55年（創業40年以上）
-- **事業内容**: とび・土工・コンクリート工事
-- **住所**: 〒132-0001 東京都江戸川区新堀1-33-3
-- **電話**: 03-3670-0534
-- **メール**: tachikawa@nifty.com
-- **対応エリア**: 関東一円
+## 会社・サイトについて
 
-## ウェブサイト構成
+- **会社名：** 株式会社太刀川組
+- **創業：** 昭和55年（1980年）
+- **所在地：** 東京都江戸川区新堀1-33-3
+- **電話：** 03-3670-0534
+- **主な工事：** とび・土工・コンクリート工事、工場改修・補修、高速道路・遮音壁関連工事など
+- **建設業許可：** 東京都知事許可（般－7）第58800号／とび・土工工事業
+- **主なご相談エリア：** 東京・千葉・埼玉南部・川崎周辺（現場条件等を確認のうえご案内）
 
-### ページセクション
+掲載内容・施工範囲・許可情報などの詳細は、必ず公式サイトの最新の案内をご確認ください。
 
-1. **ヘッダー・ナビゲーション**
-   - 企業ロゴ（logo.png）
-   - 企業名
-   - ナビゲーションメニュー
+## 公開ページ
 
-2. **ヒーロー セクション**
-   - 企業名表示
-   - 「創業40年以上」のキャッチコピー
-   - 事業内容の説明
-   - CTA ボタン（電話・事業内容）
+| 内容 | 公式URL |
+| --- | --- |
+| トップ・会社案内・お問い合わせ | https://tachikawagumi.co.jp/ |
+| 工場改修・補修 | https://tachikawagumi.co.jp/factory-renovation/ |
+| 高速道路・遮音壁 | https://tachikawagumi.co.jp/sound-barrier/ |
+| 施工実績一覧 | https://tachikawagumi.co.jp/works/ |
+| メッシュフェンス一時撤去・復旧 | https://tachikawagumi.co.jp/works/mesh-fence-restoration/ |
+| アドフラット仮囲い | https://tachikawagumi.co.jp/works/adflat-temporary-enclosure/ |
+| フェンス部分改修 | https://tachikawagumi.co.jp/works/fence-panel-renovation/ |
+| ドローンによる屋根・高所の現況確認 | https://tachikawagumi.co.jp/drone-roof-check/ |
+| プライバシーポリシー | https://tachikawagumi.co.jp/privacy/ |
 
-3. **事業内容セクション**
-   - とび工事
-   - 土工事
-   - コンクリート工事
-   - 建設補修
+ドローンページは**撮影による外観・現況確認の相談窓口**です。撮影だけで構造・劣化状態・安全性などの専門的な診断が確定するものではありません。
 
-4. **会社概要セクション**
-   - 企業情報
-   - 企業理念
-   - 詳細情報（会社名、代表者、設立年、事業内容、対応エリア）
+## サイトの構成と運用
 
-5. **お問い合わせセクション**
-   - 電話番号（クリック可能）
-   - メールアドレス（クリック可能）
-   - 営業時間
+- HTML・CSS・JavaScriptを中心とした静的サイトです。WordPress等のCMSを前提としません。
+- GitHubの `main` ブランチを管理し、Cloudflare Pages（プロジェクト名：`tachikawagumi-site`）で公開しています。
+- 公式ドメインは `tachikawagumi.co.jp` です。
+- 主要ファイル：
+  - `index.html` — トップページ
+  - `factory-renovation/`、`sound-barrier/`、`works/`、`drone-roof-check/`、`privacy/` — 下層ページ
+  - `style.css`、`styles.css`、`script.js`、`assets/` — 表示・操作・画像など
+  - `sitemap.xml`、`robots.txt`、`404.html` — 検索エンジン向け設定・404ページ
+- お問い合わせフォーム、アクセス解析、内部リンクなどは公式サイト側の実装を参照してください。
 
-6. **アクセスセクション**
-   - Google Maps 埋め込み
-   - 住所情報
+### 公開時の確認
 
-7. **フッター**
-   - 企業情報
-   - 連絡先
-   - 営業時間
-   - コピーライト
+1. GitHubの `main` へのマージだけで公開完了と判断せず、**Cloudflare Pagesのデプロイ成功**を確認する。
+2. 公式ドメインで、対象ページが正常に開くこと、写真・内部リンクが表示できることを確認する。
+3. `sitemap.xml`、`robots.txt`、問い合わせ導線など、関連箇所への影響を確認する。
+4. 問い合わせフォームの実送信は、必要な場合に適切な手順で実施する。
 
-## ファイル構成
+## 写真と情報の取り扱い
 
-```
-tachikawagumi-site/
-├── index.html          # メインページ
-├── style.css           # スタイルシート
-├── script.js           # JavaScript
-├── logo.png            # 企業ロゴ（オプション）
-├── README.md           # このファイル
-└── .gitignore          # Git 設定
-```
+施工写真は掲載権利・プライバシー・撮影情報を確認して取り扱います。自社の担当範囲と他社の施工部分を混同せず、AI生成の比較イメージを掲載する場合は実際の施工写真と区別して表示します。
 
-## ローカル開発
+---
 
-### 必要環境
-- ウェブブラウザ（Chrome, Firefox, Safari など）
-- テキストエディタまたは IDE
-
-### 実行方法
-
-1. リポジトリをクローンします：
-   ```bash
-   git clone https://github.com/tachikawagumi/tachikawagumi-site.git
-   cd tachikawagumi-site
-   ```
-
-2. `index.html` をブラウザで開きます：
-   ```bash
-   # macOS
-   open index.html
-   
-   # Linux
-   xdg-open index.html
-   
-   # Windows
-   start index.html
-   ```
-
-3. または、ローカルサーバーを起動します：
-   ```bash
-   # Python 3
-   python -m http.server 8000
-   
-   # Python 2
-   python -m SimpleHTTPServer 8000
-   
-   # Node.js (http-server)
-   npx http-server
-   ```
-
-   その後 `http://localhost:8000` にアクセスします。
-
-## Cloudflare Pages でのデプロイ
-
-### デプロイ手順
-
-1. [Cloudflare Pages](https://pages.cloudflare.com/) にログインします
-
-2. 「Create a project」をクリック
-
-3. このリポジトリを選択
-
-4. ビルド設定を以下のように設定します：
-   - **フレームワーク**: なし（静的サイト）
-   - **ビルドコマンド**: （空白）
-   - **ビルド出力ディレクトリ**: `/` （または `.`）
-
-5. 環境変数（不要）
-
-6. 「Deploy」をクリック
-
-### デプロイ後
-
-- Cloudflare Pages が自動的にサイトをビルドしてデプロイします
-- 各コミットごとにプレビュー URL が生成されます
-- `main` ブランチへのプッシュで本番環境にデプロイされます
-
-## ロゴについて
-
-企業ロゴを使用するには：
-
-1. ロゴファイル（PNG 形式）を `logo.png` として保存します
-2. ファイルをリポジトリのルートディレクトリに配置します
-3. HTML に自動的に読み込まれます
-
-ロゴが見つからない場合、ヘッダーには企業名テキストのみが表示されます。
-
-## カスタマイズ
-
-### 色の変更
-
-`style.css` で以下の色を変更できます：
-
-- **プライマリカラー**: `#f39c12` （オレンジ）
-- **ダークカラー**: `#2c3e50` （濃いグレー）
-
-### 連絡先情報の更新
-
-`index.html` で以下の情報を更新してください：
-
-```html
-<!-- 電話番号 -->
-<a href="tel:03-3670-0534">03-3670-0534</a>
-
-<!-- メールアドレス -->
-<a href="mailto:tachikawa@nifty.com">tachikawa@nifty.com</a>
-```
-
-### Google Maps の埋め込みを更新
-
-Google Maps Embed API の URL を生成：
-
-1. [Google Maps Embed API](https://developers.google.com/maps/documentation/embed/get-started) にアクセス
-2. 住所を検索して embed URL を取得
-3. `index.html` の `<iframe src="..."` の URL を更新
-
-## レスポンシブデザイン
-
-サイトはモバイル、タブレット、デスクトップに対応しています：
-
-- **モバイル**: 320px～
-- **タブレット**: 768px～
-- **デスクトップ**: 1200px～
-
-## パフォーマンス
-
-- 静的サイト（動的なバックエンドなし）
-- 最小限の JavaScript
-- CSS は最適化済み
-- 画像は必要に応じて圧縮
-
-## ブラウザ対応
-
-- Chrome / Edge（最新版）
-- Firefox（最新版）
-- Safari（11+）
-- モバイルブラウザ（iOS Safari, Chrome Mobile など）
-
-## セキュリティ
-
-- HTTPS デフォルト（Cloudflare Pages）
-- XSS 対策実装
-- メタデータは安全に設定
-
-## ライセンス
-
-© 2024 株式会社太刀川組. All rights reserved.
-
-## サポート
-
-問題が発生した場合：
-
-1. [GitHub Issues](https://github.com/tachikawagumi/tachikawagumi-site/issues) で報告してください
-2. 電話でお問い合わせください: 03-3670-0534
-3. メールでお問い合わせください: tachikawa@nifty.com
-
-## 更新履歴
-
-### v1.0.0 (2024-10-06)
-- 初版リリース
-- 企業情報表示機能
-- モバイル対応
-- Cloudflare Pages 対応
+**公式ホームページ：** <https://tachikawagumi.co.jp/>  
+**工事のご相談：** <https://tachikawagumi.co.jp/#contact>
