@@ -87,10 +87,27 @@ API成功を受けた時点で結果を記録し、一覧からの消失・対�
 
 ## 公式仕様と検証
 
+### discoverのAPIエラーを安全に調べる
+
+初回run #1（41177364132）はHTTP400でした。元コードはHTTPエラー本文を破棄していたため、そのログからAPIエラーコードや原因を復元することはできません。トークン不良と断定して再発行を求めないでください。
+
+- リクエスト先は`https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/projects`です。Account IDは前後空白を除去して32桁16進数を検証し、小文字へ正規化します。APIトークンと混ぜません。名称の推測やアカウント変更は行いません。
+- Account API tokenも`Authorization: Bearer <token>`を使用します。Global API Key用の`X-Auth-Key`/`X-Auth-Email`や、ユーザートークン専用の検証APIへ切り替えません。Account API tokenのPages対応は公式互換表で確認しています。
+- 元コードの`per_page=100`を、公式WranglerのPagesプロジェクト一覧と同じ10へ変更しました。ページ総数等がない場合には短い最終ページで止め、存在しない次ページへの不要な要求を防ぎます。総件数・総ページ数が提供される場合はそちらを優先します。これらはコード上の問題への修正であり、初回400の確定原因と断定しません。
+- HTTP400等でもAPIのエラーJSONをメモリ内で読み、整数エラーコード・固定ラベルに分類した理由・HTTP状態・マスクしたendpoint・page/per_page・Bearer方式・応答形式を`api-error.json`とSTOP行へ出します。API応答原文、自由文のエラーメッセージ、トークン、Account ID、GPS座標、画像、env_varsは診断成果物へ出しません。未知の自由文は原文を伏せたまま分類します。
+- Secretの前後空白は除去します。値に`Bearer `、Authorizationヘッダー、curl、引用符、内部空白・改行等が混ざる場合は、値を表示せず送信前に止めます。必要なのは登録値の形式確認であり、直ちにトークン再発行が必要という意味ではありません。
+
+修正後はActionsで **Run workflow → main → discover** の新規実行を起動します。古いrunのRe-runは古いコミットを使い、stale-mainガードで止まるため使用しません。失敗時は`api-error.json`またはSTOP診断のエラーコードと分類を確認してから次の対応を決めます。認証を401/403/400の数字だけで判断しません。削除ワークフローは実行しません。
+
+既存のGitHubコネクターには新規workflow_dispatch機能がなく、クラウドブラウザもGitHub未認証の場合、新規runは代表者の通常ブラウザで起動してください。Workにトークンの値を渡す必要はありません。新規runのURLが分かれば、ジョブ状態・安全なログ・成果物の確認はGitHubコネクターで続行できます。
+
 - [Pages deployments一覧・ページネーション・Pages Read](https://developers.cloudflare.com/api/resources/pages/subresources/projects/subresources/deployments/methods/list/)
 - [Project一覧](https://developers.cloudflare.com/api/resources/pages/subresources/projects/methods/list/) / [Project取得・canonical_deployment](https://developers.cloudflare.com/api/resources/pages/subresources/projects/methods/get/)
 - [Deployment削除・Pages Write・force](https://developers.cloudflare.com/api/resources/pages/subresources/projects/subresources/deployments/methods/delete/)
 - [Preview保護・alias・最新ブランチ削除不可](https://developers.cloudflare.com/pages/configuration/preview-deployments/)
 - [GitHub Environmentsの承認設定](https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments)
+- [Cloudflare APIのBearer認証](https://developers.cloudflare.com/fundamentals/api/how-to/make-api-calls/)
+- [Account API tokens互換表（Pages対応）](https://developers.cloudflare.com/fundamentals/api/get-started/account-owned-tokens/)
+- [公式WranglerのPages一覧実装（pageSize=10）](https://github.com/cloudflare/workers-sdk/blob/main/packages/wrangler/src/pages/projects.ts)
 
 オフラインの安全性試験：`python3 -m unittest discover -s tools/cloudflare -p 'test_*.py' -v`。外部通信・実削除なし。秘密の生レスポンスや画像を残すテストは作成しません。
