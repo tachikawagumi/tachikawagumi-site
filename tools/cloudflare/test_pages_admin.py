@@ -216,6 +216,18 @@ class SafetyTests(unittest.TestCase):
             with patch.object(p, "ROOT", root), self.assertRaises(p.Stop):
                 p.approval(self.old, "verified", "a" * 32, hashlib.sha256(data).hexdigest(), "tachikawagumi")
 
+    def test_unknown_delete_response_records_attempt_not_success(self):
+        api = unittest.mock.Mock()
+        api.call.side_effect = [{"result": self.old}, {"result": self.old}, p.Stop("Cloudflare API HTTP 0")]
+        with patch.dict(os.environ, {"CF_PAGES_DELETE_ENABLED": "true", "CONFIRMATION": "DELETE:" + self.old["id"]}), patch.object(
+                p, "project_state", return_value=(self.project, self.deployments)), patch.object(
+                p, "approval"), patch.object(p, "production_health", return_value={"ok": True}), patch.object(p, "write_report") as report, self.assertRaises(p.Stop):
+            p.delete_one(api, "verified", "a" * 32, self.old["id"], True)
+        self.assertTrue(report.call_args.args[1]["delete_attempted"])
+        self.assertEqual(report.call_args.args[1]["api_outcome"], "unconfirmed")
+        self.assertNotIn("api_success", report.call_args.args[1])
+        self.assertEqual(sum(c.kwargs.get("method") == "DELETE" for c in api.call.call_args_list), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

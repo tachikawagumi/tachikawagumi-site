@@ -357,9 +357,11 @@ def delete_one(api, name, account, target_id, execute=False):
     require(summary(target2) == summary(target) and not protected(project2, fresh, target2), "Safety state changed; deletion refused")
     require((project2.get("canonical_deployment") or {}).get("id") == (project.get("canonical_deployment") or {}).get("id"),
             "Production changed; deletion refused")
+    report.update(delete_attempted=True, api_outcome="unconfirmed")
+    write_report("deletion.json", report)
     api.call(f"/pages/projects/{name}/deployments/{target_id}", method="DELETE")
     # Record accepted operation before verification, even when verification later fails.
-    report.update(executed=True, api_success=True)
+    report.update(executed=True, api_success=True, api_outcome="accepted")
     write_report("deletion.json", report)
     after, remaining = project_state(api, name)
     checks, skipped = inspect_urls(target, project["subdomain"])
