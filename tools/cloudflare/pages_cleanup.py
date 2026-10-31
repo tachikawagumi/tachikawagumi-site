@@ -13,6 +13,7 @@ import subprocess
 import sys
 
 import pages_admin as p
+import preflight_diagnostics as diagnostics
 
 PROJECT = "tachikawagumi-site"
 REPOSITORY = "tachikawagumi/tachikawagumi-site"
@@ -135,10 +136,34 @@ def trusted_main():
 
 
 def preflight(api, plan, plan_sha, account):
-    project, deployments = p.project_state(api, PROJECT)
-    absent = reconcile(project, deployments, plan)
-    second, fresh = p.project_state(api, PROJECT)
-    reconcile(second, fresh, plan, absent)
+    diagnostic = diagnostics.new_report(plan, plan_sha)
+    diagnostics.save(diagnostic)
+    try:
+        project, deployments = p.project_state(api, PROJECT)
+        observation = diagnostics.snapshot(project, deployments, plan)
+        diagnostic["observations"].append(observation)
+        diagnostic["phase"] = "first-state-check"
+        diagnostics.save(diagnostic)
+        diagnostics.reject_unknown_or_missing(observation)
+        absent = reconcile(project, deployments, plan)
+        diagnostic["phase"] = "second-api-read"
+        diagnostics.save(diagnostic)
+        second, fresh = p.project_state(api, PROJECT)
+        observation = diagnostics.snapshot(second, fresh, plan)
+        diagnostic["observations"].append(observation)
+        diagnostic["phase"] = "second-state-check"
+        diagnostics.save(diagnostic)
+        diagnostics.reject_unknown_or_missing(observation)
+        reconcile(second, fresh, plan, absent)
+    except Exception:
+        # No exception text or API payload is copied into artifacts.
+        diagnostic["outcome"] = "failed"
+        diagnostic["failure_category"] = diagnostic["phase"]
+        diagnostics.save(diagnostic)
+        raise
+    diagnostic["outcome"] = "passed"
+    diagnostic["phase"] = "complete"
+    diagnostics.save(diagnostic)
     report = {"schema_version": 1, "approved": False, "project_name": PROJECT,
               "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(),
               "run_id": os.environ.get("GITHUB_RUN_ID"), "plan_sha256": plan_sha,

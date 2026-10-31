@@ -23,6 +23,9 @@ def raw_deployment(row):
 
 class CleanupSafetyTests(unittest.TestCase):
     def setUp(self):
+        output = tempfile.TemporaryDirectory()
+        self.addCleanup(output.cleanup)
+        self.enterContext(patch.object(p, "OUT", Path(output.name)))
         self.stdout = patch("sys.stdout", new_callable=io.StringIO)
         self.stdout.start()
         self.addCleanup(self.stdout.stop)
@@ -129,7 +132,9 @@ class CleanupSafetyTests(unittest.TestCase):
         with patch.object(p, "project_state", side_effect=[(self.project, self.rows),
                 (self.project, self.rows[1:])]), patch.object(p, "write_report") as report, self.assertRaises(p.Stop):
             c.preflight(Mock(), self.plan, self.plan_sha, "a" * 32)
-        report.assert_not_called()
+        self.assertTrue(report.called)
+        self.assertTrue(all(call.args[0] == "cleanup-diagnostics.json" for call in report.call_args_list))
+        self.assertEqual(report.call_args.args[1]["outcome"], "failed")
 
     def test_valid_bounded_representative_approval(self):
         self.approval_context(self.approval)
