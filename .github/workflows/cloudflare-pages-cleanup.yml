@@ -1,0 +1,80 @@
+name: Cloudflare Pages - frozen cleanup
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Read-only preflight first; delete requires a separately approved manifest
+        required: true
+        default: preflight
+        type: choice
+        options: [preflight, delete]
+      approval_sha256:
+        description: SHA256 of the exact separately approved cleanup-approval.json on main
+        required: false
+        type: string
+      confirmation:
+        description: 'Delete only: DELETE:<approval SHA256>:<exact approved count, maximum 25>'
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: cloudflare-pages-management
+  cancel-in-progress: false
+jobs:
+  preflight:
+    if: github.ref == 'refs/heads/main' && github.repository == 'tachikawagumi/tachikawagumi-site' && inputs.mode == 'preflight'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Offline safety tests
+        run: python3 -m unittest discover -s tools/cloudflare -p 'test_*.py' -v
+      - name: Read-only reconciliation of frozen inventory (no image rescan)
+        env:
+          CLEANUP_MODE: preflight
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_PAGES_READ_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_PAGES_PROJECT_NAME: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
+        run: python3 tools/cloudflare/pages_cleanup.py
+      - name: Save sanitized reconciliation only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: pages-cleanup-preflight-${{ github.run_id }}-${{ github.run_attempt }}
+          path: pages-report/*.json
+          if-no-files-found: ignore
+          retention-days: 7
+  delete:
+    if: github.ref == 'refs/heads/main' && github.repository == 'tachikawagumi/tachikawagumi-site' && inputs.mode == 'delete' && github.actor == 'tachikawagumi' && github.triggering_actor == 'tachikawagumi'
+    environment: cloudflare-pages-delete
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Offline safety tests
+        run: python3 -m unittest discover -s tools/cloudflare -p 'test_*.py' -v
+      - name: Serial deletion of separately approved IDs (disabled by default)
+        env:
+          CLEANUP_MODE: delete
+          APPROVAL_SHA256: ${{ inputs.approval_sha256 }}
+          CONFIRMATION: ${{ inputs.confirmation }}
+          CF_PAGES_DELETE_ENABLED: ${{ vars.CF_PAGES_DELETE_ENABLED }}
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_PAGES_DELETE_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_PAGES_PROJECT_NAME: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
+        run: python3 tools/cloudflare/pages_cleanup.py
+      - name: Record sanitized attempts and verification, including incomplete outcomes
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: pages-cleanup-result-${{ github.run_id }}-${{ github.run_attempt }}
+          path: pages-report/*.json
+          if-no-files-found: ignore
+          retention-days: 7
