@@ -1,0 +1,3083 @@
+{
+  "schema_version": 1,
+  "status": "draft-not-approved",
+  "repository": "tachikawagumi/tachikawagumi-site",
+  "project_name": "tachikawagumi-site",
+  "subdomain": "tachikawagumi-site.pages.dev",
+  "source": {
+    "run_id": 41179402871,
+    "run_number": 4,
+    "inventory_sha256": "994e14ca33aa6dccc077560be1e45146885311aa9e17087530bd05e4dea83776",
+    "generated_at": "2026-10-31T07:08:36.719633+00:00"
+  },
+  "expected_production_id": "b9f89a1f-cffa-427a-800d-98280178678a",
+  "never_delete_ids": [
+    "b9f89a1f-cffa-427a-800d-98280178678a",
+    "a0244d88-1233-478b-8c1d-cc031c227862"
+  ],
+  "manually_deleted_ids": [
+    "55ffe624-3398-4f08-9f8e-7441924fc90a"
+  ],
+  "candidate_ids": [
+    "01da0aa7-f334-43e6-a97b-20b4feb13084",
+    "02c0d10f-09ab-48e1-ac04-5c427056c647",
+    "0434aabd-505c-4713-9261-0d116823ad09",
+    "082d133b-ba92-445d-8a1f-71c2543c42be",
+    "089aad0d-19c0-41ad-a969-73fd9031a005",
+    "08f45084-fe50-4cdf-a12e-070a0087e60c",
+    "0957122e-fc45-45f8-89de-5113df73b174",
+    "0dd82105-063c-4f72-a2e0-2096f71f3687",
+    "0de73d66-9af0-4036-9937-88aebfcdc883",
+    "0f14d125-3753-4a9c-a3ad-505a6546777e",
+    "0fa78e7a-aba5-484c-9752-b7d4158bb2ab",
+    "122eafc2-05f7-4ae8-ae16-cd347cec1dc0",
+    "1297b00c-044e-429b-9170-3410fc22666e",
+    "13777e3c-d5e0-4b45-b336-253191e84d2d",
+    "149cf59b-272a-43f8-96e5-988e8b7f8650",
+    "1816cb98-355c-473b-a299-7f8784854002",
+    "1907b416-130b-43d8-bcd7-2216ece25ae9",
+    "19145023-7c90-4250-8b87-9377731fd636",
+    "1d57895b-d239-4ff0-a669-2135eac19d97",
+    "21703408-77e0-45cc-9323-e2616962bd9b",
+    "21fd5808-af53-4c9e-bba0-ce4f91559a08",
+    "22c240f2-6f02-40dc-9378-ae770e0470b5",
+    "267dfb07-2f33-4bcb-9e51-2445f89e7f64",
+    "26fa49c0-a84d-4d5b-a04a-0b2cec15f230",
+    "27fc35ec-59af-44d2-8f6e-887ec2cc86e2",
+    "290642b8-1a13-419a-abc4-45850425e784",
+    "29edfb38-eed5-4306-9bb8-281f82d1a7e9",
+    "2b36b856-1925-447f-9086-547c2c723ac8",
+    "2b8ea1f4-a835-4b53-9282-10fcaaf0812d",
+    "2c4adc61-1075-40d5-883e-8f7f8a3bf2aa",
+    "2d1cf181-14fb-4209-8cf2-817ae198cf5d",
+    "2fd77eb9-ab6a-4c68-8e6a-029e128a7ae5",
+    "3268c3a8-60dc-4eb1-a29a-3c242e8d9ac0",
+    "32be9e4f-769f-4395-9572-1f97dcefaa55",
+    "33281c2c-f8bd-4d3a-838d-ba1f6aafddfc",
+    "347ca94f-0263-409c-9623-16f498d02142",
+    "359d37a7-13b5-48fd-a6ab-262a3005501d",
+    "36007793-349e-435e-9e9f-05033ec32346",
+    "36c532a0-8b93-4263-9696-6dad6958d811",
+    "38446a1c-5758-49b1-8a2b-c061ef3586dc",
+    "387f369d-b55f-4a76-80d7-0a30b28b456b",
+    "3acb20d2-38a2-49e7-867c-2f7cba27eb40",
+    "3c5bd14d-b909-4f32-b790-b1982e00ae6d",
+    "3c6efa9b-e941-4317-b6a6-cba0a4bec677",
+    "3d19f125-b84e-4a58-b6b7-4e10f51e892f",
+    "400af184-9694-449b-8902-4c05819a2fcd",
+    "40113b6c-df15-4abb-aa19-4bb9cbe3b0e9",
+    "43293790-b447-47aa-88b5-26e6be12d7ed",
+    "438a4561-e0a0-48d3-823c-4ddc80194062",
+    "449d1d4b-66d8-445c-89b7-93821392d4d0",
+    "45bf6685-aa07-4b61-8828-aebe15ba5ba0",
+    "4743cfbb-e18c-40f7-a3f5-59eb94597af5",
+    "47831bd5-a125-4e87-a34a-f418a53bce90",
+    "483b09fe-d8e5-49df-adac-e1ba8c08fca6",
+    "4d9e807d-d1f4-4eae-ba53-7b8f4ef02886",
+    "4de44d6c-e4c9-449f-b525-2a860bc09e9f",
+    "51628b86-2801-4f07-af17-cc51bedcacb0",
+    "5243a1b8-ca54-4cff-b073-e14bb4f2c435",
+    "5302f2df-ead2-4eb0-b1c8-e039b2613c9a",
+    "5364c02e-b3f7-4911-8ca9-3999dd56dd5c",
+    "53bccdb9-e7f9-462a-906a-b28930072041",
+    "584fc5ac-2cca-4891-912d-6fca1c302610",
+    "5ac00d9c-f1d4-48b3-9882-89960b3929b3",
+    "5ae32704-df7a-4ed7-847c-1116748937bf",
+    "5bd275ad-da64-4e30-951d-6466aa705993",
+    "5c7baccd-66b5-4595-8814-1fe0a723b5db",
+    "5c9c7bcb-470f-4136-a606-efc4fcd28fef",
+    "5ea4f603-d349-4095-9f32-054d72da5770",
+    "61b4ee2c-9572-4e91-b6f2-e4956cc524a1",
+    "65d0e32e-b08b-459c-9f6b-2196fb9ee978",
+    "65eb96d3-b752-4470-bbf5-d9b735047eec",
+    "66748bec-4a51-4b9e-984b-2dfff3a5b3f4",
+    "66f8c459-aaa8-4710-8b79-5a997376c090",
+    "6831a750-03ed-4750-94fd-06a659d3d081",
+    "68782b49-4ca9-435b-b560-9141df93afa4",
+    "69b1d48e-1fdc-4ccb-a7c2-e0f9897eed4e",
+    "69bc817e-2195-45aa-a702-a4f796515524",
+    "69fc0513-9927-449d-b5f7-fe41a837769f",
+    "6a1f0d90-97d7-4d23-9f85-7aeeb0d3fa86",
+    "6ba1b2ea-9d00-43d6-99ae-b59716bd4f50",
+    "6c527b15-027b-4dd8-97c4-e9902d8d5071",
+    "6ce1b887-c837-4dc5-a6aa-98de2b042521",
+    "6e6ec2c2-3098-4c01-91cb-d2b40687b60c",
+    "6f4de160-8ef0-40f9-a584-231125373cf1",
+    "70863a52-91ce-4b8c-867f-10f1daee625b",
+    "72035510-5309-4a78-b47f-f2e54849dd77",
+    "75f6d31a-94d0-48a6-98ee-9d015cc83a5e",
+    "7676d9d9-0406-4484-a8eb-3701a7e34f40",
+    "781426c3-a2f4-4a83-914d-39d1a6d1d7e2",
+    "781cbd2c-0d7d-4b57-a268-46de9d76144a",
+    "78bbdb49-e611-4b6b-a143-37b121aed237",
+    "7a8428eb-2121-4ef1-bbcc-b796a09eca46",
+    "7a9a86f5-2fac-4e36-b6f8-3d8b02cac1bc",
+    "7b796d46-14c7-4ff4-b3fe-6718c60ff270",
+    "7c72c495-95a2-41d9-a4ca-873a767533af",
+    "7cd4df9e-cbf0-4903-9c9c-ae4c4e008608",
+    "81232352-d415-4589-a5dc-39e5da6bcb13",
+    "81a374a5-8e7a-474b-9c53-44c8a656ab63",
+    "82a39ed8-ae55-4cdd-b6a6-6133cdd49267",
+    "84eb2c3a-546b-4b9c-a42d-fc7adbb352cb",
+    "87937a82-3743-4f0f-a92a-8afaf08def54",
+    "8b332beb-083e-4641-94af-bb8325f31173",
+    "8b6817ba-649a-4f38-b56c-fb1928bfbb47",
+    "8b87dfb7-674a-408b-af7b-605f2f1c3ec4",
+    "8e6141e0-80a7-48c2-9c32-d0c88600b53e",
+    "8f6fb658-ea6a-4c97-b466-60044247c0aa",
+    "90c98c02-9432-471e-bb95-76c47f0da44a",
+    "912378fb-28f2-4653-95db-940192775244",
+    "9331f561-974c-40ff-9c4b-b2561ac6eb73",
+    "966c01e1-306f-451f-8dd4-1209c7cb22a9",
+    "96b5cbc5-b170-4d77-b145-903095c1c275",
+    "98144c6e-f26c-4940-bdd5-e5fcf38ec60a",
+    "98e9b4a2-1980-46c2-a691-02ba2b30bf77",
+    "9a2ebb80-833c-415b-b41b-fa2b85045539",
+    "9b9e2fe5-15a4-430e-9953-bb2012d4b616",
+    "9ca490fc-3369-46cd-a41c-f9c207235bff",
+    "9e628def-7177-4633-8fb6-d12e8dea9518",
+    "a0b61742-7b9e-40c4-9888-17ff800cb3a1",
+    "a5214183-5698-469c-bed4-5ccd917018ef",
+    "a7ad4663-5636-406a-b1b7-a86550882d1d",
+    "a87fb528-91b3-4244-8a30-655359cda0a9",
+    "adab0aa1-a6df-4b12-86b0-8ac83e638e54",
+    "ae2f71e4-391e-4081-868e-4ce8f083ff5d",
+    "b0aa340c-10ba-40ff-b02e-4bc895f8cca3",
+    "b13c3c1f-bbee-4d66-8ca8-751bd70b0e04",
+    "b1f24b41-b81b-45dd-a8c2-54f41910a5a2",
+    "b2236a18-69cc-4d64-8e78-2ec53f262ff2",
+    "b36798cc-e7d4-4f77-bfa1-1b40b1be5e77",
+    "b38cbd41-b961-4334-af90-b2ffc1e824a7",
+    "b46f4e46-11e2-4fdf-ab24-5755555a5fa3",
+    "b4bfa15a-a896-482e-8670-b66bb6914d27",
+    "b769698a-95ff-4096-a847-a8456a8afb50",
+    "b796e9f3-4320-4b08-9d9a-5bd189034de6",
+    "b79df613-c046-4be8-8068-018011fae879",
+    "bb8eddf3-6328-4dd8-83fe-dbbabcf1928b",
+    "bc2e54f9-fc0d-4cfc-98c5-32c0e888167c",
+    "bdc79c70-e04d-4157-9f7d-ae6467e52d0d",
+    "c5f96e28-1ba4-4e26-86df-ebc12bdd28b8",
+    "c68cfe85-1e36-4b25-97d7-83efba36ee7c",
+    "c702e7ce-1719-48a0-9be2-ad26989eb219",
+    "c7b07e9e-c7c4-49bf-8665-40375f41a3dd",
+    "c7fd46ca-3c4f-43e1-89df-c0de7b92b2a5",
+    "c862bd22-13d4-4ec4-ab1d-d79308a64f5a",
+    "c911934b-e47c-4fe0-9ef1-c32e1b83e7f1",
+    "cbd3842c-d884-4e4d-9ab4-cef3afb79468",
+    "cbdfef1e-9f64-49d9-b300-f1ec6498a264",
+    "ccf1411e-7fa1-4c7f-a769-7f7f808eae76",
+    "ce36800a-41d3-4e6e-8870-d05411265fd9",
+    "d1ee4051-1785-43de-a9c6-10c14b581d90",
+    "d62e5efc-fbcc-47e0-aadd-1549b9269f95",
+    "d68e9181-050f-4447-bca8-4c44c412acce",
+    "d79908ca-c438-4353-b48e-e93dee78e892",
+    "d7c2e88b-a4c0-4733-b791-2e0a5ccb202e",
+    "d8db91ba-7d9a-44d9-95cc-df591fcaa1b0",
+    "d975bae3-7291-469f-adc4-fc2516ecde14",
+    "d988408b-c8b2-47a9-ad10-3d83cce87421",
+    "daba7ac9-2987-429b-bb7e-a543f2e84a82",
+    "db3bc429-fe5b-4449-ac61-c1cc71647e8a",
+    "dc03846f-4bb8-4161-b89a-c6f3bf302946",
+    "dcfd45d0-9770-49b7-922b-53f2956712d9",
+    "e376a51f-fa50-45b8-91d4-11ad8342c7c3",
+    "e3d9260f-15ef-45a2-9160-7424c5dffb97",
+    "e47c5bd6-4a73-4321-b69b-80b5b822a487",
+    "e48665f7-8489-445e-b295-4408e5efbaa4",
+    "e5ead49f-522c-4dc1-bf7b-7b861b9a6bc6",
+    "e5f8e619-01b5-46ed-a16e-22cbfa6fd5d1",
+    "e71969db-7741-48dd-bab3-eb07d4f8c98d",
+    "e78d7b58-4c09-4e8e-b49e-c79143132548",
+    "e8574778-9269-4f6b-861c-4281e6ae686c",
+    "e8ee043f-3d8d-4302-934d-718541507265",
+    "eacdc116-6e97-4c44-b06e-7ba97a93ddb6",
+    "f405ffbe-5698-4f54-8100-464bb7dd524a",
+    "f71028f8-c81f-4d7a-9852-74d5c70f8793",
+    "f72dc2e6-556b-4664-b5f8-d8f53ffb43bc",
+    "fa8d0f9b-b6b0-4001-861c-7c2ec80b5573",
+    "fba48630-4d7f-457f-8014-bbcdb9389fbd",
+    "fe1d3425-d696-4c72-be71-c1a488177f16"
+  ],
+  "deployments": [
+    {
+      "id": "01da0aa7-f334-43e6-a97b-20b4feb13084",
+      "url": "https://01da0aa7.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "1c1162d0cff4b06675680e7bd678b6af810761be",
+      "created_on": "2026-10-25T14:03:52.419172Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "02c0d10f-09ab-48e1-ac04-5c427056c647",
+      "url": "https://02c0d10f.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/mesh-fence-restoration-20261027",
+      "commit": "ae0da1415d416ec4de523708556fd48e8e3f2ac1",
+      "created_on": "2026-10-27T07:56:12.156531Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "0434aabd-505c-4713-9261-0d116823ad09",
+      "url": "https://0434aabd.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "c249d19bd2bc8d47fb88c45aeb0045166b8aa782",
+      "created_on": "2026-10-28T15:06:49.73663Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "07a7c43e-9102-4db4-80e5-8eeea477a339",
+      "url": "https://07a7c43e.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://content-r20-worker-free-scaf.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "content/r20-worker-free-scaffold-20261029",
+      "commit": "189b63b32d7c1ad9227068db5f32716e39889613",
+      "created_on": "2026-10-29T11:10:47.293106Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "082d133b-ba92-445d-8a1f-71c2543c42be",
+      "url": "https://082d133b.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "content/adflat-case-r19-20261029",
+      "commit": "f70ab9adccf6c3f91b332247ba24b789e6b610ae",
+      "created_on": "2026-10-29T05:37:54.627563Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "089aad0d-19c0-41ad-a969-73fd9031a005",
+      "url": "https://089aad0d.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/r20-remove-misidentified-unsafe-photos-20261029",
+      "commit": "f56a92e5f8c436352ff506c9ca7ff4fc912cc917",
+      "created_on": "2026-10-29T10:52:23.147513Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "08e531f4-f287-450b-87be-8666bc8b767f",
+      "url": "https://08e531f4.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-sheet-pile-gc-scope-2026.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/sheet-pile-gc-scope-20261031",
+      "commit": "20c7967d63d08d2e6f3f96b8996081de055ee63c",
+      "created_on": "2026-10-30T22:12:20.908911Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "08f45084-fe50-4cdf-a12e-070a0087e60c",
+      "url": "https://08f45084.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "6541609f219b62268e394f09e16cd983313e5ba4",
+      "created_on": "2026-10-06T03:56:07.38478Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "0957122e-fc45-45f8-89de-5113df73b174",
+      "url": "https://0957122e.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/mesh-fence-restoration-20261027",
+      "commit": "3224486a44e2efade28001b02ac8deea0fd00413",
+      "created_on": "2026-10-27T07:56:01.188263Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "0bdcd2e6-af3d-41dd-96e8-35ad1a0e3441",
+      "url": "https://0bdcd2e6.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://seo-custom-domain-20261028.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "seo/custom-domain-20261028",
+      "commit": "1e9caf060a76fd2d81bfc3c885c19ac40dff1ca7",
+      "created_on": "2026-10-27T22:53:06.370109Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "0dd82105-063c-4f72-a2e0-2096f71f3687",
+      "url": "https://0dd82105.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-phase3-20261025",
+      "commit": "7c688afcae66f39ef9e34736abe8e8833bb84007",
+      "created_on": "2026-10-25T14:28:01.459459Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "0de73d66-9af0-4036-9937-88aebfcdc883",
+      "url": "https://0de73d66.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/scrap-factory-soundproofing-20261030",
+      "commit": "6fc130f0bd0de1ab9cae6af9dd9a5e8d71ac4a5d",
+      "created_on": "2026-10-30T09:56:01.358279Z",
+      "stage": "queued",
+      "status": "skipped",
+      "baseline_blockers": []
+    },
+    {
+      "id": "0f14d125-3753-4a9c-a3ad-505a6546777e",
+      "url": "https://0f14d125.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "docs/refresh-readme-official-url-20261030",
+      "commit": "0edd2d67f107c9943a3958fed851788c6766ff6f",
+      "created_on": "2026-10-30T03:57:44.303607Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "0fa78e7a-aba5-484c-9752-b7d4158bb2ab",
+      "url": "https://0fa78e7a.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/mobile-menu-state-20261027",
+      "commit": "d0f67f8225639d6e548f73befebadf5e2b714e7f",
+      "created_on": "2026-10-27T13:05:34.66822Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "122eafc2-05f7-4ae8-ae16-cd347cec1dc0",
+      "url": "https://122eafc2.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/drone-roof-visual-check-page-20261029",
+      "commit": "101505785a6fe9d60b783d3dd77b4177a578211b",
+      "created_on": "2026-10-29T13:58:14.327033Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "1297b00c-044e-429b-9170-3410fc22666e",
+      "url": "https://1297b00c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/r20-remove-misidentified-unsafe-photos-20261029",
+      "commit": "20536766b347cc5ae43989cd2ba86dd3a17ff812",
+      "created_on": "2026-10-29T10:52:44.920804Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "12ee4ac0-6747-4dc8-91ce-d0f023ff2939",
+      "url": "https://12ee4ac0.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feat-drone-roof-real-photos.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feat/drone-roof-real-photos-20261030",
+      "commit": "1e6624e1a75b0bb50b9fedd885890f7eb0ee5051",
+      "created_on": "2026-10-30T10:36:23.993469Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "13777e3c-d5e0-4b45-b336-253191e84d2d",
+      "url": "https://13777e3c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "0f131e21a3553d6185cb55e30d7ddeeece4a5cb9",
+      "created_on": "2026-10-25T16:31:02.389987Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "149cf59b-272a-43f8-96e5-988e8b7f8650",
+      "url": "https://149cf59b.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "bef3d26566361138596eafa4f50c6e74c58dffee",
+      "created_on": "2026-10-27T14:38:08.329782Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "1816cb98-355c-473b-a299-7f8784854002",
+      "url": "https://1816cb98.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/drone-roof-visual-check-page-20261029",
+      "commit": "13f3f4a6f3c72f76631359a146de5915b54d9b26",
+      "created_on": "2026-10-29T13:55:16.045035Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "1907b416-130b-43d8-bcd7-2216ece25ae9",
+      "url": "https://1907b416.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "0edd2d67f107c9943a3958fed851788c6766ff6f",
+      "created_on": "2026-10-29T16:06:54.885325Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "19145023-7c90-4250-8b87-9377731fd636",
+      "url": "https://19145023.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/works-floor-before-photo-20261031",
+      "commit": "ebd07aa578826db3c9653800c955af3a550ed656",
+      "created_on": "2026-10-30T22:32:58.231941Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "1a037d6a-17e9-4b44-980e-87b34bb3dc6d",
+      "url": "https://1a037d6a.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-r20-remove-misidentified.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/r20-remove-misidentified-unsafe-photos-20261029",
+      "commit": "b41eb0cc85a815fa91903a967b1f177d63867f05",
+      "created_on": "2026-10-29T10:53:38.765872Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "1d57895b-d239-4ff0-a669-2135eac19d97",
+      "url": "https://1d57895b.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/scrap-factory-soundproofing-20261030",
+      "commit": "8e8584aeb6de15687b938c8a8bd779ba2818acf4",
+      "created_on": "2026-10-30T09:55:54.599497Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "21703408-77e0-45cc-9323-e2616962bd9b",
+      "url": "https://21703408.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "0edd2d67f107c9943a3958fed851788c6766ff6f",
+      "created_on": "2026-10-29T14:35:45.497632Z",
+      "stage": "clone_repo",
+      "status": "failure",
+      "baseline_blockers": []
+    },
+    {
+      "id": "21fd5808-af53-4c9e-bba0-ce4f91559a08",
+      "url": "https://21fd5808.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "df3b458625fa6b8a007a31d7a02f071b18d800c8",
+      "created_on": "2026-10-06T04:14:41.91477Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "22c240f2-6f02-40dc-9378-ae770e0470b5",
+      "url": "https://22c240f2.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "059b29aeb8bb0d51e28f4974ac17ee217706c503",
+      "created_on": "2026-10-06T03:49:45.885505Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "267dfb07-2f33-4bcb-9e51-2445f89e7f64",
+      "url": "https://267dfb07.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "ab8b1044c898b344cc33ed3c5282de1e1b4ddc5f",
+      "created_on": "2026-10-25T14:10:09.671624Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "26fa49c0-a84d-4d5b-a04a-0b2cec15f230",
+      "url": "https://26fa49c0.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/drone-roof-visual-check-page-20261029",
+      "commit": "1bf803715d2e22d3bf0fb40f6c3ca8dc943cbb56",
+      "created_on": "2026-10-29T13:58:52.536889Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "2788d1aa-a44a-4ef9-add9-6029d19ec87b",
+      "url": "https://2788d1aa.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-retired-asset-routes-202.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/retired-asset-routes-20261031",
+      "commit": "5016b432dac29c2ca8ebe9e2e20646cbc5d2f4b7",
+      "created_on": "2026-10-30T23:17:38.534313Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "27fc35ec-59af-44d2-8f6e-887ec2cc86e2",
+      "url": "https://27fc35ec.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/works-drone-photo-link-20261030",
+      "commit": "4e6dc62ce21d7ce3f961b6a7594db7de02706119",
+      "created_on": "2026-10-30T10:39:17.904688Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "290642b8-1a13-419a-abc4-45850425e784",
+      "url": "https://290642b8.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/drone-roof-visual-check-page-20261029",
+      "commit": "74d59c28a4e8c52262d364452b171467d7d36767",
+      "created_on": "2026-10-29T14:17:49.680562Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "29edfb38-eed5-4306-9bb8-281f82d1a7e9",
+      "url": "https://29edfb38.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "13f3f4a6f3c72f76631359a146de5915b54d9b26",
+      "created_on": "2026-10-29T13:48:11.897381Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "2b36b856-1925-447f-9086-547c2c723ac8",
+      "url": "https://2b36b856.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "e9dad017e0290e246d0365d87c49e42b502723b5",
+      "created_on": "2026-10-25T14:03:29.830795Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "2b8ea1f4-a835-4b53-9282-10fcaaf0812d",
+      "url": "https://2b8ea1f4.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "898d2f4d3e211769d92be675c1b0f2c4099b34db",
+      "created_on": "2026-10-06T08:08:43.639463Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "2beb22fa-9b3d-4b43-a82d-3804831bae82",
+      "url": "https://2beb22fa.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feat-works-drone-photo-link.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feat/works-drone-photo-link-20261030",
+      "commit": "c405786f0ca934f8074f50404e2eb1ae80b2f556",
+      "created_on": "2026-10-30T10:39:20.74077Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "2c4adc61-1075-40d5-883e-8f7f8a3bf2aa",
+      "url": "https://2c4adc61.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "perf/mobile-lcp-20261028",
+      "commit": "180348abc6b4ad196c15b78012948c04b86219c9",
+      "created_on": "2026-10-28T14:40:06.620885Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "2d1cf181-14fb-4209-8cf2-817ae198cf5d",
+      "url": "https://2d1cf181.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-phase3-20261025",
+      "commit": "f969287651ca3f31139e3359768d935827956fba",
+      "created_on": "2026-10-25T14:29:06.332451Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "2fd77eb9-ab6a-4c68-8e6a-029e128a7ae5",
+      "url": "https://2fd77eb9.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "455950150f2c9c5ce5af3d99003ee0f0d765651a",
+      "created_on": "2026-10-29T11:26:57.732682Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "30a25b42-aebe-4660-a71e-e9de936defcd",
+      "url": "https://30a25b42.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-r20-header-contact-hiera.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/r20-header-contact-hierarchy-20261029",
+      "commit": "b163084eb7f6f716826ead50fa08e868cc045fa1",
+      "created_on": "2026-10-29T11:26:12.901891Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "3268c3a8-60dc-4eb1-a29a-3c242e8d9ac0",
+      "url": "https://3268c3a8.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "content/fence-panel-case-r20-20261029",
+      "commit": "b5ad04b209df32954599f18802d5544ac6f993d2",
+      "created_on": "2026-10-29T09:27:31.358904Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "32be9e4f-769f-4395-9572-1f97dcefaa55",
+      "url": "https://32be9e4f.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/scrap-factory-soundproofing-20261030",
+      "commit": "1231f3db840f97a5629295a76d987affba4300f6",
+      "created_on": "2026-10-30T09:56:04.013599Z",
+      "stage": "queued",
+      "status": "skipped",
+      "baseline_blockers": []
+    },
+    {
+      "id": "33281c2c-f8bd-4d3a-838d-ba1f6aafddfc",
+      "url": "https://33281c2c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/drone-roof-visual-check-page-20261029",
+      "commit": "73fe80c466ec666f3f51e1d3dac79e9f1696fd44",
+      "created_on": "2026-10-29T13:57:03.304984Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "336f5ee4-73e5-4450-870a-5f5e658b1a8e",
+      "url": "https://336f5ee4.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-works-asbestos-survey-de.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/works-asbestos-survey-demolition-scope-20261031",
+      "commit": "f14ef3ca9b4ad0969c674f6291fa9a90ff8e2732",
+      "created_on": "2026-10-30T22:27:05.198995Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "347ca94f-0263-409c-9623-16f498d02142",
+      "url": "https://347ca94f.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "6ef472c15c796df2e295c2b9d96d78911dbf323a",
+      "created_on": "2026-10-06T03:53:40.724926Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "359d37a7-13b5-48fd-a6ab-262a3005501d",
+      "url": "https://359d37a7.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "ff480d780c31dd32db1f007d8121568677eddc0c",
+      "created_on": "2026-10-06T04:32:28.172281Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "36007793-349e-435e-9e9f-05033ec32346",
+      "url": "https://36007793.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "6cbcccaa53dfc0d6e2dca1dc30c7e004257d86b4",
+      "created_on": "2026-10-06T04:40:02.921431Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "36c532a0-8b93-4263-9696-6dad6958d811",
+      "url": "https://36c532a0.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-phase3-20261025",
+      "commit": "ea9c41c2c208507de10e52c28c2926971035f29e",
+      "created_on": "2026-10-25T14:28:41.688808Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "38446a1c-5758-49b1-8a2b-c061ef3586dc",
+      "url": "https://38446a1c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/r20-remove-misidentified-unsafe-photos-20261029",
+      "commit": "2b1b796ccd7506283955cf844cd17019749ace05",
+      "created_on": "2026-10-29T10:52:58.687672Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "387f369d-b55f-4a76-80d7-0a30b28b456b",
+      "url": "https://387f369d.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "72a59e226e81cf4cc08cb541e63946803cd66ac1",
+      "created_on": "2026-10-06T04:46:18.256666Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "3a74b0b3-428e-498d-bfba-5d943ae795a6",
+      "url": "https://3a74b0b3.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-remove-nonemployee-guard.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/remove-nonemployee-guardrail-photo-20261026",
+      "commit": "dea8bd61890bc4ea7115ed97d77836dc0cc6bf06",
+      "created_on": "2026-10-26T09:18:32.641117Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "3acb20d2-38a2-49e7-867c-2f7cba27eb40",
+      "url": "https://3acb20d2.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "bb8aff46d22779b20175a70a67ee4a951ca3ed6b",
+      "created_on": "2026-10-29T10:54:09.033476Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "3c5bd14d-b909-4f32-b790-b1982e00ae6d",
+      "url": "https://3c5bd14d.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/r20-remove-misidentified-unsafe-photos-20261029",
+      "commit": "12e50164634abdcc46cd486e2c3666488775581b",
+      "created_on": "2026-10-29T10:52:50.195774Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "3c6efa9b-e941-4317-b6a6-cba0a4bec677",
+      "url": "https://3c6efa9b.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "perf/mobile-lcp-20261028",
+      "commit": "9d4515b62a743d1b294eefefa2dd0d132c7ef75f",
+      "created_on": "2026-10-28T14:41:02.950384Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "3d19f125-b84e-4a58-b6b7-4e10f51e892f",
+      "url": "https://3d19f125.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "ec5e63d9c79deb9fed6ba686d2730295f371923f",
+      "created_on": "2026-10-25T14:10:12.018398Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "400af184-9694-449b-8902-4c05819a2fcd",
+      "url": "https://400af184.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/r20-remove-misidentified-unsafe-photos-20261029",
+      "commit": "0484b0a3cbcfa08d9461a505b1cea0b445114ddf",
+      "created_on": "2026-10-29T10:53:06.537977Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "40113b6c-df15-4abb-aa19-4bb9cbe3b0e9",
+      "url": "https://40113b6c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "01f044ad4ef345d4c0f73049a007d7b07ab8accd",
+      "created_on": "2026-10-06T08:08:05.634619Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "40e2601b-3343-4603-b689-d0cf56360591",
+      "url": "https://40e2601b.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feat-torii-repair-detail-202.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feat/torii-repair-detail-20261031",
+      "commit": "c14408f792f333ca1200f9df2452a7b4a4cbde93",
+      "created_on": "2026-10-30T21:54:18.803293Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "43293790-b447-47aa-88b5-26e6be12d7ed",
+      "url": "https://43293790.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "c15bd71b499108ce9b370e495202ea512b55fbc5",
+      "created_on": "2026-10-06T08:09:09.57696Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "438a4561-e0a0-48d3-823c-4ddc80194062",
+      "url": "https://438a4561.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "909cbea2eab9c3237d03e9e2a422a295f8e0ab76",
+      "created_on": "2026-10-25T14:03:41.565235Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "449d1d4b-66d8-445c-89b7-93821392d4d0",
+      "url": "https://449d1d4b.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "c0d3ac5edd80c619e04ae459fac007813c46b625",
+      "created_on": "2026-10-06T06:32:10.624746Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "45bf6685-aa07-4b61-8828-aebe15ba5ba0",
+      "url": "https://45bf6685.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "5df077fb7a5e04ab1f1f31e8dbc33ae7e1ac2a6c",
+      "created_on": "2026-10-06T06:17:19.63745Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "4743cfbb-e18c-40f7-a3f5-59eb94597af5",
+      "url": "https://4743cfbb.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "463aab5fed28584541c60fc2f6a4743c08642313",
+      "created_on": "2026-10-30T22:16:45.319705Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "47831bd5-a125-4e87-a34a-f418a53bce90",
+      "url": "https://47831bd5.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "7635fa49c5e7190a79183a151a9e230dba7befa8",
+      "created_on": "2026-10-06T03:39:40.480384Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "483b09fe-d8e5-49df-adac-e1ba8c08fca6",
+      "url": "https://483b09fe.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "344f70361e20db50f55e2ec1c4edc2412152a6d9",
+      "created_on": "2026-10-25T14:10:06.502118Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "48e2eb4b-fc3d-4ca8-abe6-b5c45acd0717",
+      "url": "https://48e2eb4b.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feat-scrap-factory-soundproo.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feat/scrap-factory-soundproofing-20261030",
+      "commit": "c16dfb5691b8766bd1fc991fab9d06e7c886effe",
+      "created_on": "2026-10-30T10:07:52.914755Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "4bc2dc1a-d905-49ed-ac2f-9020c854c10f",
+      "url": "https://4bc2dc1a.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-truck-safety-block-purpo.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/truck-safety-block-purpose-steel-20261031",
+      "commit": "19ad8ed7fd72c6c83afe1a86feb3c9ab3089701b",
+      "created_on": "2026-10-30T22:16:13.049891Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "4d9e807d-d1f4-4eae-ba53-7b8f4ef02886",
+      "url": "https://4d9e807d.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "37e4f97f734bcc390a5fed34ecd55cc7e01f7997",
+      "created_on": "2026-10-30T14:57:46.164986Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "4de44d6c-e4c9-449f-b525-2a860bc09e9f",
+      "url": "https://4de44d6c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "content/fence-panel-case-r20-20261029",
+      "commit": "f27242bf1081921b61cd6b4d220039265840f72c",
+      "created_on": "2026-10-29T09:27:36.64541Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "512e5151-3aea-47db-bcff-69a9385c683a",
+      "url": "https://512e5151.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-hero-cta-hit-target-2026.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/hero-cta-hit-target-20261028",
+      "commit": "c44ddaf8079978c744757cc4c1e2c9161b61dc1d",
+      "created_on": "2026-10-28T09:08:44.39076Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "51628b86-2801-4f07-af17-cc51bedcacb0",
+      "url": "https://51628b86.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/scrap-factory-soundproofing-20261030",
+      "commit": "c31d8586db3ee66f3acff55d4a85eb108551f082",
+      "created_on": "2026-10-30T09:55:50.972853Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "5243a1b8-ca54-4cff-b073-e14bb4f2c435",
+      "url": "https://5243a1b8.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/urgent-quality-phase4-20261026",
+      "commit": "6bb164376999cafdba60801220da1fc0b16df245",
+      "created_on": "2026-10-25T16:29:47.80206Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "5302f2df-ead2-4eb0-b1c8-e039b2613c9a",
+      "url": "https://5302f2df.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "3fa6affcb368255c9d5b3d272e8b75ed7ae300a2",
+      "created_on": "2026-10-16T01:08:58.146283Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "5364c02e-b3f7-4911-8ca9-3999dd56dd5c",
+      "url": "https://5364c02e.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/drone-roof-visual-check-page-20261029",
+      "commit": "df39b3b9287611242024799d802868f5ae6ff1cd",
+      "created_on": "2026-10-29T13:58:10.346625Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "53bccdb9-e7f9-462a-906a-b28930072041",
+      "url": "https://53bccdb9.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "897313c7222b591d0d11a22b2a06d83dadc08f74",
+      "created_on": "2026-10-06T08:47:32.846292Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "545c658c-a31e-406f-87cc-a1c545f36fa8",
+      "url": "https://545c658c.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feat-factory-roof-drainage-l.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feat/factory-roof-drainage-leak-repair-20261030",
+      "commit": "c4ffc6d4c9f50579c32c9a5a554d9ff5d8ef96da",
+      "created_on": "2026-10-30T11:16:39.476082Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "584fc5ac-2cca-4891-912d-6fca1c302610",
+      "url": "https://584fc5ac.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/lead-generation-pages",
+      "commit": "f5ef73e2608de480475511fb35992ae3eb7af960",
+      "created_on": "2026-10-20T15:08:08.497891Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "5988f289-5673-40e9-abc3-87e3217588f5",
+      "url": "https://5988f289.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feature-lead-generation-page.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feature/lead-generation-pages",
+      "commit": "2c8b2d0a11b6b22302335fed216ec851d2d644d9",
+      "created_on": "2026-10-20T15:08:41.331509Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "5ac00d9c-f1d4-48b3-9882-89960b3929b3",
+      "url": "https://5ac00d9c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "388905cd56bbaf2ab5892888e61d0a1b242463ec",
+      "created_on": "2026-10-25T14:29:57.912201Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "5ae32704-df7a-4ed7-847c-1116748937bf",
+      "url": "https://5ae32704.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "d0f67f8225639d6e548f73befebadf5e2b714e7f",
+      "created_on": "2026-10-27T12:58:46.593986Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "5bd275ad-da64-4e30-951d-6466aa705993",
+      "url": "https://5bd275ad.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "62583b208c12fcf23a2f8066379138bd801144eb",
+      "created_on": "2026-10-06T04:55:18.964655Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "5c7baccd-66b5-4595-8814-1fe0a723b5db",
+      "url": "https://5c7baccd.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "36cac9a368c36e57ffd349f3b7db8f542e8c849c",
+      "created_on": "2026-10-06T08:59:04.585277Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "5c9c7bcb-470f-4136-a606-efc4fcd28fef",
+      "url": "https://5c9c7bcb.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "af204e2e7019d99589c283228350e213a647cf41",
+      "created_on": "2026-10-06T04:39:48.880661Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "5e44df0c-e253-4c5d-875e-a538be1a50d5",
+      "url": "https://5e44df0c.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-pages-delete-outcome-rec.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/pages-delete-outcome-record-20261031",
+      "commit": "9780ce14b05fa7f064c4c9c35863f95c78a67c7f",
+      "created_on": "2026-10-31T03:00:57.90924Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "5ea4f603-d349-4095-9f32-054d72da5770",
+      "url": "https://5ea4f603.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/r20-header-contact-hierarchy-20261029",
+      "commit": "5e12c4561b955d1e51e5f845c2d4cd41afdc20d4",
+      "created_on": "2026-10-29T11:23:34.792811Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "5ed01199-23fe-4829-97ec-6c1b43ebc711",
+      "url": "https://5ed01199.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://perf-mobile-lcp-20261028.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "perf/mobile-lcp-20261028",
+      "commit": "1557457408d16fb3fad516bb2dd1e959c489738a",
+      "created_on": "2026-10-28T14:45:18.68244Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "61b4ee2c-9572-4e91-b6f2-e4956cc524a1",
+      "url": "https://61b4ee2c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/urgent-quality-phase4-20261026",
+      "commit": "63e5817c4dcb98db01cdd7c161c095dd35a8774f",
+      "created_on": "2026-10-25T16:30:25.607491Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "65d0e32e-b08b-459c-9f6b-2196fb9ee978",
+      "url": "https://65d0e32e.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "5df077fb7a5e04ab1f1f31e8dbc33ae7e1ac2a6c",
+      "created_on": "2026-10-06T06:17:27.697932Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "65eb96d3-b752-4470-bbf5-d9b735047eec",
+      "url": "https://65eb96d3.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "7367fbe5ea7e343cf1cbbf7750859ff523524ce8",
+      "created_on": "2026-10-30T15:22:05.553739Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "65ff6e93-45dd-48bb-8005-c8af730cd5ea",
+      "url": "https://65ff6e93.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feature-drone-roof-visual-ch.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feature/drone-roof-visual-check-page-20261029",
+      "commit": "50fafe634cec8c372aa0004a0f007bc617560d18",
+      "created_on": "2026-10-29T14:35:19.380881Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "66748bec-4a51-4b9e-984b-2dfff3a5b3f4",
+      "url": "https://66748bec.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "7621fdba39ff0b9eba22d8b1261ba39cb8a100c6",
+      "created_on": "2026-10-25T14:09:58.469221Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "66f8c459-aaa8-4710-8b79-5a997376c090",
+      "url": "https://66f8c459.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "perf/defer-below-fold-rendering-20261027",
+      "commit": "cadfaa37b097131bffdc3130e8e4ddb56c740217",
+      "created_on": "2026-10-27T12:00:57.184752Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "6831a750-03ed-4750-94fd-06a659d3d081",
+      "url": "https://6831a750.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/sheet-pile-gc-scope-20261031",
+      "commit": "908f3e9f7b06f3f90e17ef77243551fef0621251",
+      "created_on": "2026-10-30T22:11:50.318921Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "68782b49-4ca9-435b-b560-9141df93afa4",
+      "url": "https://68782b49.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "b5ad04b209df32954599f18802d5544ac6f993d2",
+      "created_on": "2026-10-29T07:06:09.292829Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "69b1d48e-1fdc-4ccb-a7c2-e0f9897eed4e",
+      "url": "https://69b1d48e.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/mesh-fence-restoration-20261027",
+      "commit": "8618b2e72a0556285f1ad36e23f6531ad47698f7",
+      "created_on": "2026-10-27T09:45:14.652658Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "69bc817e-2195-45aa-a702-a4f796515524",
+      "url": "https://69bc817e.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "d7125204f5c4814f7b410b48f2ad6b37bcb130ba",
+      "created_on": "2026-10-31T02:59:28.926587Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "69fc0513-9927-449d-b5f7-fe41a837769f",
+      "url": "https://69fc0513.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "4c216123be71d48e9dd2c3c11277f12b28ead9aa",
+      "created_on": "2026-10-26T09:18:57.63876Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "6a1f0d90-97d7-4d23-9f85-7aeeb0d3fa86",
+      "url": "https://6a1f0d90.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/torii-repair-detail-20261031",
+      "commit": "7367fbe5ea7e343cf1cbbf7750859ff523524ce8",
+      "created_on": "2026-10-30T21:54:16.083338Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "6ba1b2ea-9d00-43d6-99ae-b59716bd4f50",
+      "url": "https://6ba1b2ea.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "cc4344a9d1fe35e7d4975122b2ba7853ed334461",
+      "created_on": "2026-10-06T06:20:44.764781Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "6c527b15-027b-4dd8-97c4-e9902d8d5071",
+      "url": "https://6c527b15.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-phase3-20261025",
+      "commit": "b8c4e3d397644db3a4810bb43e61a6b3de9257e9",
+      "created_on": "2026-10-25T14:28:44.230273Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "6ce1b887-c837-4dc5-a6aa-98de2b042521",
+      "url": "https://6ce1b887.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "142bae3fd6e710f736b9417d270025a436218321",
+      "created_on": "2026-10-30T15:16:42.426807Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "6e6ec2c2-3098-4c01-91cb-d2b40687b60c",
+      "url": "https://6e6ec2c2.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/urgent-quality-phase4-20261026",
+      "commit": "15324e61934e05e8c200b4f07679499ab60ddada",
+      "created_on": "2026-10-25T16:30:23.109936Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "6f4de160-8ef0-40f9-a584-231125373cf1",
+      "url": "https://6f4de160.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "4e6dc62ce21d7ce3f961b6a7594db7de02706119",
+      "created_on": "2026-10-30T10:37:22.606224Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "70863a52-91ce-4b8c-867f-10f1daee625b",
+      "url": "https://70863a52.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/scrap-factory-soundproofing-20261030",
+      "commit": "6350dbd49809a1fd83fd3cfe790d13391baccfc9",
+      "created_on": "2026-10-30T09:55:57.926208Z",
+      "stage": "queued",
+      "status": "skipped",
+      "baseline_blockers": []
+    },
+    {
+      "id": "72035510-5309-4a78-b47f-f2e54849dd77",
+      "url": "https://72035510.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "content/fence-panel-case-r20-20261029",
+      "commit": "e78b805bcea82f14974064d156940f1045ec216f",
+      "created_on": "2026-10-29T09:51:00.669972Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "7356f6fd-4ae5-4545-8520-085efdc9e4aa",
+      "url": "https://7356f6fd.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feature-seo-quality-20261025.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "6dbb2986e96cc5163f05ce724a2411506bb3876b",
+      "created_on": "2026-10-25T14:10:35.715515Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "75f6d31a-94d0-48a6-98ee-9d015cc83a5e",
+      "url": "https://75f6d31a.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "ca0ef887f805680c02e1b355d1bed80a6dddf5ca",
+      "created_on": "2026-10-06T09:16:11.616786Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "7676d9d9-0406-4484-a8eb-3701a7e34f40",
+      "url": "https://7676d9d9.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "content/works-services-r18-20261029",
+      "commit": "ecaf52775e802c810feacf7032db074e76f1651c",
+      "created_on": "2026-10-28T16:25:21.036481Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "781426c3-a2f4-4a83-914d-39d1a6d1d7e2",
+      "url": "https://781426c3.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/drone-roof-visual-check-page-20261029",
+      "commit": "fa9e0bea94cce52d8df1d1e6dbc39cca99ee5f04",
+      "created_on": "2026-10-29T14:18:22.411075Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "781cbd2c-0d7d-4b57-a268-46de9d76144a",
+      "url": "https://781cbd2c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "6aabcbcf32217ba4c536affaecf17bfcfb3d8d3c",
+      "created_on": "2026-10-06T08:25:12.605982Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "78474d45-6e07-41ee-a65d-f93010893a39",
+      "url": "https://78474d45.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feature-mesh-fence-restorati.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feature/mesh-fence-restoration-20261027",
+      "commit": "75fb622cfacead5229d57fb43e8739573eb59014",
+      "created_on": "2026-10-27T11:49:45.648885Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "78bbdb49-e611-4b6b-a143-37b121aed237",
+      "url": "https://78bbdb49.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "c20a9fd7d782d790370bcb0b739188f2fcef3aa9",
+      "created_on": "2026-10-25T14:03:33.72882Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "7a8428eb-2121-4ef1-bbcc-b796a09eca46",
+      "url": "https://7a8428eb.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "f1cb9f5263625111f8c5541e2845fface72b9178",
+      "created_on": "2026-10-27T13:07:33.164266Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "7a9a86f5-2fac-4e36-b6f8-3d8b02cac1bc",
+      "url": "https://7a9a86f5.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/works-asbestos-survey-demolition-scope-20261031",
+      "commit": "f9e91e1b1223255566301a780d648bb1a0f4cc51",
+      "created_on": "2026-10-30T22:27:02.493015Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "7b796d46-14c7-4ff4-b3fe-6718c60ff270",
+      "url": "https://7b796d46.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "f5ef73e2608de480475511fb35992ae3eb7af960",
+      "created_on": "2026-10-16T05:46:45.142463Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "7c72c495-95a2-41d9-a4ca-873a767533af",
+      "url": "https://7c72c495.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/sheet-pile-gc-scope-20261031",
+      "commit": "015a972f97cffff0f1f83d103f8659ce27e687fb",
+      "created_on": "2026-10-30T22:12:15.481305Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "7cd4df9e-cbf0-4903-9c9c-ae4c4e008608",
+      "url": "https://7cd4df9e.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/urgent-quality-phase4-20261026",
+      "commit": "388905cd56bbaf2ab5892888e61d0a1b242463ec",
+      "created_on": "2026-10-25T16:29:23.731249Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "7d9d5303-53b5-49af-a482-8f50142f2a1e",
+      "url": "https://7d9d5303.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feature-seo-phase3-20261025.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feature/seo-phase3-20261025",
+      "commit": "be577cebc5e3f133f1f711c680f603e723639e53",
+      "created_on": "2026-10-25T14:29:35.736072Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "81232352-d415-4589-a5dc-39e5da6bcb13",
+      "url": "https://81232352.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/truck-safety-block-purpose-steel-20261031",
+      "commit": "326657246f36ed64e66aa4979ae5f622958dcef1",
+      "created_on": "2026-10-30T22:15:45.752319Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "81a374a5-8e7a-474b-9c53-44c8a656ab63",
+      "url": "https://81a374a5.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "896ad300969bef4b8696b60de6da45c8f66f2fe0",
+      "created_on": "2026-10-25T14:09:40.285454Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "82a39ed8-ae55-4cdd-b6a6-6133cdd49267",
+      "url": "https://82a39ed8.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "seo/factory-renovation-phase1",
+      "commit": "455950150f2c9c5ce5af3d99003ee0f0d765651a",
+      "created_on": "2026-10-29T13:35:01.645846Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "84eb2c3a-546b-4b9c-a42d-fc7adbb352cb",
+      "url": "https://84eb2c3a.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/mesh-fence-restoration-20261027",
+      "commit": "eb379214ea9d4753a3de35bcefcac57a443f9162",
+      "created_on": "2026-10-27T07:56:24.974278Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "87937a82-3743-4f0f-a92a-8afaf08def54",
+      "url": "https://87937a82.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "d30065b57bf4f6f4fba205333a8502ad9722c29e",
+      "created_on": "2026-10-06T04:45:06.363283Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "8b332beb-083e-4641-94af-bb8325f31173",
+      "url": "https://8b332beb.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "254e823129345d9d5d00a36ef44b29b872a60219",
+      "created_on": "2026-10-25T14:09:55.737145Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "8b6817ba-649a-4f38-b56c-fb1928bfbb47",
+      "url": "https://8b6817ba.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/council-contact-funnel-20261027",
+      "commit": "e6654a4dc3e7d9682af9a0d623fe8dede136516c",
+      "created_on": "2026-10-27T14:51:29.601343Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "8b87dfb7-674a-408b-af7b-605f2f1c3ec4",
+      "url": "https://8b87dfb7.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "3acb96acf2fa2922b133252972d9679ffd57e09f",
+      "created_on": "2026-10-30T23:15:12.087102Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "8e6141e0-80a7-48c2-9c32-d0c88600b53e",
+      "url": "https://8e6141e0.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "21b7faab8e271c03c8f5502aa808bdb00d86d4ce",
+      "created_on": "2026-10-25T14:11:41.90492Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "8e8d8deb-b45f-4c2b-bb3d-ceebe0a7aceb",
+      "url": "https://8e8d8deb.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feat-works-roadside-green-fe.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feat/works-roadside-green-fence-20261031",
+      "commit": "a1ea915e77114e61a067203483afea5328bd4174",
+      "created_on": "2026-10-30T15:21:24.709219Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "8f6fb658-ea6a-4c97-b466-60044247c0aa",
+      "url": "https://8f6fb658.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "41b3d1a4403afb33e34a01274956724cbd9b0d86",
+      "created_on": "2026-10-06T06:23:23.42858Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "90c98c02-9432-471e-bb95-76c47f0da44a",
+      "url": "https://90c98c02.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/works-four-more-cases-20261031",
+      "commit": "37e4f97f734bcc390a5fed34ecd55cc7e01f7997",
+      "created_on": "2026-10-30T15:13:58.401759Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "912378fb-28f2-4653-95db-940192775244",
+      "url": "https://912378fb.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/urgent-quality-phase4-20261026",
+      "commit": "a649e2724112a45e83a0d43304b75af22b38e89a",
+      "created_on": "2026-10-25T16:30:09.740336Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "9137f67b-97e5-477b-bc9b-3a7ffa1a533c",
+      "url": "https://9137f67b.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://content-fence-panel-case-r20.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "content/fence-panel-case-r20-20261029",
+      "commit": "2b43655c29955fa4af166024c027a89882354256",
+      "created_on": "2026-10-29T10:17:04.216325Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "9224766c-73d9-4d3c-b644-2e8587021faa",
+      "url": "https://9224766c.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://seo-factory-renovation-phase.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "seo/factory-renovation-phase1",
+      "commit": "d440e97fc893e5ec0e0c4fcdfcb796dca11c8fd0",
+      "created_on": "2026-10-29T13:35:38.146027Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "9331f561-974c-40ff-9c4b-b2561ac6eb73",
+      "url": "https://9331f561.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "6a29c312c5c19c2ad891b14b62ab081f5867c538",
+      "created_on": "2026-10-30T22:27:42.877574Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "95257546-7623-41ad-b4a0-4315eaae638d",
+      "url": "https://95257546.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feat-works-four-more-cases-2.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feat/works-four-more-cases-20261031",
+      "commit": "478ad02669e0673702524ba421795847ae696dce",
+      "created_on": "2026-10-30T15:15:38.20555Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "966c01e1-306f-451f-8dd4-1209c7cb22a9",
+      "url": "https://966c01e1.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "ee1a4229e0d8a5a06f09af6cb8c74a5c60a3e3bd",
+      "created_on": "2026-10-27T23:22:17.50571Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "96b5cbc5-b170-4d77-b145-903095c1c275",
+      "url": "https://96b5cbc5.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/drone-roof-visual-check-page-20261029",
+      "commit": "f249910f4ebeae62462586b191e184ec9e3b9cc1",
+      "created_on": "2026-10-29T13:58:18.068735Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "97363f46-c37f-4fc0-ab0a-027363ab3d61",
+      "url": "https://97363f46.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://docs-refresh-readme-official.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "docs/refresh-readme-official-url-20261030",
+      "commit": "be9b768fba0bacaae3e526f5bca23df57c245199",
+      "created_on": "2026-10-30T03:57:47.594427Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "98144c6e-f26c-4940-bdd5-e5fcf38ec60a",
+      "url": "https://98144c6e.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "content/fence-panel-case-r20-20261029",
+      "commit": "977066fed32c61bc680929eaf4dad823d723d984",
+      "created_on": "2026-10-29T10:15:39.86098Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "98e9b4a2-1980-46c2-a691-02ba2b30bf77",
+      "url": "https://98e9b4a2.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "e6654a4dc3e7d9682af9a0d623fe8dede136516c",
+      "created_on": "2026-10-27T14:48:59.721532Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "9a2ebb80-833c-415b-b41b-fa2b85045539",
+      "url": "https://9a2ebb80.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/r20-remove-misidentified-unsafe-photos-20261029",
+      "commit": "fd6d2661da38d847e2bb9ac925c562b1f5223640",
+      "created_on": "2026-10-29T10:52:30.058011Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "9b9e2fe5-15a4-430e-9953-bb2012d4b616",
+      "url": "https://9b9e2fe5.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/lead-generation-pages",
+      "commit": "69118bca97fda68f04e8114884f9f536b22b8388",
+      "created_on": "2026-10-20T15:08:39.06166Z",
+      "stage": "queued",
+      "status": "skipped",
+      "baseline_blockers": []
+    },
+    {
+      "id": "9ca490fc-3369-46cd-a41c-f9c207235bff",
+      "url": "https://9ca490fc.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/r20-remove-misidentified-unsafe-photos-20261029",
+      "commit": "57b48205920d30ce6c7fb4d7c7870095f8279d21",
+      "created_on": "2026-10-29T10:52:26.983192Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "9cf52048-d364-49d0-9214-be7b4b064ba5",
+      "url": "https://9cf52048.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-cloudflare-discover-diag.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/cloudflare-discover-diagnostics-20261031",
+      "commit": "3e12d73c509fb852cea3ae85eed715c50846d4df",
+      "created_on": "2026-10-31T06:47:55.290567Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "9e628def-7177-4633-8fb6-d12e8dea9518",
+      "url": "https://9e628def.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "d6271d2176781c92e8dfc54a80c6205f1d55ebbd",
+      "created_on": "2026-10-28T09:11:43.602Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "a0244d88-1233-478b-8c1d-cc031c227862",
+      "url": "https://a0244d88.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feat-works-floor-before-phot.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feat/works-floor-before-photo-20261031",
+      "commit": "6f68246eb830acf8508f3141a643d36205de1f83",
+      "created_on": "2026-10-30T22:33:25.674339Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "a0b61742-7b9e-40c4-9888-17ff800cb3a1",
+      "url": "https://a0b61742.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/lead-generation-pages",
+      "commit": "95af794d98835b55762fabddae3fd1d2e669ccf7",
+      "created_on": "2026-10-20T15:08:35.712315Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "a15dcc81-9907-4495-afd4-ec693d20ee74",
+      "url": "https://a15dcc81.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://perf-defer-below-fold-render.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "perf/defer-below-fold-rendering-20261027",
+      "commit": "7926b4e4bdd63c47dcdf9b73a13f1f5569992f92",
+      "created_on": "2026-10-27T12:54:27.295977Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "a5214183-5698-469c-bed4-5ccd917018ef",
+      "url": "https://a5214183.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "60a40cdd2f392c0d7a2e6d07672568a209b8749b",
+      "created_on": "2026-10-06T03:57:32.451353Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "a7ad4663-5636-406a-b1b7-a86550882d1d",
+      "url": "https://a7ad4663.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "bdbfb1d7c5c9b7be7d3557ed5edf4bb5e79ac12a",
+      "created_on": "2026-10-30T10:09:32.670967Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "a87fb528-91b3-4244-8a30-655359cda0a9",
+      "url": "https://a87fb528.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/truck-safety-block-purpose-steel-20261031",
+      "commit": "33f06b4dfba422e87527a01412df98dda06d688c",
+      "created_on": "2026-10-30T22:16:08.968515Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "adab0aa1-a6df-4b12-86b0-8ac83e638e54",
+      "url": "https://adab0aa1.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/drone-roof-visual-check-page-20261029",
+      "commit": "2eeecc784a69c8caaccf155ff7a5ebafaaea20af",
+      "created_on": "2026-10-29T14:31:28.452376Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "ae2f71e4-391e-4081-868e-4ce8f083ff5d",
+      "url": "https://ae2f71e4.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/works-asbestos-survey-demolition-scope-20261031",
+      "commit": "463aab5fed28584541c60fc2f6a4743c08642313",
+      "created_on": "2026-10-30T22:26:36.786739Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b0aa340c-10ba-40ff-b02e-4bc895f8cca3",
+      "url": "https://b0aa340c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/remove-nonemployee-guardrail-photo-20261026",
+      "commit": "8c77d4e1a798b32cbd051ae242b82ef3ccd7ebe4",
+      "created_on": "2026-10-26T09:18:23.027317Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b13c3c1f-bbee-4d66-8ca8-751bd70b0e04",
+      "url": "https://b13c3c1f.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/drone-roof-real-photos-20261030",
+      "commit": "bdbfb1d7c5c9b7be7d3557ed5edf4bb5e79ac12a",
+      "created_on": "2026-10-30T10:36:16.326086Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b1f24b41-b81b-45dd-a8c2-54f41910a5a2",
+      "url": "https://b1f24b41.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "86a2d7da846dc4fbaeea0fda4039b8ce3f9ab722",
+      "created_on": "2026-10-27T11:51:47.021004Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b2236a18-69cc-4d64-8e78-2ec53f262ff2",
+      "url": "https://b2236a18.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/factory-roof-drainage-leak-repair-20261030",
+      "commit": "0b7403feed6ec2066b7e75193f85f242d9816bbb",
+      "created_on": "2026-10-30T11:14:54.023038Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b36798cc-e7d4-4f77-bfa1-1b40b1be5e77",
+      "url": "https://b36798cc.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "97fe09a5ca3a21de2379fa5c0230b329085fa0ab",
+      "created_on": "2026-10-06T04:15:31.985927Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b38cbd41-b961-4334-af90-b2ffc1e824a7",
+      "url": "https://b38cbd41.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "f4ff6f0aa2370bbede498e3ae03308ae9b6b5278",
+      "created_on": "2026-10-25T14:03:12.42308Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b46f4e46-11e2-4fdf-ab24-5755555a5fa3",
+      "url": "https://b46f4e46.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "f5ef73e2608de480475511fb35992ae3eb7af960",
+      "created_on": "2026-10-25T14:02:45.338191Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b4bfa15a-a896-482e-8670-b66bb6914d27",
+      "url": "https://b4bfa15a.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-phase3-20261025",
+      "commit": "ae44304afa4225a3961943e70fa3cc871f086328",
+      "created_on": "2026-10-25T14:29:12.024783Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b4fedff2-623c-4173-99dc-a21b77a7ed53",
+      "url": "https://b4fedff2.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feat-cloudflare-pages-manage.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feat/cloudflare-pages-management-20261031",
+      "commit": "730a88ad433b78ffad4145cfd485aa7f934e24ef",
+      "created_on": "2026-10-31T02:59:10.626507Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "b769698a-95ff-4096-a847-a8456a8afb50",
+      "url": "https://b769698a.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "c1493b12c91b36f15d85a7be6ac873dfa2fc6e7f",
+      "created_on": "2026-10-31T03:01:07.436597Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b796e9f3-4320-4b08-9d9a-5bd189034de6",
+      "url": "https://b796e9f3.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "9a64809eebc79ebd1986808b00613e4eba33a799",
+      "created_on": "2026-10-27T14:59:41.883109Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b79df613-c046-4be8-8068-018011fae879",
+      "url": "https://b79df613.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "326657246f36ed64e66aa4979ae5f622958dcef1",
+      "created_on": "2026-10-30T22:13:14.986118Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "b9f89a1f-cffa-427a-800d-98280178678a",
+      "url": "https://b9f89a1f.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://tachikawagumi.co.jp"
+      ],
+      "environment": "production",
+      "branch": "main",
+      "commit": "c64d5ccdfa765fb32f6c8ddc7d41046251dea576",
+      "created_on": "2026-10-31T06:48:16.754257Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "current-production",
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "bb26ef44-25e2-45d2-9bb5-f2a5cb1253e1",
+      "url": "https://bb26ef44.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-contact-form-feedback-20.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/contact-form-feedback-20261028",
+      "commit": "2e182c0b7920c40b3d27dce150fb32b776697ee8",
+      "created_on": "2026-10-28T10:19:29.879138Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "bb8eddf3-6328-4dd8-83fe-dbbabcf1928b",
+      "url": "https://bb8eddf3.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/scrap-factory-soundproofing-20261030",
+      "commit": "48bfa16a4be4dfb3876bdfeccb445803cd85b28d",
+      "created_on": "2026-10-30T09:56:06.813832Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "bc2e54f9-fc0d-4cfc-98c5-32c0e888167c",
+      "url": "https://bc2e54f9.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "abc624d606e549e5e94cccee72fb05b076c93e72",
+      "created_on": "2026-10-06T03:55:15.937483Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "bdc79c70-e04d-4157-9f7d-ae6467e52d0d",
+      "url": "https://bdc79c70.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-phase3-20261025",
+      "commit": "7c9e57edc38908f7953b584417ade0188fdcf96e",
+      "created_on": "2026-10-25T14:29:09.074541Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "c05fce70-a5ff-4ac1-bf62-f29ce515e5c6",
+      "url": "https://c05fce70.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feature-urgent-quality-phase.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feature/urgent-quality-phase4-20261026",
+      "commit": "86bc0a923bfdaf231a3d5591aa147997818c3cfb",
+      "created_on": "2026-10-25T16:30:39.359879Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "c37b5f5f-e0d0-4893-8643-72d766d3c11b",
+      "url": "https://c37b5f5f.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://content-works-services-r18-2.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "content/works-services-r18-20261029",
+      "commit": "f70ab9adccf6c3f91b332247ba24b789e6b610ae",
+      "created_on": "2026-10-28T16:55:34.996513Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "c5f96e28-1ba4-4e26-86df-ebc12bdd28b8",
+      "url": "https://c5f96e28.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "68281684f13dbca3eb906b3658b20a7c17fe550e",
+      "created_on": "2026-10-06T05:09:04.522855Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "c68cfe85-1e36-4b25-97d7-83efba36ee7c",
+      "url": "https://c68cfe85.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "0141fe677138afa2c8a0bf3060dabfe88486b8a3",
+      "created_on": "2026-10-06T03:59:07.688831Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "c702e7ce-1719-48a0-9be2-ad26989eb219",
+      "url": "https://c702e7ce.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "805d969760d727b9370e139c2bb199632e3b1dd9",
+      "created_on": "2026-10-06T04:00:25.205858Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "c7b07e9e-c7c4-49bf-8665-40375f41a3dd",
+      "url": "https://c7b07e9e.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "1f74e35c39ed1355888aa26928e0d1c159dcec3a",
+      "created_on": "2026-10-06T06:44:35.234085Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "c7fd46ca-3c4f-43e1-89df-c0de7b92b2a5",
+      "url": "https://c7fd46ca.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "24a42bb9c7fa785f0e84db4b3160e3219ebd57d9",
+      "created_on": "2026-10-06T05:10:48.127359Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "c862bd22-13d4-4ec4-ab1d-d79308a64f5a",
+      "url": "https://c862bd22.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "ffc4888b3717a9bd51e7544556ca42eb14111de9",
+      "created_on": "2026-10-29T07:04:41.384457Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "c911934b-e47c-4fe0-9ef1-c32e1b83e7f1",
+      "url": "https://c911934b.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "perf/council-images-20261027",
+      "commit": "f1cb9f5263625111f8c5541e2845fface72b9178",
+      "created_on": "2026-10-27T14:33:36.433243Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "cbd3842c-d884-4e4d-9ab4-cef3afb79468",
+      "url": "https://cbd3842c.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "4fce2a3932d8c3c405be256c4ff500b011312543",
+      "created_on": "2026-10-28T10:22:46.476181Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "cbdfef1e-9f64-49d9-b300-f1ec6498a264",
+      "url": "https://cbdfef1e.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "perf/defer-below-fold-rendering-20261027",
+      "commit": "86a2d7da846dc4fbaeea0fda4039b8ce3f9ab722",
+      "created_on": "2026-10-27T12:00:42.732444Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "ccf1411e-7fa1-4c7f-a769-7f7f808eae76",
+      "url": "https://ccf1411e.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/urgent-quality-phase4-20261026",
+      "commit": "deb825fc51d9ab45addd2b71848877eb9376bda0",
+      "created_on": "2026-10-25T16:30:13.150125Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "cd05f169-0873-433e-9a2c-30ed0877d920",
+      "url": "https://cd05f169.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feat-council-contact-funnel.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feat/council-contact-funnel-20261027",
+      "commit": "4ad6ee2acc9375f94418cbad475feacb39a272e3",
+      "created_on": "2026-10-27T14:51:33.367335Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "ce36800a-41d3-4e6e-8870-d05411265fd9",
+      "url": "https://ce36800a.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "content/adflat-case-r19-20261029",
+      "commit": "8b97509a6868ac2bfa7b090e8065f459da68603b",
+      "created_on": "2026-10-29T05:38:04.29959Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "d0ca6606-47c0-4465-915d-c046fc82200c",
+      "url": "https://d0ca6606.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-pre-council-emergency-20.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/pre-council-emergency-20261031",
+      "commit": "c1c05af7cf6ec5a999d1d89125b5e172152f3dd6",
+      "created_on": "2026-10-30T23:14:48.76247Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "d1b421f7-f5ff-4feb-9305-94f6eb4ed42c",
+      "url": "https://d1b421f7.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-council-accessibility-20.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/council-accessibility-20261027",
+      "commit": "172399a126a721d4f0b02a9235152be927a8e085",
+      "created_on": "2026-10-27T14:42:46.254161Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "d1ee4051-1785-43de-a9c6-10c14b581d90",
+      "url": "https://d1ee4051.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/council-accessibility-20261027",
+      "commit": "bef3d26566361138596eafa4f50c6e74c58dffee",
+      "created_on": "2026-10-27T14:42:43.648918Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "d5f81243-1f46-4af0-b376-01fa97f1a69f",
+      "url": "https://d5f81243.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://content-adflat-case-r19-2026.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "content/adflat-case-r19-20261029",
+      "commit": "73dd74cfefac8919bcb90487fe229359c4171479",
+      "created_on": "2026-10-29T06:59:29.892123Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "d62e5efc-fbcc-47e0-aadd-1549b9269f95",
+      "url": "https://d62e5efc.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-phase3-20261025",
+      "commit": "706e0784c1958c3d745b788680a4b31779ab8188",
+      "created_on": "2026-10-25T14:29:23.395785Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "d68e9181-050f-4447-bca8-4c44c412acce",
+      "url": "https://d68e9181.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/works-roadside-green-fence-20261031",
+      "commit": "142bae3fd6e710f736b9417d270025a436218321",
+      "created_on": "2026-10-30T15:20:45.025577Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "d79908ca-c438-4353-b48e-e93dee78e892",
+      "url": "https://d79908ca.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "335b9e9fd7ecc813a631e58eecfaa3b80fd63220",
+      "created_on": "2026-10-29T11:14:31.725452Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "d7c2e88b-a4c0-4733-b791-2e0a5ccb202e",
+      "url": "https://d7c2e88b.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "0b7403feed6ec2066b7e75193f85f242d9816bbb",
+      "created_on": "2026-10-30T10:40:11.462107Z",
+      "stage": "initialize",
+      "status": "failure",
+      "baseline_blockers": []
+    },
+    {
+      "id": "d8db91ba-7d9a-44d9-95cc-df591fcaa1b0",
+      "url": "https://d8db91ba.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/works-floor-before-photo-20261031",
+      "commit": "6a29c312c5c19c2ad891b14b62ab081f5867c538",
+      "created_on": "2026-10-30T22:32:54.149774Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "d975bae3-7291-469f-adc4-fc2516ecde14",
+      "url": "https://d975bae3.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/lead-generation-pages",
+      "commit": "49005982aed02ff27f431d24c3c3d0c15ebe3cb1",
+      "created_on": "2026-10-20T15:08:33.061219Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "d988408b-c8b2-47a9-ad10-3d83cce87421",
+      "url": "https://d988408b.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/mesh-fence-restoration-20261027",
+      "commit": "4c216123be71d48e9dd2c3c11277f12b28ead9aa",
+      "created_on": "2026-10-27T07:55:50.996847Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "daba7ac9-2987-429b-bb7e-a543f2e84a82",
+      "url": "https://daba7ac9.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "4bfb4debe9d9ebb49e0a34dda96fa75f9581a49e",
+      "created_on": "2026-10-06T04:18:56.877679Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "db3bc429-fe5b-4449-ac61-c1cc71647e8a",
+      "url": "https://db3bc429.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "f56a92e5f8c436352ff506c9ca7ff4fc912cc917",
+      "created_on": "2026-10-29T10:38:13.679104Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "dc03846f-4bb8-4161-b89a-c6f3bf302946",
+      "url": "https://dc03846f.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/r20-header-contact-hierarchy-20261029",
+      "commit": "335b9e9fd7ecc813a631e58eecfaa3b80fd63220",
+      "created_on": "2026-10-29T11:23:30.993292Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "dcfd45d0-9770-49b7-922b-53f2956712d9",
+      "url": "https://dcfd45d0.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "3e30eb93f08968d8e4b32cdee8b7868356f8f9a9",
+      "created_on": "2026-10-25T14:03:36.381234Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "e376a51f-fa50-45b8-91d4-11ad8342c7c3",
+      "url": "https://e376a51f.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/publish-company-credentials-20261025",
+      "commit": "f5ef73e2608de480475511fb35992ae3eb7af960",
+      "created_on": "2026-10-25T14:11:09.480687Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "e3d9260f-15ef-45a2-9160-7424c5dffb97",
+      "url": "https://e3d9260f.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "2a6eebcdc9bbaaf42b02ce36716ee1363466eb1a",
+      "created_on": "2026-10-06T04:21:44.787208Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "e47c5bd6-4a73-4321-b69b-80b5b822a487",
+      "url": "https://e47c5bd6.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "ad21c9bdab68428ea6501936ce16245b9ff70919",
+      "created_on": "2026-10-30T22:33:54.761995Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "e48665f7-8489-445e-b295-4408e5efbaa4",
+      "url": "https://e48665f7.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "content/fence-panel-case-r20-20261029",
+      "commit": "a24a49a879ecc2993bf66d54c12fd90b242e6209",
+      "created_on": "2026-10-29T09:27:34.029672Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "e5ead49f-522c-4dc1-bf7b-7b861b9a6bc6",
+      "url": "https://e5ead49f.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "fix/remove-nonemployee-guardrail-photo-20261026",
+      "commit": "0f131e21a3553d6185cb55e30d7ddeeece4a5cb9",
+      "created_on": "2026-10-26T09:18:07.318005Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "e5f8e619-01b5-46ed-a16e-22cbfa6fd5d1",
+      "url": "https://e5f8e619.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "25e57921d12cb37bc940287da60cec5ca82cecb4",
+      "created_on": "2026-10-06T08:07:17.244442Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "e71969db-7741-48dd-bab3-eb07d4f8c98d",
+      "url": "https://e71969db.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "ace9d38c7ec71743eb56b12fce9f435414d67858",
+      "created_on": "2026-10-30T23:17:49.526331Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "e78d7b58-4c09-4e8e-b49e-c79143132548",
+      "url": "https://e78d7b58.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "743411cb218c18fbefac1cae1ce7a96026e4a184",
+      "created_on": "2026-10-06T04:31:29.022533Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "e8574778-9269-4f6b-861c-4281e6ae686c",
+      "url": "https://e8574778.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "b62161dd9f30b578a59b0d7361ad57bb506b9229",
+      "created_on": "2026-10-06T04:54:12.631038Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "e8ee043f-3d8d-4302-934d-718541507265",
+      "url": "https://e8ee043f.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "65138162b6c43d7c4d6661fcc0ad7d97200f49f3",
+      "created_on": "2026-10-25T14:03:39.128704Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "eacdc116-6e97-4c44-b06e-7ba97a93ddb6",
+      "url": "https://eacdc116.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feat/scrap-factory-soundproofing-20261030",
+      "commit": "d8245585157af277501328991c5f8aee24d842c8",
+      "created_on": "2026-10-30T10:07:04.404196Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "f18eef10-1078-4173-9d34-1e94bb63c034",
+      "url": "https://f18eef10.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://fix-mobile-menu-state-202610.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "fix/mobile-menu-state-20261027",
+      "commit": "45f4b08359512224c13d592b7a140b87df906662",
+      "created_on": "2026-10-27T13:05:49.680377Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "f405ffbe-5698-4f54-8100-464bb7dd524a",
+      "url": "https://f405ffbe.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "44683d294a7ca0d78e2aafb2f534b82c0518b21b",
+      "created_on": "2026-10-06T08:17:30.518191Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "f4dac576-791d-4007-a710-a6245f9d7e21",
+      "url": "https://f4dac576.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://perf-council-images-20261027.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "perf/council-images-20261027",
+      "commit": "d9de073ec58a76387fc70d03fdbd6d8f80f2ade0",
+      "created_on": "2026-10-27T14:33:40.339411Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "f71028f8-c81f-4d7a-9852-74d5c70f8793",
+      "url": "https://f71028f8.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "908f3e9f7b06f3f90e17ef77243551fef0621251",
+      "created_on": "2026-10-30T21:55:01.337532Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "f72dc2e6-556b-4664-b5f8-d8f53ffb43bc",
+      "url": "https://f72dc2e6.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-phase3-20261025",
+      "commit": "21b7faab8e271c03c8f5502aa808bdb00d86d4ce",
+      "created_on": "2026-10-25T14:27:28.363307Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "fa8d0f9b-b6b0-4001-861c-7c2ec80b5573",
+      "url": "https://fa8d0f9b.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "feature/seo-quality-20261025",
+      "commit": "ca209d4f859bb4fcb590ecbc38db8c8ec486f117",
+      "created_on": "2026-10-25T14:10:03.124017Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "fba48630-4d7f-457f-8014-bbcdb9389fbd",
+      "url": "https://fba48630.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "production",
+      "branch": "main",
+      "commit": "c31d8586db3ee66f3acff55d4a85eb108551f082",
+      "created_on": "2026-10-30T03:58:59.830327Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    },
+    {
+      "id": "fda190ac-f5a1-4fe1-969f-0a919a0903ce",
+      "url": "https://fda190ac.tachikawagumi-site.pages.dev",
+      "aliases": [
+        "https://feature-publish-company-cred.tachikawagumi-site.pages.dev"
+      ],
+      "environment": "preview",
+      "branch": "feature/publish-company-credentials-20261025",
+      "commit": "635a25d2bbe5b46b70c407d465ef79afcf9e0615",
+      "created_on": "2026-10-25T14:11:27.981728Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": [
+        "latest-branch",
+        "latest-successful-branch",
+        "active-alias-no-force"
+      ]
+    },
+    {
+      "id": "fe1d3425-d696-4c72-be71-c1a488177f16",
+      "url": "https://fe1d3425.tachikawagumi-site.pages.dev",
+      "aliases": [],
+      "environment": "preview",
+      "branch": "content/adflat-case-r19-20261029",
+      "commit": "f2aa9923c7f2987b372a7a9e632033badff3eca9",
+      "created_on": "2026-10-29T06:00:01.324489Z",
+      "stage": "deploy",
+      "status": "success",
+      "baseline_blockers": []
+    }
+  ]
+}

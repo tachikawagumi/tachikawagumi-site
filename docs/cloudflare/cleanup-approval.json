@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "project_name": "tachikawagumi-site",
+  "plan_sha256": "4d5563a98070753aa1d18ecdcd59446568c2b190b87c6b1be6471cc8d786a473",
+  "account_sha256": null,
+  "state_sha256": null,
+  "preflight_run_id": null,
+  "expected_absent_ids": [],
+  "authorized_ids": [],
+  "max_deletions": 0,
+  "approved_by": null,
+  "approval_record": null,
+  "approved_at": null,
+  "expires_at": null
+}
