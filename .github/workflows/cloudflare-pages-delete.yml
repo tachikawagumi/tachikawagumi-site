@@ -1,0 +1,87 @@
+name: Cloudflare Pages - single approved deletion
+on:
+  workflow_dispatch:
+    inputs:
+      deployment_id:
+        description: Exactly one Deployment ID (no force, no batch)
+        required: true
+        type: string
+      mode:
+        description: Dry run first; delete requires separate representative approval
+        required: true
+        default: dry-run
+        type: choice
+        options: [dry-run, delete]
+      approval_sha256:
+        description: SHA256 of representative-approved deletion-approvals.json on main
+        required: false
+        type: string
+      confirmation:
+        description: 'For delete only, type DELETE: followed by the exact Deployment ID'
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: cloudflare-pages-management
+  cancel-in-progress: false
+jobs:
+  dry-run:
+    if: github.ref == 'refs/heads/main' && github.repository == 'tachikawagumi/tachikawagumi-site' && inputs.mode == 'dry-run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Refuse stale main runs
+        run: test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
+      - name: Prepare only (read token)
+        env:
+          MODE: dry-run
+          DEPLOYMENT_ID: ${{ inputs.deployment_id }}
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_PAGES_READ_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_PAGES_PROJECT_NAME: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
+        run: python3 tools/cloudflare/pages_admin.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: pages-delete-dry-run-${{ github.run_id }}-${{ github.run_attempt }}
+          path: pages-report/*.json
+          if-no-files-found: ignore
+          retention-days: 7
+  delete:
+    if: github.ref == 'refs/heads/main' && github.repository == 'tachikawagumi/tachikawagumi-site' && inputs.mode == 'delete' && github.actor == 'tachikawagumi' && github.triggering_actor == 'tachikawagumi'
+    environment: cloudflare-pages-delete
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Offline safety tests
+        run: python3 -m unittest discover -s tools/cloudflare -p 'test_*.py' -v
+      - name: Refuse stale main runs
+        run: test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
+      - name: Delete only the approved single deployment (disabled by default)
+        env:
+          MODE: delete
+          DEPLOYMENT_ID: ${{ inputs.deployment_id }}
+          APPROVAL_SHA256: ${{ inputs.approval_sha256 }}
+          CONFIRMATION: ${{ inputs.confirmation }}
+          CF_PAGES_DELETE_ENABLED: ${{ vars.CF_PAGES_DELETE_ENABLED }}
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_PAGES_DELETE_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_PAGES_PROJECT_NAME: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
+        run: python3 tools/cloudflare/pages_admin.py
+      - name: Record sanitized API outcome and post-delete probes
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: pages-delete-result-${{ github.run_id }}-${{ github.run_attempt }}
+          path: pages-report/*.json
+          if-no-files-found: ignore
+          retention-days: 7

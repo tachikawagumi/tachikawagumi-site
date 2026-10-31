@@ -1,0 +1,44 @@
+name: Cloudflare Pages - read-only inventory
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Discover projects first, then inventory the verified project
+        required: true
+        default: discover
+        type: choice
+        options: [discover, inventory]
+permissions:
+  contents: read
+concurrency:
+  group: cloudflare-pages-management
+  cancel-in-progress: false
+jobs:
+  inventory:
+    if: github.ref == 'refs/heads/main' && github.repository == 'tachikawagumi/tachikawagumi-site'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Offline safety tests
+        run: python3 -m unittest discover -s tools/cloudflare -p 'test_*.py' -v
+      - name: Refuse stale main runs
+        run: test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
+      - name: Read Cloudflare API and probe images without credentials
+        env:
+          MODE: ${{ inputs.mode }}
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_PAGES_READ_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_PAGES_PROJECT_NAME: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
+        run: python3 tools/cloudflare/pages_admin.py
+      - name: Save sanitized results only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: pages-read-only-${{ github.run_id }}-${{ github.run_attempt }}
+          path: pages-report/*.json
+          if-no-files-found: ignore
+          retention-days: 7
