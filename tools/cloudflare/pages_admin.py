@@ -20,11 +20,78 @@ PATHS = ["ashiba2.jpg", "ashiba3.jpg", "chika.jpg", "doko2.jpg", "hokyou.jpg", "
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(os.environ.get("REPORT_DIR", "pages-report"))
 MAX_IMAGE = 16 * 1024 * 1024
+MAX_API_ERROR = 64 * 1024
+PAGE_SIZE = 10  # Match Cloudflare Wrangler's Pages project listing; do not assume 100 is valid.
 UUID = r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
 
 
 class Stop(Exception):
     pass
+
+
+class APIError(Stop):
+    def __init__(self, diagnostic):
+        self.diagnostic = diagnostic
+        # Only allowlisted/generated fields. Never embed an API message or request URL.
+        super().__init__("Cloudflare API diagnostic: " + json.dumps(diagnostic, ensure_ascii=True))
+
+
+def safe_api_errors(data):
+    """Classify error text in memory; serialize fixed labels and integer codes only."""
+    results = []
+
+    def visit(errors, depth=0):
+        if not isinstance(errors, list) or depth > 4:
+            return
+        for error in errors[:20]:
+            if not isinstance(error, dict) or len(results) >= 40:
+                continue
+            message = error.get("message")
+            message = message.lower() if isinstance(message, str) else ""
+            if "per_page" in message or "per page" in message or "pagination" in message:
+                reason = "pagination-parameter-rejected"
+            elif "invalid request headers" in message or "authorization" in message or "bearer" in message:
+                reason = "authorization-header-rejected"
+            elif any(w in message for w in ("authenticat", "api token", "access token", "invalid token")):
+                reason = "authentication-rejected"
+            elif any(w in message for w in ("permission", "not authorized", "forbidden", "access denied")):
+                reason = "permission-or-scope-rejected"
+            elif "account" in message:
+                reason = "account-parameter-or-scope-rejected"
+            elif "rate limit" in message:
+                reason = "rate-limited"
+            else:
+                reason = "unrecognized-api-error-raw-message-withheld"
+            code = error.get("code")
+            results.append({"code": code if type(code) is int and 0 <= code <= 999999999 else None,
+                            "reason": reason})
+            visit(error.get("error_chain"), depth + 1)
+
+    visit(data.get("errors"))
+    return results
+
+
+def api_diagnostic(path, method, status, headers, data, body_kind):
+    # Public logs may contain adversarial API messages. Never try to redact arbitrary prose.
+    endpoint = "/accounts/<redacted>/pages/projects"
+    route = path.split("?", 1)[0]
+    if route != "/pages/projects":
+        endpoint += "/<project>"
+        if "/deployments" in route:
+            endpoint += "/deployments"
+            if route.rsplit("/", 1)[-1] != "deployments":
+                endpoint += "/<deployment>"
+    params = urllib.parse.parse_qs(urllib.parse.urlsplit(path).query)
+    pagination = {}
+    for field in ("page", "per_page"):
+        value = params.get(field, [""])[0]
+        if re.fullmatch(r"[0-9]{1,5}", value):
+            pagination[field] = int(value)
+    ray = next((v for k, v in headers.items() if k.lower() == "cf-ray"), "")
+    return {"method": method, "endpoint": endpoint, "pagination": pagination, "http": status,
+            "authentication": "Bearer", "account_id_format_valid": True, "body_kind": body_kind,
+            "cf_ray": ray if re.fullmatch(r"[0-9a-fA-F]{16,32}(?:-[A-Z]{3})?", ray) else None,
+            "errors": safe_api_errors(data)}
 
 
 def require(condition, message):
@@ -42,40 +109,54 @@ def request(url, token=None, method="GET", limit=MAX_IMAGE):
     if token:
         require(url.startswith("https://api.cloudflare.com/client/v4/accounts/"), "Invalid API origin")
         headers["Authorization"] = "Bearer " + token
+        headers["Accept"] = "application/json"
     req = urllib.request.Request(url, headers=headers, method=method)
     try:
         with urllib.request.build_opener(NoRedirect).open(req, timeout=20) as response:
             body = response.read(limit + 1)
             return response.status, dict(response.headers), body
     except urllib.error.HTTPError as error:
-        # Error pages may contain secrets or coordinates; do not return their body.
-        return error.code, dict(error.headers), b""
+        # API error JSON is read only in memory for allowlisted diagnosis; never serialize raw body.
+        # Image error pages remain discarded. Redirects are never followed with credentials.
+        body = error.read(MAX_API_ERROR + 1) if token else b""
+        return error.code, dict(error.headers), body
     except (OSError, TimeoutError):
         return 0, {}, b""
 
 
 class API:
     def __init__(self, token, account):
+        token, account = token.strip(), account.strip().lower()
         require(bool(token), "Register the required Cloudflare token in GitHub Secrets")
         require(bool(re.fullmatch(r"[0-9a-f]{32}", account)), "Set CLOUDFLARE_ACCOUNT_ID from Cloudflare")
+        require(not token.lower().startswith(("bearer ", "authorization:", "curl "))
+                and not token.startswith(("'", '"')) and not token.endswith(("'", '"')),
+                "Token Secret must contain only the token value, without Bearer/header/curl/quotes; no reissue required")
+        require(all(33 <= ord(c) <= 126 for c in token),
+                "Token Secret contains whitespace/control/non-ASCII characters; check stored formatting without sharing its value")
         self.token = token
         self.base = "https://api.cloudflare.com/client/v4/accounts/" + account
 
     def call(self, path, method="GET"):
         require(path.startswith("/pages/projects"), "Unexpected API path")
-        status, _, body = request(self.base + path, self.token, method, 32 * 1024 * 1024)
-        require(status == 200, f"Cloudflare API HTTP {status}; no raw response logged")
+        status, headers, body = request(self.base + path, self.token, method, 32 * 1024 * 1024)
         try:
             data = json.loads(body)
+            body_kind = "json-object" if isinstance(data, dict) else "json-non-object"
         except (ValueError, UnicodeError):
-            raise Stop("Invalid Cloudflare JSON response") from None
-        require(data.get("success") is True, "Cloudflare API rejected request; no raw response logged")
+            data, body_kind = {}, "non-json-or-empty"
+        if not isinstance(data, dict):
+            data = {}
+        if status != 200 or data.get("success") is not True:
+            diagnostic = api_diagnostic(path, method, status, headers, data, body_kind)
+            write_report("api-error.json", diagnostic)
+            raise APIError(diagnostic)
         return data
 
     def all(self, path):
         results, seen = [], set()
         for page in range(1, 10001):
-            data = self.call(path + f"?page={page}&per_page=100")
+            data = self.call(path + f"?page={page}&per_page={PAGE_SIZE}")
             batch = data.get("result")
             require(isinstance(batch, list), "Invalid paginated result")
             ids = [x.get("id") for x in batch]
@@ -84,8 +165,18 @@ class API:
             results.extend(batch)
             seen.update(ids)
             info = data.get("result_info") or {}
-            # Do not assume the server honors per_page=100. Empty page is the fallback.
-            if not batch or (info.get("total_pages") is not None and page >= int(info["total_pages"])):
+            # Respect explicit server pagination first. Without totals, stop on a short
+            # final page as Wrangler does; querying beyond it may itself return HTTP 400.
+            total_pages, total_count = info.get("total_pages"), info.get("total_count")
+            if total_pages is not None:
+                done = page >= int(total_pages)
+            elif total_count is not None:
+                done = len(results) >= int(total_count)
+            else:
+                server_size = int(info.get("per_page") or PAGE_SIZE)
+                require(server_size > 0, "Invalid server page size")
+                done = len(batch) < server_size
+            if not batch or done:
                 if info.get("total_count") is not None:
                     require(len(results) == int(info["total_count"]), "Incomplete pagination; rerun")
                 return results
@@ -397,7 +488,7 @@ def main():
             safe.append({"name": p.get("name"), "subdomain": p.get("subdomain"),
                          "domains": p.get("domains") or [], "repository_owner": c.get("owner"), "repository_name": c.get("repo_name")})
         write_report("projects.json", safe)
-        print("Project discovery complete. Verify repository + official domain before setting project variable.")
+        print(f"Project discovery complete: {len(safe)} project(s). Verify repository + official domain before setting project variable.")
     elif mode == "inventory":
         inventory(api, name)
     else:

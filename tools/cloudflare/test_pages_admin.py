@@ -1,6 +1,7 @@
 import copy
 import datetime as dt
 import hashlib
+import io
 import json
 import os
 from pathlib import Path
@@ -22,6 +23,10 @@ def deployment(number, date, branch="old", aliases=None):
 
 class SafetyTests(unittest.TestCase):
     def setUp(self):
+        # Mocked deletion success is not a real operation; keep its stdout out of Actions logs.
+        self.output = patch("sys.stdout", new_callable=io.StringIO)
+        self.output.start()
+        self.addCleanup(self.output.stop)
         self.old = deployment(1, "2026-10-01T00:00:00Z")
         self.latest = deployment(2, "2026-10-02T00:00:00Z")
         self.prod = deployment(3, "2026-10-03T00:00:00Z", "main")
@@ -82,7 +87,7 @@ class SafetyTests(unittest.TestCase):
 
     def test_repeated_page_fails_closed(self):
         api = p.API("test", "a" * 32)
-        with patch.object(api, "call", return_value={"result": [{"id": "1"}]}), self.assertRaises(p.Stop):
+        with patch.object(api, "call", return_value={"result": [{"id": "1"}], "result_info": {"total_pages": 2}}), self.assertRaises(p.Stop):
             api.all("/pages/projects")
 
     def test_partial_pagination_fails_closed(self):
@@ -227,6 +232,112 @@ class SafetyTests(unittest.TestCase):
         self.assertEqual(report.call_args.args[1]["api_outcome"], "unconfirmed")
         self.assertNotIn("api_success", report.call_args.args[1])
         self.assertEqual(sum(c.kwargs.get("method") == "DELETE" for c in api.call.call_args_list), 1)
+
+    def test_discover_uses_account_pages_endpoint_and_wrangler_page_size(self):
+        api = p.API("test", "a" * 32)
+        with patch.object(p, "request", return_value=(200, {}, b'{"success":true,"result":[{"id":"one"}]}')) as call:
+            self.assertEqual(api.all("/pages/projects"), [{"id": "one"}])
+            call.assert_called_once_with("https://api.cloudflare.com/client/v4/accounts/" + "a" * 32 + "/pages/projects?page=1&per_page=10",
+                                         "test", "GET", 32 * 1024 * 1024)
+
+    def test_short_final_page_without_metadata_does_not_request_invalid_next_page(self):
+        api = p.API("test", "a" * 32)
+        with patch.object(api, "call", side_effect=[{"result": [{"id": str(i)} for i in range(10)]},
+                                                   {"result": [{"id": "last"}]}]) as call:
+            self.assertEqual(len(api.all("/pages/projects")), 11)
+            self.assertEqual(call.call_count, 2)
+            self.assertIn("page=2&per_page=10", call.call_args.args[0])
+
+    def test_server_shorter_page_size_with_totals_still_fetches_all(self):
+        api = p.API("test", "a" * 32)
+        with patch.object(api, "call", side_effect=[{"result": [{"id": "one"}], "result_info": {"total_count": 2}},
+                                                   {"result": [{"id": "two"}], "result_info": {"total_count": 2}}]) as call:
+            self.assertEqual(len(api.all("/pages/projects")), 2)
+            self.assertEqual(call.call_count, 2)
+
+    def test_account_id_normalization_and_validation_no_raw_value(self):
+        api = p.API("  cfat_test.ABC_123-xyz\n", "  " + "A" * 32 + "\n")
+        self.assertEqual(api.token, "cfat_test.ABC_123-xyz")
+        self.assertEqual(api.base, "https://api.cloudflare.com/client/v4/accounts/" + "a" * 32)
+        with self.assertRaises(p.Stop) as error:
+            p.API("test", "not-an-account-id")
+        self.assertNotIn("not-an-account-id", str(error.exception))
+
+    def test_bad_token_format_rejected_before_network_without_echo(self):
+        for token in ['Bearer SUPER_SECRET', 'Authorization: Bearer SUPER_SECRET', '"SUPER_SECRET"',
+                      "abc\r\nSUPER_SECRET", "abc SUPER_SECRET"]:
+            with self.subTest(token_format="malformed"), patch.object(p, "request") as request, self.assertRaises(p.Stop) as error:
+                p.API(token, "a" * 32)
+            self.assertNotIn("SUPER_SECRET", str(error.exception))
+            request.assert_not_called()
+
+    def test_account_token_uses_single_bearer_and_json_accept(self):
+        response = unittest.mock.MagicMock()
+        response.__enter__.return_value = response
+        response.status, response.headers = 200, {}
+        response.read.return_value = b'{"success":true,"result":[]}'
+        opener = unittest.mock.Mock()
+        opener.open.return_value = response
+        with patch.object(p.urllib.request, "build_opener", return_value=opener):
+            p.request("https://api.cloudflare.com/client/v4/accounts/" + "a" * 32 + "/pages/projects", "cfat_example-token")
+        req = opener.open.call_args.args[0]
+        self.assertEqual(req.get_header("Authorization"), "Bearer cfat_example-token")
+        self.assertEqual(req.get_header("Accept"), "application/json")
+        self.assertIsNone(req.get_header("X-auth-key"))
+        self.assertIsNone(req.get_header("X-auth-email"))
+
+    def test_http_error_body_is_available_only_in_api_memory(self):
+        body = b'{"success":false,"errors":[{"code":10000,"message":"authentication rejected"}]}'
+        def error(*args, **kwargs):
+            return p.urllib.error.HTTPError("https://api.cloudflare.com/", 400, "Bad Request", {}, io.BytesIO(body))
+        opener = unittest.mock.Mock()
+        opener.open.side_effect = lambda *args, **kwargs: (_ for _ in ()).throw(error())
+        with patch.object(p.urllib.request, "build_opener", return_value=opener):
+            status, _, api_body = p.request("https://api.cloudflare.com/client/v4/accounts/" + "a" * 32 + "/pages/projects", "test")
+            self.assertEqual(status, 400)
+            self.assertEqual(api_body, body)
+            self.assertEqual(p.request("https://x.example.pages.dev/ashiba2.jpg")[2], b"")
+
+    def test_error_diagnostics_never_write_raw_message_token_account_or_result(self):
+        account, token = "a" * 32, "NEVER_ECHO_TOKEN_123"
+        payload = {"success": False, "errors": [{"code": 8000000,
+                   "message": "per_page rejected token=" + token + " account=" + account + " GPS=35.123456,139.123456",
+                   "error_chain": [{"code": 10000, "message": "authentication failed " + token}]}],
+                   "result": {"env_vars": {"secret": token}}}
+        api = p.API(token, account)
+        with tempfile.TemporaryDirectory() as temp, patch.object(p, "OUT", Path(temp)), patch.object(
+                p, "request", return_value=(400, {}, json.dumps(payload).encode())):
+            with self.assertRaises(p.APIError) as error:
+                api.call("/pages/projects?page=1&per_page=10")
+            saved = (Path(temp) / "api-error.json").read_text()
+            self.assertEqual(sorted(f.name for f in Path(temp).iterdir()), ["api-error.json"])
+        diagnostic = error.exception.diagnostic
+        text = str(error.exception)
+        self.assertEqual(diagnostic["http"], 400)
+        self.assertEqual(diagnostic["pagination"], {"page": 1, "per_page": 10})
+        self.assertEqual(diagnostic["errors"][0], {"code": 8000000, "reason": "pagination-parameter-rejected"})
+        for secret in [token, account, "35.123456", "139.123456", "env_vars"]:
+            self.assertNotIn(secret, text)
+            self.assertNotIn(secret, saved)
+
+    def test_non_json_or_success_false_is_safe_failure(self):
+        api = p.API("test", "a" * 32)
+        for status, body in [(400, b'<html>SECRET_RAW_ERROR</html>'), (200, b'{"success":false}'), (200, b'[]'), (0, b'')]:
+            with patch.object(p, "request", return_value=(status, {}, body)), patch.object(p, "write_report"), self.assertRaises(p.APIError) as error:
+                api.call("/pages/projects?page=1&per_page=10")
+            self.assertNotIn("SECRET_RAW_ERROR", str(error.exception))
+
+    def test_discover_end_to_end_read_only_with_existing_config(self):
+        env = {"GITHUB_EVENT_NAME": "workflow_dispatch", "GITHUB_REF": "refs/heads/main",
+               "GITHUB_REPOSITORY": "tachikawagumi/tachikawagumi-site", "MODE": "discover",
+               "CF_API_TOKEN": "test", "CLOUDFLARE_ACCOUNT_ID": "a" * 32}
+        response = {"success": True, "result": [{"id": "one", "name": "verified",
+                    "subdomain": "verified.pages.dev", "env_vars": {"secret": "NEVER_SAVE"},
+                    "source": {"config": {"owner": "tachikawagumi", "repo_name": "tachikawagumi-site"}}}]}
+        with patch.dict(os.environ, env), patch.object(p, "request", return_value=(200, {}, json.dumps(response).encode())) as request, patch.object(p, "write_report") as report:
+            p.main()
+        self.assertNotIn("NEVER_SAVE", json.dumps(report.call_args.args[1]))
+        self.assertTrue(all(c.args[2] == "GET" for c in request.call_args_list))
 
 
 if __name__ == "__main__":
