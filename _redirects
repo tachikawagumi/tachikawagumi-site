@@ -8,3 +8,9 @@
 /works/factory-roof-drainage-repair /retired-assets/ 302
 /works/factory-roof-drainage-repair/* /retired-assets/ 302
 /works/interior-floor-replacement/photos/floor-before.webp /retired-assets/ 302
+
+# Legacy navigation aliases: preserve existing canonical content and form.
+/contact /#contact 301
+/contact/ /#contact 301
+/works/highway-sound-barrier /sound-barrier/ 301
+/works/highway-sound-barrier/ /sound-barrier/ 301
