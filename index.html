@@ -112,6 +112,43 @@
 .btn-primary,.final-cta .btn-primary{color:var(--navy)}.contact .contact-label{color:#d8b66a}.contact-form input:focus-visible,.contact-form select:focus-visible,.contact-form textarea:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid #896322;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 .contact .form-card .form-error{color:#a34539;font-size:13px;line-height:1.7;margin:-10px 0 0}
+</style><style>
+/* Full-screen mobile navigation: the fixed inquiry bar stays above the overlay. */
+@media(max-width:900px){
+  body.mobile-menu-open{overflow:hidden}
+  .header:has(.menu.open){z-index:65}
+  .header .nav{position:relative}
+  .header .brand{position:relative;z-index:2}
+  .menu-toggle{position:relative;z-index:3;display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:0;background:transparent;cursor:pointer}
+  .menu-toggle-icon,.menu-toggle-icon:before,.menu-toggle-icon:after{display:block;position:absolute;width:23px;height:1.5px;background:#fff;transition:transform .25s,opacity .2s}
+  .menu-toggle-icon:before,.menu-toggle-icon:after{content:""}
+  .menu-toggle-icon:before{transform:translateY(-7px)}.menu-toggle-icon:after{transform:translateY(7px)}
+  .menu-toggle[aria-expanded="true"] .menu-toggle-icon{background:transparent}
+  .menu-toggle[aria-expanded="true"] .menu-toggle-icon:before{transform:rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] .menu-toggle-icon:after{transform:rotate(-45deg)}
+  .menu{position:fixed;inset:0;width:100%;height:100dvh;top:0;left:0;right:0;border:0;border-radius:0;background:#0a1525;z-index:1;display:block;overflow-y:auto;overscroll-behavior:contain;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-12px);transition:opacity .3s ease,transform .3s ease,visibility 0s linear .3s;padding:116px max(26px,calc((100% - 660px)/2)) 36px;box-shadow:none}
+  .menu.open{display:block;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0);transition:opacity .3s ease,transform .3s ease,visibility 0s}
+  .menu>.desktop-menu-link{display:none}
+  .mobile-menu-content{display:block;width:100%;max-width:660px;margin:auto;color:#fff}
+  .mobile-menu-kicker{font-size:11px;letter-spacing:.28em;color:#b8a37b;margin-bottom:28px}
+  .mobile-menu-group{border-bottom:1px solid rgba(255,255,255,.15)}
+  .mobile-menu-group summary{list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:82px;font-size:clamp(23px,4vw,30px);font-weight:600;cursor:pointer;padding:10px 2px}
+  .mobile-menu-group summary::-webkit-details-marker{display:none}
+  .mobile-menu-group summary:after{content:"+";font-family:Arial,sans-serif;font-size:24px;font-weight:300;color:#c1c8cf}
+  .mobile-menu-group[open] summary:after{content:"−"}
+  .mobile-menu-sub{display:grid;gap:2px;padding:0 0 18px 15px}
+  .menu .mobile-menu-sub a{display:block;padding:9px 0;border:0;color:#d2d9e0;font-size:15px;font-weight:400}
+  .menu .mobile-menu-primary{display:block;padding:24px 2px;min-height:82px;border:0;border-bottom:1px solid rgba(255,255,255,.15);font-size:clamp(23px,4vw,30px);font-weight:600}
+  .menu .mobile-menu-contact{display:block;margin-top:30px;padding:15px 0;color:#fff;border:0;font-size:16px;font-weight:600}
+  .menu a:focus-visible,.menu summary:focus-visible,.menu-toggle:focus-visible{outline:2px solid #d8b66a;outline-offset:4px}
+}
+@media(min-width:901px){.mobile-menu-content{display:none}}
+@media(max-width:700px){
+  .menu{padding-top:112px;padding-bottom:calc(105px + env(safe-area-inset-bottom))}
+  .menu .mobile-menu-contact{display:none}
+  .mobile-contact-bar{z-index:80}
+}
+@media(prefers-reduced-motion:reduce){.menu,.menu-toggle-icon,.menu-toggle-icon:before,.menu-toggle-icon:after{transition:none!important}}
 </style><noscript><style>.menu-toggle{display:none}.header{position:static}.nav{height:auto;display:block;padding:12px 0}.menu{display:flex!important;position:static;flex-direction:row;flex-wrap:wrap}.hero{padding-top:0}</style></noscript><style>
 /* Shared contact actions; keep public pages within the navy/gold design. */
 body.has-contact-actions{background:#fff}
@@ -132,8 +169,16 @@ body.has-contact-actions{background:#fff}
 }
 </style><script defer src="assets/contact-ui.js"></script><style>.works-group{margin:32px 0}.works-group-title{font-size:clamp(1.2rem,2.5vw,1.6rem);margin:0 0 18px;padding-left:14px;border-left:3px solid #b79a58}</style></head>
 <body class="has-contact-actions" data-service="general">
-<header class="header"><div class="container nav"><a class="brand" href="#top"><img src="assets/optimized/logo-96.webp" srcset="assets/optimized/logo-48.webp 48w, assets/optimized/logo-96.webp 96w, assets/optimized/logo-144.webp 144w" sizes="(max-width:560px) 38px, 44px" alt="太刀川組ロゴ" width="96" height="96"><span>株式会社太刀川組</span></a><button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-menu">☰</button>
-<nav class="menu" id="primary-menu" aria-label="メインナビゲーション"><a href="#about">私たちについて</a><a href="#business">事業内容</a><a href="works/">施工実績一覧</a><a href="#strength">強み</a><a href="#trust">信頼と施工体制</a><a href="#company">会社概要</a><a class="cta" href="#contact">お問い合わせ</a></nav></div></header>
+<header class="header"><div class="container nav"><a class="brand" href="#top"><img src="assets/optimized/logo-96.webp" srcset="assets/optimized/logo-48.webp 48w, assets/optimized/logo-96.webp 96w, assets/optimized/logo-144.webp 144w" sizes="(max-width:560px) 38px, 44px" alt="太刀川組ロゴ" width="96" height="96"><span>株式会社太刀川組</span></a><button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-menu"><span class="menu-toggle-icon" aria-hidden="true"></span></button>
+<nav class="menu" id="primary-menu" aria-label="メインナビゲーション">
+<a class="desktop-menu-link" href="#about">私たちについて</a><a class="desktop-menu-link" href="#business">事業内容</a><a class="desktop-menu-link" href="works/">施工実績一覧</a><a class="desktop-menu-link" href="#strength">強み</a><a class="desktop-menu-link" href="#trust">信頼と施工体制</a><a class="cta desktop-menu-link" href="#contact">お問い合わせ</a>
+<div class="mobile-menu-content">
+  <div class="mobile-menu-kicker">MENU</div>
+  <details class="mobile-menu-group"><summary>事業内容</summary><div class="mobile-menu-sub"><a href="factory-renovation/">工場改修・補修工事</a><a href="sound-barrier/">高速道路・遮音壁関連工事</a><a href="#business">事業内容を見る</a></div></details>
+  <details class="mobile-menu-group"><summary>施工実績</summary><div class="mobile-menu-sub"><a href="works/">施工実績一覧</a><a href="works/#works-factory">工場・施設工事</a><a href="works/#works-public">道路・インフラ工事</a><a href="works/#works-private">建物・外構工事</a><a href="works/#works-other">その他の施工実績</a></div></details>
+  <a class="mobile-menu-primary" href="#company">会社情報</a>
+  <a class="mobile-menu-contact" href="#contact">お問い合わせ</a>
+</div></nav></div></header>
 <main id="top">
 <section class="hero"><picture><source media="(max-width:560px)" type="image/avif" srcset="assets/optimized/tobi-mobile.avif"><img src="tobi.webp" fetchpriority="high" alt="太刀川組の施工風景" srcset="assets/optimized/tobi-960.webp 960w, assets/optimized/tobi-1600.webp 1600w, tobi.webp 2400w" sizes="100vw" width="2400" height="1800"></picture><div class="container hero-inner"><div class="hero-copy reveal"><div class="kicker">TACHIKAWA GUMI / SINCE 1980</div><h1>街を支える仕事に、<br><em>40年以上。</em></h1><p>工場の外壁・足場・部分改修・補修をご相談ください。土工・とび・コンクリート工事で培った経験を、工場の維持管理と道路インフラの施工に活かします。</p><div class="buttons"><a class="btn btn-primary" href="factory-renovation/">工場改修・補修のご案内</a><a class="btn btn-ghost" href="#contact">お問い合わせ</a></div></div></div><div class="container hero-note">CONSTRUCTION / TOKYO / KANTO</div></section>
 <section class="section" id="about"><div class="container intro"><div class="intro-photo reveal"><img loading="lazy" decoding="async" fetchpriority="low" src="assets/optimized/doko.webp" alt="土工事の施工風景" srcset="assets/optimized/doko-960.webp 960w, assets/optimized/doko.webp 2048w" sizes="(max-width: 900px) 100vw, 600px" width="2048" height="1536"></div><div class="intro-copy reveal"><div class="eyebrow">ABOUT US</div><h2>現場を知る。<br>だから、強い。</h2><h3>確かな仕事は、<br>一つひとつの現場から。</h3><p>株式会社太刀川組は、昭和55年の創業以来、土工・とび・コンクリート工事を中心に、建設現場を支えてきました。</p><p>安全を第一に、現場ごとの条件を見極め、経験と技術を活かした施工を行っています。これからも、地域と建設業界に必要とされる会社であり続けます。</p><div class="signature"><small>代表者</small><strong>太刀川 慶一</strong></div></div></div><div class="container message reveal"><div><img loading="lazy" decoding="async" fetchpriority="low" src="assets/optimized/shachou.webp" alt="太刀川組 代表者" srcset="assets/optimized/shachou-960.webp 960w, assets/optimized/shachou.webp 2400w" sizes="(max-width: 900px) 100vw, 600px" width="2400" height="1350"></div><div><div class="eyebrow">MESSAGE</div><h2>これからも、<br>一つひとつの現場を大切に。</h2><p>長年にわたり支えてくださった皆さまへの感謝を忘れず、これまで培ってきた経験を次の仕事へつなげていきます。安全を第一に、確かな仕事を積み重ね、これからも信頼される会社を目指します。</p><div class="signature"><small>代表者</small><strong>太刀川 慶一</strong></div></div></div>
@@ -245,13 +290,31 @@ const header=document.querySelector('.header');
 window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>20),{passive:true});
 const toggle=document.querySelector('.menu-toggle'), menu=document.querySelector('.menu');
 if(toggle&&menu){
-  const setMenuOpen=open=>{
+  const groups=[...menu.querySelectorAll('details')];
+  const setMenuOpen=(open,restoreFocus=false)=>{
     menu.classList.toggle('open',open);
+    document.body.classList.toggle('mobile-menu-open',open);
     toggle.setAttribute('aria-expanded',open?'true':'false');
     toggle.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');
+    if(!open){groups.forEach(group=>group.open=false);if(restoreFocus)toggle.focus();}
   };
   toggle.addEventListener('click',()=>setMenuOpen(!menu.classList.contains('open')));
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenuOpen(false)));
+  // Bottom inquiry links remain usable above the menu: close the overlay before navigating.
+  document.querySelectorAll('.mobile-contact-bar a, .header .brand').forEach(a=>{
+    a.addEventListener('click',()=>{if(menu.classList.contains('open'))setMenuOpen(false);});
+  });
+  document.addEventListener('keydown',e=>{
+    if(!menu.classList.contains('open'))return;
+    if(e.key==='Escape'){e.preventDefault();setMenuOpen(false,true);return;}
+    if(e.key==='Tab'){
+      const focusables=[toggle,...menu.querySelectorAll('summary, a')].filter(el=>el.getClientRects().length);
+      const first=focusables[0],last=focusables[focusables.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
+  window.addEventListener('resize',()=>{if(window.innerWidth>900&&menu.classList.contains('open'))setMenuOpen(false);});
 }
 </script>
 <script>
