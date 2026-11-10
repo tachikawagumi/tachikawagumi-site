@@ -300,6 +300,10 @@ if(toggle&&menu){
   };
   toggle.addEventListener('click',()=>setMenuOpen(!menu.classList.contains('open')));
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenuOpen(false)));
+  // Bottom inquiry links remain usable above the menu: close the overlay before navigating.
+  document.querySelectorAll('.mobile-contact-bar a, .header .brand').forEach(a=>{
+    a.addEventListener('click',()=>{if(menu.classList.contains('open'))setMenuOpen(false);});
+  });
   document.addEventListener('keydown',e=>{
     if(!menu.classList.contains('open'))return;
     if(e.key==='Escape'){e.preventDefault();setMenuOpen(false,true);return;}
