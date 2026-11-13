@@ -21,7 +21,7 @@
     const url = new URL(link.href, window.location.href);
     if (url.protocol === 'tel:') {
       link.addEventListener('click', () => track('phone_click', sourceService, {link_location:locationFor(link)}));
-    } else if (url.origin === window.location.origin && url.hash === '#contact') {
+    } else if (url.origin === window.location.origin && (url.hash === '#contact' || url.pathname.replace(/\\/$/, '') === '/contact')) {
       const requested = url.searchParams.get('service');
       link.addEventListener('click', () => track('contact_click', allowed(requested) ? requested : sourceService, {link_location:locationFor(link)}));
     }
